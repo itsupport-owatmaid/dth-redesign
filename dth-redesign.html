@@ -1,0 +1,741 @@
+﻿<!doctype html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<title>สมาคมสภาคนพิการทุกประเภทแห่งประเทศไทย | Disabilities Thailand (DTH)</title>
+<meta name="description" content="ศูนย์รวมข่าวสาร สิทธิ สวัสดิการ และกิจกรรมเพื่อคนพิการทุกประเภท โดยสมาคมสภาคนพิการทุกประเภทแห่งประเทศไทย (Disabilities Thailand)">
+<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&family=Noto+Sans+Thai:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="dth-styles.css">
+</head>
+<body>
+
+<a href="#main" class="skip">ข้ามไปยังเนื้อหาหลัก</a>
+
+<!-- Accessibility bar -->
+<div class="a11y-bar" role="region" aria-label="ปรับการแสดงผลเพื่อการเข้าถึง">
+  <div class="wrap">
+    <div class="a11y-group">
+      <span>ขนาดตัวอักษร</span>
+      <button class="a11y-btn" data-fs=".9" aria-label="อักษรขนาดเล็ก">ก</button>
+      <button class="a11y-btn active" data-fs="1" aria-label="อักษรขนาดปกติ" style="font-size:1rem">ก</button>
+      <button class="a11y-btn" data-fs="1.18" aria-label="อักษรขนาดใหญ่" style="font-size:1.2rem">ก</button>
+    </div>
+    <div class="a11y-group">
+      <span>การแสดงผล</span>
+      <button class="a11y-btn active" data-theme="" aria-label="แสดงผลปกติ">C</button>
+      <button class="a11y-btn sw-white" data-theme="hc-white" aria-label="อักษรขาวพื้นดำ">C</button>
+      <button class="a11y-btn sw-yellow" data-theme="hc-yellow" aria-label="อักษรเหลืองพื้นดำ">C</button>
+    </div>
+  </div>
+</div>
+
+<!-- Header -->
+<header class="site" id="top">
+  <div class="nav">
+    <a href="#top" class="brand" aria-label="หน้าแรก สมาคมสภาคนพิการทุกประเภทแห่งประเทศไทย">
+      <span class="logo"><img src="Pic/dth-logo.jpg" alt="โลโก้ Disabilities Thailand" onerror="this.style.display='none'"></span>
+      <span class="name"><b>สภาคนพิการทุกประเภท</b><span>แห่งประเทศไทย · Disabilities Thailand</span></span>
+    </a>
+    <nav class="menu" id="menu" aria-label="เมนูหลัก">
+      <a href="#top" class="active">หน้าแรก</a>
+      <div class="has-sub">
+        <a href="#about" aria-haspopup="true" aria-expanded="false">เกี่ยวกับเรา <span class="caret" aria-hidden="true">▾</span></a>
+        <div class="sub">
+          <a href="#about">เกี่ยวกับสมาคมฯ</a>
+          <a href="#about">คณะกรรมการ</a>
+          <a href="#about">เจ้าหน้าที่สมาคม</a>
+          <a href="#about">ผลงานสภา</a>
+          <a href="#contact">ติดต่อเรา</a>
+        </div>
+      </div>
+      <div class="has-sub">
+        <a href="#network" aria-haspopup="true" aria-expanded="false">เครือข่าย <span class="caret" aria-hidden="true">▾</span></a>
+        <div class="sub">
+          <a href="#network">องค์การคนพิการ</a>
+          <a href="#network">สภาประจำจังหวัด</a>
+        </div>
+      </div>
+      <div class="has-sub">
+        <a href="#news" aria-haspopup="true" aria-expanded="false">ข่าวสารและกิจกรรม <span class="caret" aria-hidden="true">▾</span></a>
+        <div class="sub">
+          <a href="#news">ข่าวสาร</a>
+          <a href="#activities">กิจกรรม</a>
+        </div>
+      </div>
+      <div class="has-sub">
+        <a href="#rights" aria-haspopup="true" aria-expanded="false">ข้อมูลสำคัญ <span class="caret" aria-hidden="true">▾</span></a>
+        <div class="sub">
+          <a href="#rights">สิทธิคนพิการที่ควรรู้</a>
+          <a href="#download">ดาวน์โหลดเอกสาร</a>
+          <a href="#media">คลังสื่อ / อินโฟกราฟิก</a>
+          <a href="#media">DTH Magazine</a>
+          <a href="#news">กฎหมาย</a>
+        </div>
+      </div>
+    </nav>
+    <div class="search-mini" role="search">
+      <input type="text" placeholder="ค้นหา…" aria-label="ค้นหา">
+      <button aria-label="ค้นหา">⌕</button>
+    </div>
+    <button class="burger" id="burger" aria-label="เปิดเมนู" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<!-- Hero -->
+<section class="hero" aria-label="ภาพสไลด์">
+  <div class="slides" id="slides" aria-live="polite">
+    <div class="slide welcome-slide on" style="background-image:url('Pic/hero-welcome.png')">
+      <div class="cap"><span class="tag">ยินดีต้อนรับ</span><h2>สมาคมสภาคนพิการทุกประเภทแห่งประเทศไทย</h2><p>ส่งเสริมสิทธิ พัฒนาคุณภาพชีวิต และสร้างสังคมที่เท่าเทียมสำหรับทุกคน</p></div>
+    </div>
+    <div class="slide event-slide" style="background-image:url('https://dth.or.th/wp-content/uploads/2024/09/%E0%B8%AB%E0%B8%99%E0%B9%89%E0%B8%B2%E0%B8%9B%E0%B8%81%E0%B9%80%E0%B8%A7%E0%B9%87%E0%B8%9A%E0%B9%84%E0%B8%8B%E0%B8%95%E0%B9%8C%E0%B8%9B%E0%B8%A3%E0%B8%B0%E0%B8%8A%E0%B8%B8%E0%B8%A1%E0%B8%AA%E0%B8%A1%E0%B8%B1%E0%B8%8A%E0%B8%8A%E0%B8%B2-%E0%B8%A2%E0%B8%B2%E0%B8%A7.png')">
+      <div class="cap"><span class="tag">กิจกรรม</span><h2>สมัชชาคนพิการ 2567</h2><p>ร่วมขับเคลื่อนนโยบายและสิทธิคนพิการไปด้วยกัน</p></div>
+    </div>
+  </div>
+  <button class="hero-arrow prev" id="prev" aria-label="สไลด์ก่อนหน้า">‹</button>
+  <button class="hero-arrow next" id="next" aria-label="สไลด์ถัดไป">›</button>
+  <div class="hero-dots" id="dots" role="tablist" aria-label="เลือกสไลด์"></div>
+</section>
+
+<main id="main">
+
+<!-- About -->
+<section class="block" id="about">
+  <div class="wrap about">
+    <div class="txt">
+      <h2>สภาคนพิการทุกประเภทแห่งประเทศไทย<br>Disabilities Thailand — DTH</h2>
+      <p>องค์กรกลางของสมาคมคนพิการระดับชาติ ทำหน้าที่เป็นปากเสียงและขับเคลื่อนสิทธิ สวัสดิการ และโอกาสที่เท่าเทียมให้แก่คนพิการทุกประเภททั่วประเทศ</p>
+      <p>เราทำงานร่วมกับภาครัฐ ภาคเอกชน และองค์กรระหว่างประเทศ เพื่อสร้างสังคมที่ทุกคนเข้าถึงได้อย่างแท้จริง</p>
+      <a href="#about" class="btn">อ่านเพิ่มเติม →</a>
+    </div>
+    <div class="pic"><img src="Pic/%E0%B8%A3%E0%B8%B9%E0%B8%9B%E0%B8%AD%E0%B8%B7%E0%B9%88%E0%B8%99%E0%B9%86/707816127_1426364822866949_8816878363624047560_n.jpg" alt="เกี่ยวกับสภาคนพิการทุกประเภทแห่งประเทศไทย" onerror="this.style.display='none'"></div>
+  </div>
+</section>
+
+<section class="block alt" id="leadership">
+  <div class="wrap">
+    <div class="board-shell" data-board>
+      <div class="board-scene" role="tablist" aria-label="รายชื่อคณะกรรมการบริหาร">
+        <button class="board-figure board-figure--far-left" type="button" role="tab" aria-selected="false"
+          data-name="นายศุภชีพ ดิษเทศ"
+          data-role="อุปนายก คนที่ 5 / นายทะเบียน"
+          data-image="Pic/Untitled design/นายศุภชีพ ดิษเทศ.png">
+          <img src="Pic/Untitled design/นายศุภชีพ ดิษเทศ.png" alt="นายศุภชีพ ดิษเทศ">
+          <span class="board-label board-label--left-bottom">
+            <strong class="board-label-name">นายศุภชีพ ดิษเทศ</strong>
+            <span class="board-label-role">อุปนายก คนที่ 5 / นายทะเบียน</span>
+          </span>
+        </button>
+
+        <button class="board-figure board-figure--left" type="button" role="tab" aria-selected="false"
+          data-name="นายสุชาติ โอวาทวรรณสกุล"
+          data-role="อุปนายก คนที่ 2"
+          data-image="Pic/Untitled design/นายสุชาติ โอวาทวรรณสกุล.png">
+          <img src="Pic/Untitled design/นายสุชาติ โอวาทวรรณสกุล.png" alt="นายสุชาติ โอวาทวรรณสกุล">
+          <span class="board-label board-label--left">
+            <strong class="board-label-name">นายสุชาติ โอวาทวรรณสกุล</strong>
+            <span class="board-label-role">อุปนายก คนที่ 2</span>
+          </span>
+        </button>
+
+        <button class="board-figure board-figure--center active" type="button" role="tab" aria-selected="true"
+          data-name="นายวิทยุต บุนนาค"
+          data-role="นายกสมาคมสภาคนพิการทุกประเภทแห่งประเทศไทย"
+          data-image="Pic/Untitled design/นายวิทยุต บุนนาค.png">
+          <img src="Pic/Untitled design/นายวิทยุต บุนนาค.png" alt="นายวิทยุต บุนนาค">
+          <span class="board-label board-label--center">
+            <strong class="board-label-name">นายวิทยุต บุนนาค</strong>
+            <span class="board-label-role">นายกสมาคมสภาคนพิการทุกประเภทแห่งประเทศไทย</span>
+          </span>
+        </button>
+
+        <button class="board-figure board-figure--mid-right" type="button" role="tab" aria-selected="false"
+          data-name="นายชูศักดิ์ จันทยานนท์"
+          data-role="อุปนายก คนที่ 3 / เลขานุการ / ประธานฝ่ายวิสาหกิจเพื่อสังคม"
+          data-image="Pic/Untitled design/นายชูศักดิ์ จันทยานนท์.png">
+          <img src="Pic/Untitled design/นายชูศักดิ์ จันทยานนท์.png" alt="นายชูศักดิ์ จันทยานนท์">
+          <span class="board-label board-label--right-lower">
+            <strong class="board-label-name">นายชูศักดิ์ จันทยานนท์</strong>
+            <span class="board-label-role">อุปนายก คนที่ 3 / เลขานุการ / ประธานฝ่ายวิสาหกิจเพื่อสังคม</span>
+          </span>
+        </button>
+
+        <button class="board-figure board-figure--right" type="button" role="tab" aria-selected="false"
+          data-name="นางนุชจารี คล้ายสุวรรณ"
+          data-role="อุปนายก คนที่ 4 / ปฏิคม"
+          data-image="Pic/Untitled design/นางนุชจารี คล้ายสุวรรณ.png">
+          <img src="Pic/Untitled design/นางนุชจารี คล้ายสุวรรณ.png" alt="นางนุชจารี คล้ายสุวรรณ">
+          <span class="board-label board-label--right-bottom">
+            <strong class="board-label-name">นางนุชจารี คล้ายสุวรรณ</strong>
+            <span class="board-label-role">อุปนายก คนที่ 4 / ปฏิคม</span>
+          </span>
+        </button>
+
+        <button class="board-figure board-figure--far-right" type="button" role="tab" aria-selected="false"
+          data-name="นายเอกกมล แพทยานันท์"
+          data-role="ประธานฝ่ายศิลปะ วัฒนธรรม และภาษา"
+          data-image="Pic/Untitled design/นายเอกกมล แพทยานันท์.png">
+          <img src="Pic/Untitled design/นายเอกกมล แพทยานันท์.png" alt="นายเอกกมล แพทยานันท์">
+          <span class="board-label board-label--right">
+            <strong class="board-label-name">นายเอกกมล แพทยานันท์</strong>
+            <span class="board-label-role">ประธานฝ่ายศิลปะ วัฒนธรรม และภาษา</span>
+          </span>
+        </button>
+
+        <div class="board-title-panel">
+          <h2>คณะกรรมการบริหาร<br>สภาคนพิการทุกประเภทแห่งประเทศไทย</h2>
+          <p>Disabilities Thailand — DTH</p>
+        </div>
+
+        <div class="board-active-card" data-board-card>
+          <strong data-board-name-display>นายวิทยุต บุนนาค</strong>
+          <span data-board-role-display>นายกสมาคมสภาคนพิการทุกประเภทแห่งประเทศไทย</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- News Center (tabs) -->
+<section class="block alt" id="news" data-tabwrap>
+  <div class="wrap">
+    <div class="head">
+      <span class="ic" aria-hidden="true">📰</span>
+      <h2>ศูนย์รวมข่าวสารคนพิการ <span>| News Center</span></h2>
+      <a href="#news" class="more">ดูข่าวทั้งหมด</a>
+    </div>
+    <div class="tabs" role="tablist" aria-label="หมวดข่าว">
+      <button class="tab active" role="tab" aria-selected="true" data-target="news-latest">ข่าวล่าสุด</button>
+      <button class="tab" role="tab" aria-selected="false" data-target="news-welfare">สิทธิและสวัสดิการ</button>
+      <button class="tab" role="tab" aria-selected="false" data-target="news-health">สุขภาพ</button>
+      <button class="tab" role="tab" aria-selected="false" data-target="news-edu">การศึกษา/อาชีพ</button>
+      <button class="tab" role="tab" aria-selected="false" data-target="news-law">กฎหมาย</button>
+      <button class="tab" role="tab" aria-selected="false" data-target="news-net">ข่าวจากเครือข่าย</button>
+    </div>
+
+    <div class="tabpanel active" id="news-latest" role="tabpanel">
+      <div class="grid g3">
+        <article class="card"><div class="thumb ph" aria-hidden="true">📣</div><div class="body"><span class="chip">ข่าวล่าสุด</span><h3>สมัชชาคนพิการแห่งชาติ 2568 เปิดรับลงทะเบียนแล้ว</h3><p>ขอเชิญผู้แทนองค์กรคนพิการและผู้สนใจร่วมงานสมัชชาประจำปี…</p><div class="meta">📅 02-06-2568 · 👁 1,204</div></div></article>
+        <article class="card"><div class="thumb ph" aria-hidden="true">💰</div><div class="body"><span class="chip">นโยบาย</span><h3>ครม. เห็นชอบแนวทางปรับเพิ่มเบี้ยความพิการ</h3><p>มติคณะรัฐมนตรีล่าสุดเกี่ยวกับการปรับเบี้ยความพิการ…</p><div class="meta">📅 28-05-2568 · 👁 3,890</div></div></article>
+        <article class="card"><div class="thumb ph" aria-hidden="true">🤝</div><div class="body"><span class="chip">ความร่วมมือ</span><h3>DTH ลงนาม MOU ส่งเสริมการจ้างงานคนพิการกับภาคเอกชน</h3><p>ความร่วมมือเพื่อขยายโอกาสการมีงานทำของคนพิการ…</p><div class="meta">📅 20-05-2568 · 👁 2,015</div></div></article>
+      </div>
+    </div>
+
+    <div class="tabpanel" id="news-welfare" role="tabpanel">
+      <div class="grid g3">
+        <article class="card"><div class="thumb"><img src="https://dth.or.th/wp-content/uploads/2022/07/1-300x300.jpg" alt="" loading="lazy" onerror="this.parentElement.classList.add('ph');this.parentElement.innerHTML='🪪'"></div><div class="body"><span class="chip">สิทธิและสวัสดิการ</span><h3>อัปเดตขั้นตอนทำบัตรประจำตัวคนพิการ ปี 2568</h3><p>เอกสารและขั้นตอนล่าสุดในการขอมีบัตรประจำตัวคนพิการ…</p><div class="meta">📅 18-05-2568 · 👁 8,420</div></div></article>
+        <article class="card"><div class="thumb"><img src="https://dth.or.th/wp-content/uploads/2022/07/275194508_1594645250891929_4929658142830719063_n-300x212.jpg" alt="" loading="lazy" onerror="this.parentElement.classList.add('ph');this.parentElement.innerHTML='🚌'"></div><div class="body"><span class="chip">สิทธิและสวัสดิการ</span><h3>สิทธิลดหย่อนค่าโดยสารขนส่งสาธารณะ</h3><p>สรุปสิทธิค่าโดยสารอัตราพิเศษสำหรับคนพิการ…</p><div class="meta">📅 10-05-2568 · 👁 5,260</div></div></article>
+      </div>
+    </div>
+
+    <div class="tabpanel" id="news-health" role="tabpanel">
+      <div class="grid g3">
+        <article class="card"><div class="thumb"><img src="https://dth.or.th/wp-content/uploads/2022/07/279270879_1630628107293643_3234477952132787000_n-300x212.jpg" alt="" loading="lazy" onerror="this.parentElement.classList.add('ph');this.parentElement.innerHTML='🩺'"></div><div class="body"><span class="chip">สุขภาพ</span><h3>เส้นเลือดขอด อีกหนึ่งโรคยอดฮิตของวัยทำงาน</h3><p>อาการ สาเหตุ และการดูแลเบื้องต้น…</p><div class="meta">📅 25-07-2565 · 👁 2,857</div></div></article>
+        <article class="card"><div class="thumb"><img src="https://dth.or.th/wp-content/uploads/2022/07/289098221_586550159662695_1032763863887327249_n-300x225.jpg" alt="" loading="lazy" onerror="this.parentElement.classList.add('ph');this.parentElement.innerHTML='🧠'"></div><div class="body"><span class="chip">สุขภาพ</span><h3>การดูแลสุขภาพจิตคนพิการและผู้ดูแล</h3><p>แนวทางดูแลใจสำหรับคนพิการและครอบครัว…</p><div class="meta">📅 05-07-2565 · 👁 2,875</div></div></article>
+      </div>
+    </div>
+
+    <div class="tabpanel" id="news-edu" role="tabpanel">
+      <div class="grid g3">
+        <article class="card"><div class="thumb ph" aria-hidden="true">🎓</div><div class="body"><span class="chip">การศึกษา</span><h3>ทุนการศึกษาสำหรับนักเรียนนักศึกษาพิการ 2568</h3><p>รายละเอียดทุนและกำหนดการรับสมัคร…</p><div class="meta">📅 12-05-2568 · 👁 1,640</div></div></article>
+        <article class="card"><div class="thumb ph" aria-hidden="true">💼</div><div class="body"><span class="chip">อาชีพ</span><h3>โครงการฝึกอาชีพและจัดหางานคนพิการ</h3><p>หลักสูตรฝึกทักษะและช่องทางสมัครงาน…</p><div class="meta">📅 08-05-2568 · 👁 2,310</div></div></article>
+      </div>
+    </div>
+
+    <div class="tabpanel" id="news-law" role="tabpanel">
+      <div class="grid g3">
+        <article class="card"><div class="thumb"><img src="https://dth.or.th/wp-content/uploads/2023/09/%E0%B8%9E.%E0%B8%A3.%E0%B8%9A.%E0%B8%AA%E0%B9%88%E0%B8%87%E0%B9%80%E0%B8%AA%E0%B8%A3%E0%B8%B4%E0%B8%A1%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B8%9E%E0%B8%B1%E0%B8%92%E0%B8%99%E0%B8%B2%E0%B8%84%E0%B8%B8%E0%B8%93%E0%B8%A0%E0%B8%B2-2550-300x251.png" alt="" loading="lazy" onerror="this.parentElement.classList.add('ph');this.parentElement.innerHTML='⚖️'"></div><div class="body"><span class="chip">กฎหมาย</span><h3>พ.ร.บ.ส่งเสริมและพัฒนาคุณภาพชีวิตคนพิการ</h3><p>สาระสำคัญของกฎหมายที่คนพิการควรรู้…</p><div class="meta">📅 29-09-2566 · 👁 3,236</div></div></article>
+        <article class="card"><div class="thumb ph" aria-hidden="true">🌐</div><div class="body"><span class="chip">กฎหมาย</span><h3>สิทธิตามอนุสัญญา CRPD ที่คนพิการควรรู้</h3><p>อนุสัญญาว่าด้วยสิทธิคนพิการแห่งสหประชาชาติ…</p><div class="meta">📅 03-05-2568 · 👁 1,180</div></div></article>
+      </div>
+    </div>
+
+    <div class="tabpanel" id="news-net" role="tabpanel">
+      <div class="grid g3">
+        <article class="card"><div class="thumb ph" aria-hidden="true">🦯</div><div class="body"><span class="chip">เครือข่าย</span><h3>สมาคมคนตาบอดฯ จัดอบรมทักษะการเดินทางอิสระ</h3><p>กิจกรรมพัฒนาทักษะการเดินทางสำหรับคนตาบอด…</p><div class="meta">📅 30-04-2568 · 👁 980</div></div></article>
+        <article class="card"><div class="thumb ph" aria-hidden="true">🤟</div><div class="body"><span class="chip">เครือข่าย</span><h3>สมาคมคนหูหนวกฯ เปิดบริการล่ามภาษามือออนไลน์</h3><p>ขยายช่องทางเข้าถึงล่ามภาษามือผ่านระบบออนไลน์…</p><div class="meta">📅 26-04-2568 · 👁 1,420</div></div></article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Activities -->
+<section class="block" id="activities">
+  <div class="wrap">
+    <div class="head">
+      <span class="ic" aria-hidden="true">📅</span>
+      <h2>กิจกรรมสภาคนพิการ <span>| Activities</span></h2>
+      <a href="#activities" class="more">ปฏิทินกิจกรรม</a>
+    </div>
+    <div class="events">
+      <article class="evt">
+        <div class="evt-date"><span class="d">15</span><span class="m">มิ.ย.<br>2568</span></div>
+        <div class="evt-body">
+          <span class="status open">เปิดรับสมัคร</span>
+          <h3>สมัชชาคนพิการแห่งชาติ ประจำปี 2568</h3>
+          <p class="meta">📍 ศูนย์ประชุม APCD กรุงเทพฯ · 🕘 09:00–16:00</p>
+          <div class="evt-actions"><a href="#" class="btn sm">สมัครเข้าร่วม</a><a href="#" class="btn ghost sm">ดาวน์โหลดกำหนดการ</a></div>
+        </div>
+      </article>
+      <article class="evt">
+        <div class="evt-date"><span class="d">28</span><span class="m">มิ.ย.<br>2568</span></div>
+        <div class="evt-body">
+          <span class="status soon">ใกล้เปิดรับสมัคร</span>
+          <h3>อบรมเชิงปฏิบัติการ: การเข้าถึงสื่อดิจิทัลสำหรับคนพิการ</h3>
+          <p class="meta">📍 ออนไลน์ผ่าน Zoom · 🕘 13:00–16:00</p>
+          <div class="evt-actions"><a href="#" class="btn ghost sm">ดูรายละเอียด</a></div>
+        </div>
+      </article>
+      <article class="evt">
+        <div class="evt-date"><span class="d">10</span><span class="m">ก.ค.<br>2568</span></div>
+        <div class="evt-body">
+          <span class="status soon">เร็วๆ นี้</span>
+          <h3>เวทีรับฟังความคิดเห็นร่างนโยบายสวัสดิการคนพิการ</h3>
+          <p class="meta">📍 โรงแรมเซ็นทรา ศูนย์ราชการ กรุงเทพฯ · 🕘 09:30–15:30</p>
+          <div class="evt-actions"><a href="#" class="btn ghost sm">ดูรายละเอียด</a></div>
+        </div>
+      </article>
+      <article class="evt">
+        <div class="evt-date"><span class="d">20</span><span class="m">เม.ย.<br>2568</span></div>
+        <div class="evt-body">
+          <span class="status closed">จบกิจกรรมแล้ว</span>
+          <h3>สัมมนาเครือข่ายสภาคนพิการประจำจังหวัด</h3>
+          <p class="meta">📍 จังหวัดเชียงใหม่ · 🕘 เต็มวัน</p>
+          <div class="evt-actions"><a href="#" class="btn ghost sm">ดูสรุปกิจกรรม</a></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- Rights quick access -->
+<section class="block alt" id="rights">
+  <div class="wrap">
+    <div class="rights-shell" data-rights-tabs>
+      <div class="head rights-head">
+        <div class="rights-headcopy">
+          <h2>สิทธิคนพิการที่ควรรู้ <span>| Know Your Rights</span></h2>
+          <p>เลือกดูข้อมูลสำคัญตามหมวดที่ต้องการ เพื่อเข้าถึงสิทธิพื้นฐานและช่องทางช่วยเหลือได้รวดเร็วขึ้น</p>
+        </div>
+      </div>
+      <div class="rights-tabs" role="tablist" aria-label="หมวดสิทธิคนพิการ">
+        <button class="rights-tab active" role="tab" aria-selected="true" data-target="rights-id">บัตรคนพิการ</button>
+        <button class="rights-tab" role="tab" aria-selected="false" data-target="rights-allowance">เบี้ยความพิการ</button>
+        <button class="rights-tab" role="tab" aria-selected="false" data-target="rights-opportunity">การศึกษาและการทำงาน</button>
+        <button class="rights-tab" role="tab" aria-selected="false" data-target="rights-help">ร้องเรียนและช่วยเหลือ</button>
+      </div>
+
+      <div class="rights-panels">
+        <article class="rights-panel active" id="rights-id" role="tabpanel">
+          <div class="rights-copy">
+            <span class="right-kicker">เอกสารสำคัญ</span>
+            <h3>บัตรคนพิการ</h3>
+            <p>จุดเริ่มต้นของการเข้าถึงสิทธิพื้นฐานหลายด้าน ทั้งสวัสดิการ การรักษาพยาบาล การศึกษา และสิ่งอำนวยความสะดวก</p>
+            <ul class="rights-list">
+              <li>เอกสารที่ต้องใช้ในการยื่นคำขอ</li>
+              <li>ขั้นตอนการออกบัตรและต่ออายุ</li>
+              <li>หน่วยงานและจุดบริการที่เกี่ยวข้อง</li>
+            </ul>
+            <a href="#" class="btn rights-cta">ดูรายละเอียดเพิ่มเติม</a>
+          </div>
+          <div class="rights-media rights-media-placeholder">
+            <div class="rights-media-card">
+              <span class="rights-media-badge">พื้นที่รูปประกอบ</span>
+              <h4>แท็บนี้รองรับการแนบรูปเพิ่ม</h4>
+              <p>เมื่อคุณส่งรูปบัตรตัวอย่างหรืออินโฟกราฟิกมา ผมจะใส่ลงในช่องนี้ให้พอดีกับ layout ทันที</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="rights-panel" id="rights-allowance" role="tabpanel">
+          <div class="rights-copy">
+            <span class="right-kicker">สวัสดิการ</span>
+            <h3>เบี้ยความพิการ</h3>
+            <p>สรุปข้อมูลที่ควรรู้ก่อนลงทะเบียนรับสิทธิ รวมถึงเงื่อนไข เอกสาร และการติดตามสถานะการรับเงิน</p>
+            <ul class="rights-list">
+              <li>คุณสมบัติและเงื่อนไขผู้มีสิทธิ</li>
+              <li>การยื่นคำขอและช่องทางติดตามผล</li>
+              <li>ข้อควรตรวจสอบเมื่อข้อมูลไม่ตรงหรือเงินยังไม่เข้า</li>
+            </ul>
+            <a href="#" class="btn rights-cta">ดูเงื่อนไขการลงทะเบียน</a>
+          </div>
+          <div class="rights-media">
+            <div class="rights-info-card">
+              <div class="rights-info-row"><span>หมวดสิทธิ</span><strong>เบี้ยความพิการ</strong></div>
+              <div class="rights-info-row"><span>สถานะข้อมูล</span><strong>อัปเดตสำหรับใช้อ้างอิง</strong></div>
+              <div class="rights-info-row"><span>เนื้อหาสำคัญ</span><strong>เงื่อนไข, เอกสาร, ช่องทางยื่น</strong></div>
+            </div>
+          </div>
+        </article>
+
+        <article class="rights-panel" id="rights-opportunity" role="tabpanel">
+          <div class="rights-copy">
+            <span class="right-kicker">โอกาสและอาชีพ</span>
+            <h3>การศึกษาและการทำงาน</h3>
+            <p>รวมสิทธิด้านทุนการศึกษา การฝึกอาชีพ และสิทธิในการจ้างงานที่ช่วยเพิ่มโอกาสและความมั่นคงในระยะยาว</p>
+            <ul class="rights-list">
+              <li>ทุนและสิทธิทางการศึกษาที่เกี่ยวข้อง</li>
+              <li>โครงการฝึกอาชีพและพัฒนาทักษะ</li>
+              <li>สิทธิการจ้างงานคนพิการและการคุ้มครองตามกฎหมาย</li>
+            </ul>
+            <a href="#" class="btn rights-cta">ดูสิทธิด้านการศึกษาและงาน</a>
+          </div>
+          <div class="rights-media">
+            <div class="rights-stat-card">
+              <div class="rights-stat-item">
+                <span>Education</span>
+                <strong>ทุนและการเรียนรู้</strong>
+              </div>
+              <div class="rights-stat-item">
+                <span>Work</span>
+                <strong>จ้างงานและฝึกอาชีพ</strong>
+              </div>
+              <div class="rights-stat-item">
+                <span>Support</span>
+                <strong>เข้าถึงแหล่งช่วยเหลือได้ง่ายขึ้น</strong>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="rights-panel" id="rights-help" role="tabpanel">
+          <div class="rights-copy">
+            <span class="right-kicker">ขอความช่วยเหลือ</span>
+            <h3>ร้องเรียนและประสานช่วยเหลือ</h3>
+            <p>เมื่อเกิดปัญหาในการเข้าถึงสิทธิ การบริการ หรือสวัสดิการ ควรมีช่องทางที่ชัดเจนสำหรับแจ้งเรื่องและติดตามผล</p>
+            <ul class="rights-list">
+              <li>ช่องทางร้องเรียนเมื่อไม่ได้รับสิทธิตามที่ควร</li>
+              <li>การประสานหน่วยงานที่เกี่ยวข้อง</li>
+              <li>แนวทางเตรียมข้อมูลก่อนแจ้งเรื่อง</li>
+            </ul>
+            <a href="#" class="btn rights-cta">ดูช่องทางร้องเรียน</a>
+          </div>
+          <div class="rights-media">
+            <div class="rights-help-card">
+              <span class="rights-help-label">Quick Access</span>
+              <strong>รวมช่องทางติดต่อที่ควรมีไว้ใกล้มือ</strong>
+              <p>โทรศัพท์, อีเมล, หน่วยงานประสาน และข้อมูลที่ควรเตรียมก่อนแจ้งเรื่อง</p>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Media library -->
+<section class="block" id="media" data-filterwrap>
+  <div class="wrap">
+    <div class="head">
+      <span class="ic" aria-hidden="true">🎞️</span>
+      <h2>คลังสื่อ <span>| Media Library</span></h2>
+      <a href="#media" class="more">ดูทั้งหมด</a>
+    </div>
+    <div class="filterbar" role="group" aria-label="กรองประเภทสื่อ">
+      <button class="tab active" data-filter="all">ทั้งหมด</button>
+      <button class="tab" data-filter="video">วิดีโอ</button>
+      <button class="tab" data-filter="info">อินโฟกราฟิก</button>
+      <button class="tab" data-filter="mag">DTH Magazine</button>
+      <button class="tab" data-filter="photo">ภาพกิจกรรม</button>
+      <button class="tab" data-filter="doc">เอกสารเผยแพร่</button>
+    </div>
+    <div class="grid g4" id="mediaGrid">
+      <article class="card mitem" data-type="info"><div class="thumb"><span class="mtype">อินโฟกราฟิก</span><img src="https://dth.or.th/wp-content/uploads/2022/07/273556717_1580157409007380_985939727756942970_n-300x212.jpg" alt="" loading="lazy" onerror="this.parentElement.classList.add('ph');this.parentElement.innerHTML='🖼️'"></div><div class="body"><h3>ที่จอดรถคนพิการ</h3><div class="meta">👁 31,790</div></div></article>
+      <article class="card mitem" data-type="info"><div class="thumb"><span class="mtype">อินโฟกราฟิก</span><img src="https://dth.or.th/wp-content/uploads/2022/07/275229039_1594676890888765_1550337596592218467_n-300x212.jpg" alt="" loading="lazy" onerror="this.parentElement.classList.add('ph');this.parentElement.innerHTML='🖼️'"></div><div class="body"><h3>สิทธิของผู้ดูแลคนพิการ</h3><div class="meta">👁 31,816</div></div></article>
+      <article class="card mitem" data-type="video"><div class="thumb ph"><span class="mtype">วิดีโอ</span>🎬<div class="play"><span aria-hidden="true">▶</span></div></div><div class="body"><h3>แนะนำสิทธิคนพิการเบื้องต้น</h3><div class="meta">👁 4,120</div></div></article>
+      <article class="card mitem" data-type="video"><div class="thumb ph"><span class="mtype">วิดีโอ</span>🎬<div class="play"><span aria-hidden="true">▶</span></div></div><div class="body"><h3>สัมภาษณ์ผู้นำองค์กรคนพิการ</h3><div class="meta">👁 2,560</div></div></article>
+      <article class="card mitem" data-type="mag"><div class="thumb ph"><span class="mtype">Magazine</span>📖</div><div class="body"><h3>DTH Magazine ฉบับที่ 12</h3><div class="meta">📅 พ.ค. 2568</div></div></article>
+      <article class="card mitem" data-type="mag"><div class="thumb ph"><span class="mtype">Magazine</span>📖</div><div class="body"><h3>DTH Magazine ฉบับที่ 11</h3><div class="meta">📅 ก.พ. 2568</div></div></article>
+      <article class="card mitem" data-type="photo"><div class="thumb ph"><span class="mtype">ภาพกิจกรรม</span>📷</div><div class="body"><h3>ภาพงานสมัชชาคนพิการ 2567</h3><div class="meta">📅 2567</div></div></article>
+      <article class="card mitem" data-type="photo"><div class="thumb ph"><span class="mtype">ภาพกิจกรรม</span>📷</div><div class="body"><h3>ภาพอบรมเครือข่ายจังหวัด</h3><div class="meta">📅 2567</div></div></article>
+      <article class="card mitem" data-type="doc"><div class="thumb ph"><span class="mtype">เอกสาร</span>📄</div><div class="body"><h3>คู่มือสิทธิคนพิการ ฉบับประชาชน</h3><div class="meta">PDF · 2.1 MB</div></div></article>
+      <article class="card mitem" data-type="info"><div class="thumb"><span class="mtype">อินโฟกราฟิก</span><img src="https://dth.or.th/wp-content/uploads/2022/07/275425030_1598676160488838_995252658959268142_n-300x212.jpg" alt="" loading="lazy" onerror="this.parentElement.classList.add('ph');this.parentElement.innerHTML='🖼️'"></div><div class="body"><h3>ช่วยเหลือทางกฎหมายแก่คนพิการ</h3><div class="meta">👁 4,684</div></div></article>
+    </div>
+  </div>
+</section>
+
+<!-- Download + Network -->
+<section class="block alt" id="network">
+  <div class="wrap" style="display:grid;grid-template-columns:1.3fr 1fr;gap:40px" id="dl-wrap">
+    <div id="download">
+      <div class="head"><span class="ic" aria-hidden="true">📄</span><h2>ดาวน์โหลดเอกสาร <span>| Download</span></h2></div>
+      <div class="dl-list">
+        <a href="#" class="dl"><span class="ft pdf">PDF</span><span class="info"><p>ข้อบังคับสมาคมสภาคนพิการทุกประเภทฯ พ.ศ. 2560 (แก้ไขเพิ่มเติม 2565)</p><span class="meta">📅 16-09-2567 · 187 KB</span></span><span class="arr" aria-hidden="true">⬇</span></a>
+        <a href="#" class="dl"><span class="ft doc">DOC</span><span class="info"><p>ข้อบังคับสมาคมสภาคนพิการทุกประเภทฯ พ.ศ. 2560 (แก้ไขเพิ่มเติม 2565)</p><span class="meta">📅 16-09-2567 · 76 KB</span></span><span class="arr" aria-hidden="true">⬇</span></a>
+      </div>
+      <div style="margin-top:18px"><a href="#download" class="btn ghost">ดูเอกสารทั้งหมด</a></div>
+    </div>
+    <aside aria-label="องค์กรเครือข่าย">
+      <div class="head"><span class="ic" aria-hidden="true">🔗</span><h2>องค์กรเครือข่าย</h2></div>
+      <div class="partners">
+        <a class="partner" href="#"><img src="Pic/%E0%B8%AD%E0%B8%87%E0%B8%84%E0%B9%8C%E0%B8%81%E0%B8%A3%E0%B9%80%E0%B8%84%E0%B8%A3%E0%B8%B7%E0%B8%AD%E0%B8%82%E0%B9%88%E0%B8%B2%E0%B8%A2/%E0%B8%AA%E0%B8%A1%E0%B8%B2%E0%B8%84%E0%B8%A1%E0%B8%84%E0%B8%99%E0%B8%9E%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B9%81%E0%B8%AB%E0%B9%88%E0%B8%87%E0%B8%9B%E0%B8%A3%E0%B8%B0%E0%B9%80%E0%B8%97%E0%B8%A8%E0%B9%84%E0%B8%97%E0%B8%A2.jpg" alt="สมาคมคนพิการแห่งประเทศไทย" onerror="this.style.display='none'"><span>สมาคมคนพิการแห่งประเทศไทย</span></a>
+        <a class="partner" href="#"><img src="Pic/%E0%B8%AD%E0%B8%87%E0%B8%84%E0%B9%8C%E0%B8%81%E0%B8%A3%E0%B9%80%E0%B8%84%E0%B8%A3%E0%B8%B7%E0%B8%AD%E0%B8%82%E0%B9%88%E0%B8%B2%E0%B8%A2/%E0%B8%AA%E0%B8%A1%E0%B8%B2%E0%B8%84%E0%B8%A1%E0%B8%84%E0%B8%99%E0%B8%95%E0%B8%B2%E0%B8%9A%E0%B8%AD%E0%B8%94%E0%B8%AF.jpg" alt="สมาคมคนตาบอดฯ" onerror="this.style.display='none'"><span>สมาคมคนตาบอดฯ</span></a>
+        <a class="partner" href="#"><img src="Pic/%E0%B8%AD%E0%B8%87%E0%B8%84%E0%B9%8C%E0%B8%81%E0%B8%A3%E0%B9%80%E0%B8%84%E0%B8%A3%E0%B8%B7%E0%B8%AD%E0%B8%82%E0%B9%88%E0%B8%B2%E0%B8%A2/%E0%B8%AA%E0%B8%A1%E0%B8%B2%E0%B8%84%E0%B8%A1%E0%B8%84%E0%B8%99%E0%B8%AB%E0%B8%B9%E0%B8%AB%E0%B8%99%E0%B8%A7%E0%B8%81%E0%B8%AF.avif" alt="สมาคมคนหูหนวกฯ" onerror="this.style.display='none'"><span>สมาคมคนหูหนวกฯ</span></a>
+        <a class="partner" href="#"><img src="Pic/%E0%B8%AD%E0%B8%87%E0%B8%84%E0%B9%8C%E0%B8%81%E0%B8%A3%E0%B9%80%E0%B8%84%E0%B8%A3%E0%B8%B7%E0%B8%AD%E0%B8%82%E0%B9%88%E0%B8%B2%E0%B8%A2/%E0%B8%AA%E0%B8%A1%E0%B8%B2%E0%B8%84%E0%B8%A1%E0%B8%9C%E0%B8%B9%E0%B9%89%E0%B8%9B%E0%B8%81%E0%B8%84%E0%B8%A3%E0%B8%AD%E0%B8%87%E0%B8%84%E0%B8%99%E0%B8%9E%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%97%E0%B8%B2%E0%B8%87%E0%B8%AA%E0%B8%95%E0%B8%B4%E0%B8%9B%E0%B8%B1%E0%B8%8D%E0%B8%8D%E0%B8%B2%E0%B8%AF.jpg" alt="สมาคมผู้ปกครองคนพิการทางสติปัญญาฯ" onerror="this.style.display='none'"><span>สมาคมผู้ปกครองคนพิการทางสติปัญญาฯ</span></a>
+        <a class="partner" href="https://www.facebook.com/amidmh.th/" target="_blank" rel="noopener"><img src="Pic/%E0%B8%AD%E0%B8%87%E0%B8%84%E0%B9%8C%E0%B8%81%E0%B8%A3%E0%B9%80%E0%B8%84%E0%B8%A3%E0%B8%B7%E0%B8%AD%E0%B8%82%E0%B9%88%E0%B8%B2%E0%B8%A2/%E0%B8%AA%E0%B8%A1%E0%B8%B2%E0%B8%84%E0%B8%A1%E0%B9%80%E0%B8%9E%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%9C%E0%B8%B9%E0%B9%89%E0%B8%9A%E0%B8%81%E0%B8%9E%E0%B8%A3%E0%B9%88%E0%B8%AD%E0%B8%87%E0%B8%97%E0%B8%B2%E0%B8%87%E0%B8%88%E0%B8%B4%E0%B8%95%E0%B9%81%E0%B8%AB%E0%B9%88%E0%B8%87%E0%B8%9B%E0%B8%A3%E0%B8%B0%E0%B9%80%E0%B8%97%E0%B8%A8%E0%B9%84%E0%B8%97%E0%B8%A2.png" alt="สมาคมเพื่อผู้บกพร่องทางจิตแห่งประเทศไทย" onerror="this.style.display='none'"><span>สมาคมเพื่อผู้บกพร่องทางจิตแห่งประเทศไทย</span></a>
+        <a class="partner" href="https://autism.autisticthai.com/" target="_blank" rel="noopener"><img src="Pic/%E0%B8%AD%E0%B8%87%E0%B8%84%E0%B9%8C%E0%B8%81%E0%B8%A3%E0%B9%80%E0%B8%84%E0%B8%A3%E0%B8%B7%E0%B8%AD%E0%B8%82%E0%B9%88%E0%B8%B2%E0%B8%A2/%E0%B8%AA%E0%B8%A1%E0%B8%B2%E0%B8%84%E0%B8%A1%E0%B8%9C%E0%B8%B9%E0%B9%89%E0%B8%9B%E0%B8%81%E0%B8%84%E0%B8%A3%E0%B8%AD%E0%B8%87%E0%B8%9A%E0%B8%B8%E0%B8%84%E0%B8%84%E0%B8%A5%E0%B8%AD%E0%B8%AD%E0%B8%97%E0%B8%B4%E0%B8%8B%E0%B8%B6%E0%B8%A1%28%E0%B9%84%E0%B8%97%E0%B8%A2%29.png" alt="สมาคมผู้ปกครองบุคคลออทิซึม(ไทย)" onerror="this.style.display='none'"><span>สมาคมผู้ปกครองบุคคลออทิซึม(ไทย)</span></a>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<!-- Government partners -->
+<section class="block">
+  <div class="wrap">
+    <div class="head gov-head"><span class="ic" aria-hidden="true">🔗</span><h2>หน่วยงานที่เกี่ยวข้อง</h2></div>
+    <div class="partners gov-partners">
+      <a class="partner gov-partner" href="https://www.m-society.go.th/home.php" target="_blank" rel="noopener"><img src="Pic/file%20logo/logo-01.png" alt="กระทรวงการพัฒนาสังคมและความมั่นคงของมนุษย์" onerror="this.style.display='none'"><span>กระทรวงการพัฒนาสังคมและความมั่นคงของมนุษย์</span></a>
+      <a class="partner gov-partner" href="https://www.moc.go.th" target="_blank" rel="noopener"><img src="Pic/file%20logo/logo-14.png" alt="กระทรวงพาณิชย์" onerror="this.style.display='none'"><span>กระทรวงพาณิชย์</span></a>
+      <a class="partner gov-partner" href="https://www.facebook.com/%E0%B8%A8%E0%B8%B9%E0%B8%99%E0%B8%A2%E0%B9%8C%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%94%E0%B8%B3%E0%B8%A3%E0%B8%87%E0%B8%8A%E0%B8%B5%E0%B8%A7%E0%B8%B4%E0%B8%95%E0%B8%AD%E0%B8%B4%E0%B8%AA%E0%B8%A3%E0%B8%B0%E0%B8%84%E0%B8%99%E0%B8%9E%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%88%E0%B8%B1%E0%B8%87%E0%B8%AB%E0%B8%A7%E0%B8%B1%E0%B8%94%E0%B8%99%E0%B8%99%E0%B8%97%E0%B8%9A%E0%B8%B8%E0%B8%A3%E0%B8%B5-1381044198821252" target="_blank" rel="noopener"><img src="Pic/file%20logo/logo-15.png" alt="ศูนย์การดำรงชีวิตอิสระคนพิการจังหวัดนนทบุรี" onerror="this.style.display='none'"><span>ศูนย์การดำรงชีวิตอิสระคนพิการจังหวัดนนทบุรี</span></a>
+      <a class="partner gov-partner" href="https://www.facebook.com/AccessibilityIsFreedom" target="_blank" rel="noopener"><img src="Pic/file%20logo/logo-16.png" alt="Accessibility Is Freedom เข้าถึงและเท่าเทียม" onerror="this.style.display='none'"><span>Accessibility Is Freedom เข้าถึงและเท่าเทียม</span></a>
+      <a class="partner gov-partner" href="https://www.facebook.com/konpikanthai/" target="_blank" rel="noopener"><img src="Pic/file%20logo/logo-17.png" alt="คนพิการต้องมีงานทำมูลนิธินวัตกรรมทางสังคม" onerror="this.style.display='none'"><span>คนพิการต้องมีงานทำมูลนิธินวัตกรรมทางสังคม</span></a>
+      <a class="partner gov-partner" href="https://www.transportationforall.org/" target="_blank" rel="noopener"><img src="Pic/file%20logo/logo-18.png" alt="ขนส่งมวลชนทุกคนต้องขึ้นได้ Transportation For All" onerror="this.style.display='none'"><span>ขนส่งมวลชนทุกคนต้องขึ้นได้ Transportation For All</span></a>
+      <a class="partner gov-partner" href="https://www.osep.or.th" target="_blank" rel="noopener"><img src="Pic/file%20logo/osep.jpg" alt="สำนักงานส่งเสริมวิสาหกิจเพื่อสังคม" onerror="this.style.display='none'"><span>สำนักงานส่งเสริมวิสาหกิจเพื่อสังคม</span></a>
+      <a class="partner gov-partner" href="https://dmh.go.th/main.asp" target="_blank" rel="noopener"><img src="Pic/file%20logo/dmh-new..jpg" alt="กรมสุขภาพจิต กระทรวงสาธารณสุข" onerror="this.style.display='none'"><span>กรมสุขภาพจิต กระทรวงสาธารณสุข</span></a>
+      <a class="partner gov-partner" href="https://www.ohchr.org/en/treaty-bodies/crpd" target="_blank" rel="noopener">
+        <span class="gov-logo crpd-logo" aria-hidden="true">
+          <span class="crpd-grid">
+            <span>C</span><span>R</span><span>P</span><span>D</span>
+          </span>
+          <span class="crpd-text">Convention on the Rights of Persons with Disabilities</span>
+        </span>
+        <span>คณะกรรมการว่าด้วยสิทธิคนพิการแห่งสหประชาชาติ</span>
+      </a>
+      <a class="partner gov-partner" href="https://www.internationaldisabilityalliance.org/" target="_blank" rel="noopener"><img src="Pic/file%20logo/IDA-Logo.png" alt="International Disability Alliance" onerror="this.style.display='none'"><span>International Disability Alliance</span></a>
+      <a class="partner gov-partner" href="https://www.moe.go.th" target="_blank" rel="noopener"><img src="Pic/file%20logo/logo-13.png" alt="กระทรวงศึกษาธิการ" onerror="this.style.display='none'"><span>กระทรวงศึกษาธิการ</span></a>
+      <a class="partner gov-partner" href="https://www.doe.go.th/prd/main" target="_blank" rel="noopener"><img src="Pic/file%20logo/logo-12.png" alt="กรมการจัดหางาน" onerror="this.style.display='none'"><span>กรมการจัดหางาน</span></a>
+      <a class="partner gov-partner" href="https://www.glo.or.th/home-page" target="_blank" rel="noopener"><img src="Pic/file%20logo/logo-11.png" alt="สำนักงานสลากกินแบ่งรัฐบาล" onerror="this.style.display='none'"><span>สำนักงานสลากกินแบ่งรัฐบาล</span></a>
+      <a class="partner gov-partner" href="https://thailand.un.org/th/about/about-the-un" target="_blank" rel="noopener"><img src="Pic/file%20logo/un-thailand.png" alt="สหประชาชาติ ประเทศไทย" onerror="this.style.display='none'"><span>สหประชาชาติ ประเทศไทย</span></a>
+      <a class="partner gov-partner" href="https://www.th.undp.org/content/thailand/en/home.html" target="_blank" rel="noopener"><img src="Pic/file%20logo/logo-03.png" alt="UNDP Thailand" onerror="this.style.display='none'"><span>UNDP Thailand</span></a>
+      <a class="partner gov-partner" href="https://dep.go.th/th/" target="_blank" rel="noopener"><img src="Pic/file%20logo/logo-04.png" alt="กรมส่งเสริมและพัฒนาคุณภาพชีวิตคนพิการ" onerror="this.style.display='none'"><span>กรมส่งเสริมและพัฒนาคุณภาพชีวิตคนพิการ</span></a>
+      <a class="partner gov-partner" href="https://www.nhso.go.th" target="_blank" rel="noopener"><img src="Pic/file%20logo/logo-05.png" alt="สำนักงานหลักประกันสุขภาพแห่งชาติ" onerror="this.style.display='none'"><span>สำนักงานหลักประกันสุขภาพแห่งชาติ (สปสช.)</span></a>
+      <a class="partner gov-partner" href="https://www.thaihealth.or.th" target="_blank" rel="noopener"><img src="Pic/file%20logo/logo-06.png" alt="สำนักงานกองทุนสนับสนุนการสร้างเสริมสุขภาพ" onerror="this.style.display='none'"><span>สำนักงานกองทุนสนับสนุนการสร้างเสริมสุขภาพ (สสส.)</span></a>
+      <a class="partner gov-partner" href="https://www.nbtc.go.th" target="_blank" rel="noopener"><img src="Pic/file%20logo/nbtc.png" alt="สำนักงานคณะกรรมการกิจการกระจายเสียง กิจการโทรทัศน์ และกิจการโทรคมนาคมแห่งชาติ" onerror="this.style.display='none'"><span>สำนักงาน กสทช.</span></a>
+      <a class="partner gov-partner" href="https://main.bangkok.go.th" target="_blank" rel="noopener"><img src="Pic/file%20logo/bma.png" alt="กรุงเทพมหานคร" onerror="this.style.display='none'"><span>กรุงเทพมหานคร</span></a>
+      <a class="partner gov-partner" href="https://forallcenter.org" target="_blank" rel="noopener"><img src="Pic/file%20logo/logo-09.png" alt="มูลนิธิสากลเพื่อคนพิการ" onerror="this.style.display='none'"><span>มูลนิธิสากลเพื่อคนพิการ</span></a>
+      <a class="partner gov-partner" href="https://www.onde.go.th/view/1/%E0%B8%AB%E0%B8%99%E0%B9%89%E0%B8%B2%E0%B9%81%E0%B8%A3%E0%B8%81/TH-TH" target="_blank" rel="noopener"><img src="Pic/file%20logo/logo-10.png" alt="สำนักงานคณะกรรมการดิจิทัลเพื่อเศรษฐกิจและสังคมแห่งชาติ" onerror="this.style.display='none'"><span>สำนักงานคณะกรรมการดิจิทัลเพื่อเศรษฐกิจและสังคมแห่งชาติ</span></a>
+      <a class="partner gov-partner" href="https://www.jobfinfin.com/" target="_blank" rel="noopener"><img src="Pic/file%20logo/jobfinfin.png" alt="Job Fin Fin" onerror="this.style.display='none'"><span>Job Fin Fin</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- Hotline -->
+<section class="block alt">
+  <div class="wrap">
+    <div class="hotline">
+      <div class="l"><h3>สายด่วนคนพิการ</h3><p>กรมส่งเสริมและพัฒนาคุณภาพชีวิตคนพิการ</p></div>
+      <a href="tel:1479" class="call" aria-label="โทรสายด่วนคนพิการ 1479">📞 1479</a>
+    </div>
+  </div>
+</section>
+
+<!-- Contact -->
+<section class="block" id="contact">
+  <div class="wrap contact">
+    <div class="info">
+      <h2>ติดต่อสมาคม</h2>
+      <p>255 ห้อง 6-8 ชั้น 3 อาคารศูนย์พัฒนาและฝึกอบรมคนพิการแห่งเอเชียและแปซิฟิก (APCD) ถนนราชวิถี แขวงทุ่งพญาไท เขตราชเทวี กรุงเทพมหานคร 10400</p>
+      <p>✉️ disabilitiesth@gmail.com</p>
+      <a href="tel:023544260" class="tel">📞 02-354-4260</a>
+    </div>
+    <div class="map"><iframe title="แผนที่ตั้งสมาคม" loading="lazy" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3875.15139515162!2d100.52614701483063!3d13.769742190335837!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e29952a2cdf38b%3A0x184a992ec58439a3!2z4Liq4Lih4Liy4LiE4Lih4Liq4Lig4Liy4LiE4LiZ4Lie4Li04LiB4Liy4Lij4LiX4Li44LiB4Lib4Lij4Liw4LmA4Lig4LiX4LmB4Lir4LmI4LiH4Lib4Lij4Liw4LmA4LiX4Lio4LmE4LiX4Lii!5e0!3m2!1sen!2sth!4v1649090216442!5m2!1sen!2sth"></iframe></div>
+  </div>
+</section>
+
+<!-- Social -->
+<section class="block alt social">
+  <div class="wrap">
+    <h2>ติดตามเรา</h2>
+    <div class="links">
+      <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5 3.66 9.15 8.44 9.94v-7.03H7.9v-2.9h2.54V9.85c0-2.51 1.49-3.9 3.78-3.9 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56v1.88h2.78l-.44 2.9h-2.34V22c4.78-.79 8.44-4.94 8.44-9.94Z"/></svg></a>
+      <a href="#" aria-label="X (Twitter)"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.24 2.25h3.31l-7.23 8.26L23 21.75h-6.66l-5.22-6.82-5.97 6.82H1.84l7.73-8.84L1.25 2.25h6.83l4.71 6.23 5.45-6.23Zm-1.16 17.52h1.83L7.01 4.13H5.04l12.04 15.64Z"/></svg></a>
+      <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5.5"/><circle cx="12" cy="12" r="4"/><circle cx="17.4" cy="6.6" r="1.1" fill="currentColor" stroke="none"/></svg></a>
+      <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23 7.5s-.22-1.55-.9-2.23c-.86-.9-1.82-.9-2.26-.96C16.7 4.05 12 4.05 12 4.05s-4.7 0-7.84.26c-.44.06-1.4.06-2.26.96C1.22 5.95 1 7.5 1 7.5S.77 9.31.77 11.13v1.7C.77 14.65 1 16.46 1 16.46s.22 1.55.9 2.23c.86.9 1.99.87 2.49.97 1.8.17 7.61.22 7.61.22s4.7-.01 7.84-.27c.44-.06 1.4-.06 2.26-.96.68-.68.9-2.23.9-2.23s.23-1.81.23-3.63v-1.7c0-1.82-.23-3.63-.23-3.63ZM9.75 14.6V8.74l6.02 2.94-6.02 2.92Z"/></svg></a>
+      <a href="#" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.5 2h-3v13.5a2.5 2.5 0 1 1-2.5-2.5c.27 0 .53.04.78.12V9.9a5.6 5.6 0 0 0-.78-.06A5.55 5.55 0 1 0 16.5 15V8.4a6.86 6.86 0 0 0 4 1.28V6.6a3.86 3.86 0 0 1-4-3.83V2Z"/></svg></a>
+      <a href="#" aria-label="LINE"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3C6.9 3 2.75 6.43 2.75 10.65c0 3.78 3.3 6.95 7.75 7.55.3.06.71.2.81.45.09.23.06.59.03.83l-.13.79c-.04.23-.18.91.8.5 .98-.41 5.3-3.12 7.23-5.34 1.33-1.46 1.97-2.95 1.97-4.78C21.21 6.43 17.06 3 12 3ZM8.3 13.1H6.46a.49.49 0 0 1-.49-.49V9.06a.49.49 0 0 1 .98 0v3.06H8.3a.49.49 0 0 1 0 .98Zm1.7-.49a.49.49 0 0 1-.98 0V9.06a.49.49 0 0 1 .98 0v3.55Zm4.34 0c0 .21-.14.4-.34.47a.5.5 0 0 1-.56-.18l-1.82-2.47v2.18a.49.49 0 0 1-.98 0V9.06c0-.21.14-.4.34-.46a.49.49 0 0 1 .55.18l1.83 2.48V9.06a.49.49 0 0 1 .98 0v3.55Zm3.1-2.27a.49.49 0 0 1 0 .98h-1.35v.8h1.35a.49.49 0 0 1 0 .98h-1.84a.49.49 0 0 1-.49-.49V9.06a.49.49 0 0 1 .49-.49h1.84a.49.49 0 0 1 0 .98h-1.35v.8h1.35Z"/></svg></a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- Floating contact -->
+<div class="fab-wrap" id="fab">
+  <div class="fab-panel" id="fabPanel" role="menu" aria-label="ช่องทางติดต่อ">
+    <button class="fab-item" type="button" id="openMsg" role="menuitem"><span class="ico ico-msg" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 11 21 3l-8 18-2.5-7.5L3 11Z"/></svg></span> ส่งข้อความถึงทีมงาน</button>
+    <a class="fab-item" href="https://line.me/ti/p/cDJ_30FmII" target="_blank" rel="noopener" role="menuitem"><span class="ico ico-line" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3C6.9 3 3 6.4 3 10.6c0 2.4 1.3 4.5 3.3 5.9-.1.9-.5 2-1.1 2.9 1.5-.3 2.9-.9 3.9-1.6.9.2 1.9.4 2.9.4 5.1 0 9-3.4 9-7.6S17.1 3 12 3Z"/></svg></span> แชทผ่าน LINE</a>
+    <a class="fab-item" href="https://www.facebook.com/disabilitiesth" target="_blank" rel="noopener" role="menuitem"><span class="ico ico-fb" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 21v-8h2.5l.4-3h-2.9V8.2c0-.9.3-1.5 1.5-1.5H16.5V4.1S15.4 4 14.3 4c-2.3 0-3.8 1.4-3.8 3.9V10H8v3h2.5v8h3Z"/></svg></span> Facebook</a>
+    <a class="fab-item" href="tel:023544260" role="menuitem"><span class="ico ico-tel" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.6c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.4 0 .8-.3 1l-2.3 2.2Z"/></svg></span> โทร 02-354-4260</a>
+    <a class="fab-item" href="mailto:disabilitiesth@gmail.com" role="menuitem"><span class="ico ico-mail" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="m4 7 8 6 8-6"/></svg></span> อีเมล</a>
+  </div>
+  <button class="fab-main" id="fabMain" aria-label="เปิดช่องทางติดต่อ" aria-expanded="false" aria-controls="fabPanel">
+    <svg class="ic-open" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3C6.9 3 3 6.4 3 10.6c0 2.4 1.3 4.5 3.3 5.9-.1.9-.5 2-1.1 2.9 1.5-.3 2.9-.9 3.9-1.6.9.2 1.9.4 2.9.4 5.1 0 9-3.4 9-7.6S17.1 3 12 3Z"/></svg>
+    <svg class="ic-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg>
+  </button>
+</div>
+
+<!-- Message modal -->
+<div class="modal-back" id="msgBack">
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="msgTitle">
+    <div class="modal-head"><h3 id="msgTitle">ส่งข้อความถึงทีมงาน</h3><button class="modal-x" id="closeMsg" aria-label="ปิด">✕</button></div>
+    <div id="msgForm">
+      <div class="field"><label for="mName">ชื่อของคุณ</label><input id="mName" type="text" placeholder="ชื่อ-นามสกุล"></div>
+      <div class="field"><label for="mContact">ช่องทางติดต่อกลับ</label><input id="mContact" type="text" placeholder="เบอร์โทร / อีเมล / LINE ID"></div>
+      <div class="field"><label for="mMsg">ข้อความ</label><textarea id="mMsg" rows="4" placeholder="พิมพ์ข้อความที่ต้องการสอบถาม…"></textarea></div>
+      <button class="btn" id="sendMsg" type="button" style="width:100%;justify-content:center">ส่งข้อความ →</button>
+    </div>
+    <div id="msgDone" style="display:none;text-align:center;padding:14px 0">
+      <div style="font-size:2.6rem">✅</div><h3 style="color:var(--brand-dark);margin:8px 0">ส่งข้อความเรียบร้อย</h3><p style="color:var(--muted)">ทีมงานจะติดต่อกลับโดยเร็วที่สุด ขอบคุณครับ/ค่ะ</p>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="site">
+  <div class="wrap">
+    <div class="foot">
+      <div class="col"><h4>สมาคมสภาคนพิการทุกประเภทแห่งประเทศไทย</h4><p style="color:var(--muted);font-size:.86rem">Disabilities Thailand (DTH) — ปากเสียงเพื่อสิทธิและคุณภาพชีวิตที่เท่าเทียมของคนพิการทุกคน</p></div>
+      <div class="col"><h4>เกี่ยวกับ</h4><a href="#top">หน้าแรก</a><a href="#about">เกี่ยวกับเรา</a><a href="#network">เครือข่าย</a></div>
+      <div class="col"><h4>ข้อมูล</h4><a href="#news">ศูนย์รวมข่าวสาร</a><a href="#activities">กิจกรรม</a><a href="#media">คลังสื่อ</a><a href="#rights">สิทธิคนพิการที่ควรรู้</a></div>
+      <div class="col"><h4>ติดต่อ</h4><a href="#contact">ติดต่อเรา</a><a href="tel:023544260">02-354-4260</a><a href="tel:1479">สายด่วน 1479</a></div>
+    </div>
+    <div class="copy">© 2567 สงวนลิขสิทธิ์โดยสมาคมสภาคนพิการทุกประเภทแห่งประเทศไทย</div>
+  </div>
+</footer>
+
+<script>
+  // Accessibility: font size
+  document.querySelectorAll('[data-fs]').forEach(b=>b.addEventListener('click',()=>{
+    document.documentElement.style.setProperty('--fs',b.dataset.fs);
+    document.querySelectorAll('[data-fs]').forEach(x=>x.classList.remove('active'));b.classList.add('active');
+  }));
+  // Accessibility: contrast
+  document.querySelectorAll('[data-theme]').forEach(b=>b.addEventListener('click',()=>{
+    document.body.classList.remove('hc-white','hc-yellow');
+    if(b.dataset.theme)document.body.classList.add(b.dataset.theme);
+    document.querySelectorAll('[data-theme]').forEach(x=>x.classList.remove('active'));b.classList.add('active');
+  }));
+  // Header shadow
+  const hdr=document.querySelector('header.site');
+  addEventListener('scroll',()=>hdr.classList.toggle('scrolled',scrollY>10));
+  // Mobile menu
+  const burger=document.getElementById('burger'),menu=document.getElementById('menu');
+  burger.addEventListener('click',()=>{const o=menu.classList.toggle('open');burger.setAttribute('aria-expanded',o);});
+  document.querySelectorAll('.has-sub > a').forEach(a=>a.addEventListener('click',e=>{
+    if(matchMedia('(max-width:760px)').matches){e.preventDefault();const li=a.parentElement,o=li.classList.toggle('open');a.setAttribute('aria-expanded',o);}
+  }));
+  // Hero slider
+  const slides=[...document.querySelectorAll('.slide')],dots=document.getElementById('dots');
+  let i=0,timer;
+  slides.forEach((s,idx)=>{const d=document.createElement('button');d.setAttribute('role','tab');d.setAttribute('aria-label','สไลด์ '+(idx+1));if(idx===0)d.classList.add('on');d.addEventListener('click',()=>go(idx));dots.appendChild(d);});
+  function go(n){slides[i].classList.remove('on');dots.children[i].classList.remove('on');i=(n+slides.length)%slides.length;slides[i].classList.add('on');dots.children[i].classList.add('on');}
+  const reduce=matchMedia('(prefers-reduced-motion:reduce)').matches;
+  function start(){if(!reduce)timer=setInterval(()=>go(i+1),5500);}
+  function stop(){clearInterval(timer);}
+  document.getElementById('next').addEventListener('click',()=>{go(i+1);stop();start();});
+  document.getElementById('prev').addEventListener('click',()=>{go(i-1);stop();start();});
+  document.querySelector('.hero').addEventListener('mouseenter',stop);
+  document.querySelector('.hero').addEventListener('mouseleave',start);
+  start();
+  // Rights tabs
+  document.querySelectorAll('[data-rights-tabs]').forEach(wrap=>{
+    const tabs=[...wrap.querySelectorAll('.rights-tab')];
+    const panels=[...wrap.querySelectorAll('.rights-panel')];
+    tabs.forEach(tab=>tab.addEventListener('click',()=>{
+      tabs.forEach(t=>{t.classList.remove('active');t.setAttribute('aria-selected','false');});
+      panels.forEach(p=>p.classList.remove('active'));
+      tab.classList.add('active');
+      tab.setAttribute('aria-selected','true');
+      const panel=wrap.querySelector('#'+tab.dataset.target);
+      if(panel)panel.classList.add('active');
+    }));
+  });
+  // Leadership board
+  document.querySelectorAll('[data-board]').forEach(board=>{
+    const items=[...board.querySelectorAll('.board-figure')];
+    const nameEl=board.querySelector('[data-board-name-display]');
+    const roleEl=board.querySelector('[data-board-role-display]');
+    const card=board.querySelector('[data-board-card]');
+    const ordered=[...items].sort((a,b)=>{
+      const score=item=>{
+        if(item.classList.contains('board-figure--center')) return 0;
+        const role=item.dataset.role || '';
+        const m=role.match(/คนที่\s*(\d+)/);
+        if(m) return parseInt(m[1],10);
+        return 99;
+      };
+      return score(a)-score(b);
+    });
+    let boardIndex=0;
+    let boardTimer;
+    function activate(item){
+      items.forEach(x=>{x.classList.remove('active');x.setAttribute('aria-selected','false');});
+      item.classList.add('active');
+      item.setAttribute('aria-selected','true');
+      board.classList.add('is-dim');
+      boardIndex=Math.max(0, ordered.indexOf(item));
+      if(card)card.classList.add('is-fading');
+      const sync=()=>{
+        if(nameEl)nameEl.textContent=item.dataset.name;
+        if(roleEl)roleEl.textContent=item.dataset.role;
+        if(card)card.classList.remove('is-fading');
+      };
+      clearTimeout(board._fadeTimer);
+      board._fadeTimer=setTimeout(sync,210);
+    }
+    function nextBoard(){
+      if(!ordered.length) return;
+      boardIndex=(boardIndex+1)%ordered.length;
+      activate(ordered[boardIndex]);
+    }
+    function startBoardLoop(){
+      stopBoardLoop();
+      boardTimer=setInterval(nextBoard,10000);
+    }
+    function stopBoardLoop(){
+      clearInterval(boardTimer);
+    }
+    items.forEach(item=>{
+      item.addEventListener('click',()=>{activate(item);startBoardLoop();});
+      item.addEventListener('focus',()=>{activate(item);startBoardLoop();});
+    });
+    board.addEventListener('mouseenter',stopBoardLoop);
+    board.addEventListener('mouseleave',startBoardLoop);
+    if(ordered[0])activate(ordered[0]);
+    startBoardLoop();
+  });
+  // Floating contact
+  const fab=document.getElementById('fab'),fabMain=document.getElementById('fabMain');
+  fabMain.addEventListener('click',()=>{const o=fab.classList.toggle('open');fabMain.setAttribute('aria-expanded',o);});
+  document.addEventListener('click',e=>{if(fab.classList.contains('open')&&!fab.contains(e.target)){fab.classList.remove('open');fabMain.setAttribute('aria-expanded','false');}});
+  // Message modal
+  const back=document.getElementById('msgBack'),mForm=document.getElementById('msgForm'),mDone=document.getElementById('msgDone');
+  function openModal(){back.classList.add('show');mForm.style.display='';mDone.style.display='none';setTimeout(()=>document.getElementById('mName').focus(),60);}
+  function closeModal(){back.classList.remove('show');}
+  document.getElementById('openMsg').addEventListener('click',()=>{fab.classList.remove('open');fabMain.setAttribute('aria-expanded','false');openModal();});
+  document.getElementById('closeMsg').addEventListener('click',closeModal);
+  back.addEventListener('click',e=>{if(e.target===back)closeModal();});
+  addEventListener('keydown',e=>{if(e.key==='Escape')closeModal();});
+  document.getElementById('sendMsg').addEventListener('click',()=>{const n=document.getElementById('mName').value.trim(),m=document.getElementById('mMsg').value.trim();if(!n||!m){alert('กรุณากรอกชื่อและข้อความ');return;}mForm.style.display='none';mDone.style.display='block';});
+  // News tabs
+  document.querySelectorAll('[data-tabwrap]').forEach(wrap=>{
+    const tabs=wrap.querySelectorAll('.tabs .tab');
+    tabs.forEach(t=>t.addEventListener('click',()=>{
+      tabs.forEach(x=>{x.classList.remove('active');x.setAttribute('aria-selected','false');});
+      t.classList.add('active');t.setAttribute('aria-selected','true');
+      wrap.querySelectorAll('.tabpanel').forEach(p=>p.classList.remove('active'));
+      document.getElementById(t.dataset.target).classList.add('active');
+    }));
+  });
+  // Media filter
+  document.querySelectorAll('[data-filterwrap]').forEach(wrap=>{
+    const btns=wrap.querySelectorAll('.filterbar .tab');
+    btns.forEach(b=>b.addEventListener('click',()=>{
+      btns.forEach(x=>x.classList.remove('active'));b.classList.add('active');
+      const f=b.dataset.filter;
+      wrap.querySelectorAll('.mitem').forEach(it=>{it.style.display=(f==='all'||it.dataset.type===f)?'':'none';});
+    }));
+  });
+</script>
+</body>
+</html>
