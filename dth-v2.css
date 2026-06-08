@@ -325,7 +325,8 @@ body.hc-white .hotline,body.hc-yellow .hotline{border:2px solid var(--brand)}
 /* ====================== FOOTER (green, thaihealth-style) ====================== */
 footer.site{background:var(--brand-deep);color:#fff;padding:clamp(44px,5vw,72px) 0 24px}
 .foot{display:grid;grid-template-columns:1.1fr 1.4fr 1.2fr;gap:clamp(28px,4vw,48px);align-items:start}
-.foot .flogo img{height:96px;width:auto;filter:brightness(0) invert(1)}
+.foot .flogo{display:inline-flex;background:#fff;border-radius:18px;padding:12px;box-shadow:var(--shadow-sm)}
+.foot .flogo img{height:84px;width:auto;object-fit:contain}
 .foot h4{font-size:1.4rem;font-weight:700;margin-bottom:14px}
 .foot address{font-style:normal;line-height:1.9;opacity:.92;font-size:.95rem}
 .foot-actions{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
