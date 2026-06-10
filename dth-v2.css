@@ -127,7 +127,7 @@ header.site.scrolled{box-shadow:var(--shadow);background:var(--bg)}
 
 /* ====================== HERO SLIDER ====================== */
 .hero{position:relative;overflow:hidden;background:var(--leaf)}
-.slides{position:relative;aspect-ratio:1512/520;min-height:320px}
+.slides{position:relative;width:100%;aspect-ratio:1512/520;min-height:320px}
 .slide{position:absolute;inset:0;opacity:0;transition:opacity .8s var(--ease);background-size:cover;background-position:center;display:flex;align-items:flex-end}
 .slide.on{opacity:1}
 .slide::before{content:"";position:absolute;inset:0;background:
@@ -459,6 +459,23 @@ body.hc-white .about-stat,body.hc-yellow .about-stat{border:2px solid var(--bran
   .hotline{padding:28px;flex-direction:column;text-align:center}
   .evt{flex-direction:row}
   .foot-actions{max-width:380px}
+  /* hero: fixed height instead of wide aspect ratio */
+  .slides{aspect-ratio:auto;height:380px;min-height:0}
+  .slide .cap{padding:20px 18px 52px}
+  .slide .cap h2{font-size:1.3rem;max-width:none}
+  .slide .cap p{font-size:.9rem;margin-top:8px}
+  .slide .cap .tag{margin-bottom:10px;font-size:.74rem}
+  .hero-arrow{width:36px;height:36px;font-size:1rem}
+  .hero-arrow.prev{left:8px}
+  .hero-arrow.next{right:8px}
+  .hero-dots{bottom:14px}
+  /* sections breathe less on small screens */
+  .kicker{flex-wrap:wrap}
+  .rights-panel{padding:20px}
+}
+@media(max-width:560px){
+  .topbar .left{display:none}
+  .topbar .right{margin-left:auto}
 }
 @media(max-width:480px){
   .qa-visual{grid-template-columns:1fr}
@@ -472,7 +489,7 @@ body.hc-white .about-stat,body.hc-yellow .about-stat{border:2px solid var(--bran
 .member-card .mc-head{display:flex;align-items:center;gap:14px}
 .member-card .mc-head img{width:64px;height:64px;object-fit:contain;border-radius:14px;background:#fff;border:1px solid var(--border);padding:4px;flex-shrink:0}
 .member-card h3{font-size:1.02rem;font-weight:700;color:var(--brand-dark);line-height:1.45}
-.member-card .mc-info{display:flex;flex-direction:column;gap:6px;color:var(--muted);font-size:.9rem;line-height:1.65}
+.member-card .mc-info{display:flex;flex-direction:column;gap:6px;color:var(--muted);font-size:.9rem;line-height:1.65;overflow-wrap:anywhere}
 .member-card .mc-info a{color:var(--brand-dark);font-weight:600}
 .member-card .mc-info a:hover{text-decoration:underline}
 .member-card .mc-fb{margin-top:auto;align-self:flex-start}

@@ -10,7 +10,7 @@
 <meta property="og:type" content="website">
 <meta property="og:locale" content="th_TH">
 <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&family=Noto+Sans+Thai:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="dth-v2.css">
+<link rel="stylesheet" href="dth-v2.css?v=3">
 </head>
 <body>
 
@@ -470,6 +470,12 @@
       const panel=wrap.querySelector('#'+tab.dataset.target);if(panel)panel.classList.add('active');
     }));
   });
+  // ---- FB page embed: fit plugin width to small screens ----
+  (function(){
+    const box=document.querySelector('.fb-embed'),f=box?.querySelector('iframe');if(!f)return;
+    const w=Math.floor(box.clientWidth);
+    if(w&&w<500){const u=new URL(f.src);u.searchParams.set('width',w);f.width=w;f.src=u;}
+  })();
   // ---- Floating contact ----
   const fab=document.getElementById('fab'),fabMain=document.getElementById('fabMain');
   fabMain.addEventListener('click',()=>{const o=fab.classList.toggle('open');fabMain.setAttribute('aria-expanded',o);});
