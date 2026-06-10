@@ -464,3 +464,24 @@ body.hc-white .about-stat,body.hc-yellow .about-stat{border:2px solid var(--bran
   .qa-visual{grid-template-columns:1fr}
   .partners{grid-template-columns:repeat(2,1fr)}
 }
+
+/* ---- Member organization contact cards (about.html#members) ---- */
+.members-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:var(--s4)}
+.member-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow-sm);padding:22px;display:flex;flex-direction:column;gap:12px;transition:.25s var(--ease)}
+.member-card:hover{box-shadow:var(--shadow);transform:translateY(-3px);border-color:var(--brand)}
+.member-card .mc-head{display:flex;align-items:center;gap:14px}
+.member-card .mc-head img{width:64px;height:64px;object-fit:contain;border-radius:14px;background:#fff;border:1px solid var(--border);padding:4px;flex-shrink:0}
+.member-card h3{font-size:1.02rem;font-weight:700;color:var(--brand-dark);line-height:1.45}
+.member-card .mc-info{display:flex;flex-direction:column;gap:6px;color:var(--muted);font-size:.9rem;line-height:1.65}
+.member-card .mc-info a{color:var(--brand-dark);font-weight:600}
+.member-card .mc-info a:hover{text-decoration:underline}
+.member-card .mc-fb{margin-top:auto;align-self:flex-start}
+@media(max-width:480px){.members-grid{grid-template-columns:1fr}}
+
+/* ---- Facebook Page Plugin embed (plugin caps width at 500px - scale up on desktop) ---- */
+.fb-embed{display:flex;justify-content:center;overflow:hidden}
+.fb-embed iframe{max-width:100%;border-radius:var(--radius);box-shadow:var(--shadow);background:#fff}
+@media(min-width:761px){
+  .fb-embed{height:1015px;align-items:flex-start}
+  .fb-embed iframe{transform:scale(1.35);transform-origin:top center}
+}
