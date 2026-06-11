@@ -49,8 +49,10 @@ section>.note{color:var(--muted);font-size:.92rem;margin-bottom:24px}
 .node.page{background:var(--brand-dark);color:#fff}
 .node.section{background:var(--tint);color:var(--brand-deep);border:1px solid #dde5c2;font-weight:400;font-size:.86rem;box-shadow:none;padding:7px 13px}
 .node.ext{background:var(--clay-tint);color:#8a5526;border:1px dashed #dcb88e;font-weight:400;font-size:.86rem;box-shadow:none;padding:7px 13px}
+.node.pending{background:#fff;color:var(--muted);border:1px dashed #d6a5a0;font-weight:400;font-size:.86rem;box-shadow:none;padding:7px 13px;text-decoration:underline;text-decoration-color:#d23b2f;text-decoration-thickness:2px;text-underline-offset:3px}
+.node.pending::after{content:"หน้าเมนูนี้ยังไม่เรียบร้อย";display:block;font-size:.66rem;color:#9aa093;text-decoration:none}
 .trunk{width:2px;height:26px;background:#cfd9ad}
-.branches{display:grid;grid-template-columns:repeat(5,1fr);gap:16px;width:100%;position:relative;padding-top:26px}
+.branches{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;width:100%;position:relative;padding-top:26px}
 .branches::before{content:"";position:absolute;top:0;left:10%;right:10%;height:2px;background:#cfd9ad}
 .branch{display:flex;flex-direction:column;align-items:center;gap:10px;position:relative}
 .branch::before{content:"";position:absolute;top:-26px;width:2px;height:26px;background:#cfd9ad}
@@ -120,6 +122,7 @@ section>.note{color:var(--muted);font-size:.92rem;margin-bottom:24px}
     <span><i class="dot section"></i> ส่วนในหน้า (section)</span>
     <span><i class="dot ext"></i> ลิงก์ภายนอก</span>
     <span><i class="dot act"></i> จุดที่ผู้ใช้กดทำงาน (interaction)</span>
+    <span><i class="dot" style="background:#d23b2f"></i> รอเนื้อหา (ขีดแดง = หน้าเมนูยังไม่เรียบร้อย)</span>
   </div>
 
   <!-- ================= SITE MAP ================= -->
@@ -127,56 +130,51 @@ section>.note{color:var(--muted);font-size:.92rem;margin-bottom:24px}
     <h2><span class="ic">🗺️</span> 1. Site Map — โครงสร้างหน้าเว็บ</h2>
     <p class="note">หน้าหลักหน้าเดียวรวมทุก section, หน้ารองแยกตามเมนู — ลิงก์ข่าว/บทความเชื่อมไปเว็บทางการ dth.or.th</p>
     <div class="tree">
-      <div class="node root">หน้าหลัก — dth-v2.html<small>Topbar · แถบ Accessibility · เมนู · Hero Slider · Footer · ปุ่มติดต่อลอย (FAB)</small></div>
+      <div class="node root">หน้าแรก — dth-v2.html<small>Topbar · แถบ Accessibility · เมนู 5 หมวด · Hero Slider · สาระน่ารู้ (แท็บกรองในหน้า) · คลังสื่อ · สิทธิคนพิการ · Q&amp;A · เครือข่าย · สายด่วน 1479 · ติดต่อ+แผนที่ · Footer · ปุ่มติดต่อลอย (โลโก้ DTH) · แถบกลับขึ้นด้านบน</small></div>
       <div class="trunk"></div>
       <div class="branches">
         <div class="branch">
           <div class="node page">เกี่ยวกับเรา<small>about.html</small></div>
           <div class="kids">
-            <div class="node section">ความเป็นมาของสมาคมฯ</div>
-            <div class="node section">องค์การสมาชิก (#members)</div>
-            <div class="node page" style="font-size:.86rem;padding:7px 13px">ข้อบังคับ/ระเบียบ<small>regulations.html</small></div>
-            <div class="node section">ติดต่อเรา (#contact)</div>
+            <div class="node section">ความเป็นมา (#history)</div>
+            <div class="node section">วัตถุประสงค์ 10 ประการ</div>
+            <div class="node section">วิสัยทัศน์ / พันธกิจ</div>
+            <div class="node section">คณะกรรมการ 30 รายชื่อ (#board)</div>
+            <div class="node pending">เจ้าหน้าที่สมาคม</div>
+            <div class="node section">ผลงานสภา Milestone (#milestones)</div>
+            <div class="node section">องค์การสมาชิก 6 องค์การ (#members)</div>
+            <div class="node section">ที่ตั้งและการติดต่อ</div>
           </div>
         </div>
         <div class="branch">
-          <div class="node page">ข่าวสาร<small>news.html</small></div>
+          <div class="node page">เครือข่าย<small>#network ในหน้าแรก</small></div>
+          <div class="kids">
+            <div class="node section">องค์การคนพิการ → about.html#members</div>
+            <div class="node pending">สภาฯ ประจำจังหวัด</div>
+            <div class="node section">หน่วยงานที่เกี่ยวข้อง 8 แห่ง</div>
+            <div class="node ext">Facebook / X / YouTube / TikTok</div>
+          </div>
+        </div>
+        <div class="branch">
+          <div class="node page">ข่าวสารและกิจกรรม<small>news.html</small></div>
           <div class="kids">
             <div class="node section">ข่าวประชาสัมพันธ์ (?cat=pr)</div>
             <div class="node section">กิจกรรม (?cat=activity)</div>
             <div class="node section">รายงานประจำปี (?cat=report)</div>
-            <div class="node section">สาระน่ารู้ (?cat=knowledge)</div>
             <div class="node ext">บทความเต็ม → dth.or.th</div>
           </div>
         </div>
         <div class="branch">
-          <div class="node page">สิทธิและสวัสดิการ<small>#rights ในหน้าหลัก</small></div>
+          <div class="node page">ข้อมูลสำคัญ<small>รวมจุดเข้าถึงข้อมูล</small></div>
           <div class="kids">
-            <div class="node section">แท็บ: บัตรคนพิการ</div>
-            <div class="node section">แท็บ: เบี้ยความพิการ</div>
-            <div class="node section">แท็บ: การศึกษาและการทำงาน</div>
-            <div class="node section">แท็บ: ร้องเรียนและช่วยเหลือ</div>
+            <div class="node pending">ข้อเสนอ</div>
+            <div class="node page" style="font-size:.86rem;padding:7px 13px">กฎหมาย + เอกสารดาวน์โหลด<small>regulations.html (#laws)</small></div>
+            <div class="node pending">DTH-Magazine</div>
+            <div class="node section">สาระน่ารู้ (news.html?cat=knowledge)</div>
+            <div class="node section">สิทธิคนพิการที่ควรรู้ (#rights — 4 แท็บ)</div>
             <div class="node section">คำถามที่พบบ่อย (#qa)</div>
+            <div class="node section">คลังสื่อ / อินโฟกราฟิก (#media)</div>
             <div class="node ext">หางาน → jobfinfin.com</div>
-          </div>
-        </div>
-        <div class="branch">
-          <div class="node page">คลังสื่อ<small>#media ในหน้าหลัก</small></div>
-          <div class="kids">
-            <div class="node section">แท็บ: อินโฟกราฟิก</div>
-            <div class="node section">แท็บ: วิดีโอ</div>
-            <div class="node section">ดาวน์โหลดเอกสาร (PDF/Word)</div>
-            <div class="node ext">คลังเต็ม → dth.or.th/infographic</div>
-          </div>
-        </div>
-        <div class="branch">
-          <div class="node page">เครือข่าย<small>#network ในหน้าหลัก</small></div>
-          <div class="kids">
-            <div class="node section">องค์การสมาชิก 6 สมาคม</div>
-            <div class="node section">หน่วยงานที่เกี่ยวข้อง 8 แห่ง</div>
-            <div class="node section">สายด่วน 1479</div>
-            <div class="node section">ติดต่อสมาคม + แผนที่ (#contact)</div>
-            <div class="node ext">Facebook / X / YouTube / TikTok</div>
           </div>
         </div>
       </div>
@@ -207,9 +205,9 @@ section>.note{color:var(--muted);font-size:.92rem;margin-bottom:24px}
       <div class="flow">
         <h3><span class="n">B</span> ติดตามข่าวสาร / สาระน่ารู้</h3>
         <div class="steps">
-          <div class="step">เข้าหน้าหลัก → section <b>สาระน่ารู้</b></div>
+          <div class="step">เข้าหน้าแรก → section <b>สาระน่ารู้</b></div>
           <div class="arrow">↓</div>
-          <div class="step act">เลือกแท็บหมวด <b>(ล่าสุด / สุขภาพ / ทั่วไป / สมาคมคนตาบอด)</b></div>
+          <div class="step act">เลือกแท็บหมวด <b>(ล่าสุด / สุขภาพ / ทั่วไป / สมาคมคนตาบอด)</b> — กรองการ์ดในหน้าทันที ไม่ reload</div>
           <div class="arrow">↓</div>
           <div class="step">เลือกการ์ดข่าว (ภาพ + วันที่ + ยอดเข้าชม)</div>
           <div class="arrow">↓</div>
