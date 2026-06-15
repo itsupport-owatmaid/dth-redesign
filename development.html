@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ขั้นตอนการพัฒนา — เว็บไซต์สภาคนพิการทุกประเภทแห่งประเทศไทย (DTH)</title>
+<link href="https://fonts.googleapis.com/css2?family=Anuphan:wght@400;500;600;700&family=Sarabun:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --brand:#90C73E;--brand-dark:#557c1f;--brand-deep:#3a531a;
+  --brand-2:#3d8a63;--brand-2-dark:#2a6a4a;
+  --tint:#f0f5e1;--mint:#eef3e4;--leaf:#f6f2e3;
+  --ink:#2e3326;--muted:#68705c;
+  --bg:#fdfcf6;--card:#fffef9;--border:#e6e2cf;
+  --clay:#b9743f;--clay-tint:#f7ead9;
+  --shadow:0 12px 32px rgba(62,58,32,.08);
+  --shadow-sm:0 1px 3px rgba(62,58,32,.06);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Sarabun',system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.7;padding:clamp(20px,4vw,48px)}
+h1,h2,h3,h4{font-family:'Anuphan',sans-serif;font-weight:600}
+.wrap{max-width:1000px;margin:0 auto}
+
+.head{display:flex;align-items:center;gap:18px;flex-wrap:wrap;margin-bottom:10px}
+.head img{width:72px;height:72px;object-fit:contain;background:#fff;border:1px solid var(--border);border-radius:18px;padding:6px}
+.head h1{font-size:clamp(1.4rem,3vw,2.1rem);color:var(--brand-deep);line-height:1.3}
+.head p{color:var(--muted)}
+.intro{background:var(--card);border:1px solid var(--border);border-radius:22px;padding:clamp(18px,3vw,28px);margin:24px 0 36px;box-shadow:var(--shadow-sm)}
+.intro p{color:var(--ink);line-height:1.9}
+.intro p+p{margin-top:10px}
+.intro .meta{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+.chip{background:var(--tint);color:var(--brand-deep);border:1px solid #dde5c2;border-radius:999px;padding:5px 14px;font-size:.82rem;font-weight:500}
+
+/* ---------- timeline ---------- */
+.timeline{position:relative;padding-left:38px}
+.timeline::before{content:"";position:absolute;left:14px;top:8px;bottom:8px;width:3px;background:linear-gradient(var(--brand),var(--brand-2))}
+.phase{position:relative;margin-bottom:26px}
+.phase::before{content:"";position:absolute;left:-31px;top:6px;width:18px;height:18px;border-radius:50%;background:var(--brand-dark);border:4px solid var(--bg);box-shadow:0 0 0 2px var(--brand-dark)}
+.phase-card{background:var(--card);border:1px solid var(--border);border-radius:20px;box-shadow:var(--shadow-sm);padding:clamp(18px,2.5vw,26px);transition:.2s}
+.phase-card:hover{box-shadow:var(--shadow);transform:translateX(3px)}
+.phase-top{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:12px}
+.phase-num{width:34px;height:34px;border-radius:58% 42% 55% 45%/52% 55% 45% 48%;background:var(--brand-dark);color:#fff;display:grid;place-items:center;font-family:'Anuphan',sans-serif;font-weight:600;flex-shrink:0}
+.phase-top h2{font-size:clamp(1.05rem,2vw,1.3rem);color:var(--brand-dark)}
+.phase-date{margin-left:auto;background:var(--leaf);color:var(--brand-deep);border-radius:999px;padding:4px 14px;font-size:.8rem;font-weight:500;white-space:nowrap}
+.phase-card ul{list-style:none;display:flex;flex-direction:column;gap:7px}
+.phase-card li{position:relative;padding-left:24px;line-height:1.7;font-size:.95rem}
+.phase-card li::before{content:"";position:absolute;left:4px;top:.62em;width:8px;height:8px;border-radius:50%;background:var(--brand)}
+.phase-card li b{font-family:'Anuphan',sans-serif;font-weight:500;color:var(--brand-deep)}
+
+/* ---------- tech stack ---------- */
+.tech{background:var(--mint);border:1px solid var(--border);border-radius:22px;padding:clamp(18px,3vw,28px);margin:8px 0 28px}
+.tech h2{font-size:clamp(1.1rem,2vw,1.4rem);color:var(--brand-dark);margin-bottom:14px}
+.tech-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:14px}
+.tech-item{background:#fff;border:1px solid var(--border);border-radius:14px;padding:14px 16px}
+.tech-item strong{font-family:'Anuphan',sans-serif;font-weight:500;color:var(--brand-deep);display:block;margin-bottom:4px}
+.tech-item span{font-size:.85rem;color:var(--muted);line-height:1.5}
+
+/* ---------- nav links ---------- */
+.doc-nav{display:flex;flex-wrap:wrap;gap:12px;margin:28px 0}
+.doc-nav a{display:inline-flex;align-items:center;gap:8px;background:var(--brand-dark);color:#fff;font-family:'Anuphan',sans-serif;font-weight:500;
+  text-decoration:none;padding:11px 22px;border-radius:999px;font-size:.95rem;transition:.2s}
+.doc-nav a:hover{background:var(--brand-deep);transform:translateY(-2px)}
+.doc-nav a.ghost{background:transparent;color:var(--brand-dark);border:1.5px solid var(--border)}
+.doc-nav a.ghost:hover{background:var(--tint);border-color:var(--brand-dark)}
+
+.foot{color:var(--muted);font-size:.82rem;text-align:center;margin-top:10px}
+@media print{body{padding:10mm}.phase-card,.tech,.intro{break-inside:avoid;box-shadow:none}.doc-nav{display:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="head">
+    <img src="Pic/dth-logo.png" alt="โลโก้ DTH" onerror="this.style.display='none'">
+    <div>
+      <h1>ขั้นตอนการพัฒนาเว็บไซต์</h1>
+      <p>สมาคมสภาคนพิการทุกประเภทแห่งประเทศไทย (Disabilities Thailand — DTH)</p>
+    </div>
+  </div>
+
+  <div class="intro">
+    <p>บันทึกขั้นตอนการพัฒนาและปรับปรุงเว็บไซต์ ฉบับ Redesign v2.1 <b>"Human &amp; Natural"</b> — เน้นการออกแบบที่อบอุ่น เป็นธรรมชาติ เข้าถึงง่ายสำหรับทุกคน โดยคงโครงสร้างเดิมและเพิ่มเนื้อหาข้อมูลทางการให้ครบถ้วน</p>
+    <div class="meta">
+      <span class="chip">มิถุนายน 2569 (2026)</span>
+      <span class="chip">11 หน้าเว็บ</span>
+      <span class="chip">Static Site · GitHub Pages</span>
+      <span class="chip">รองรับ Accessibility</span>
+    </div>
+  </div>
+
+  <div class="doc-nav">
+    <a href="dth-v2.html">← กลับหน้าแรก</a>
+    <a href="sitemap.html" class="ghost">ดู Site Map &amp; Flow</a>
+  </div>
+
+  <div class="timeline">
+
+    <div class="phase">
+      <div class="phase-card">
+        <div class="phase-top"><span class="phase-num">1</span><h2>วางโครงสร้าง + ปรับธีม</h2><span class="phase-date">10–11 มิ.ย.</span></div>
+        <ul>
+          <li>ดึงไฟล์ต้นฉบับ <b>dth-v2.html / dth-v2.css</b> มาพัฒนาต่อในเครื่อง</li>
+          <li>ปรับธีมเป็น <b>"Human &amp; Natural"</b> — พื้นกระดาษครีม เขียวธรรมชาติ เงานุ่ม มุมโค้งแบบ organic</li>
+          <li>เปลี่ยนฟอนต์เป็น <b>Anuphan</b> (หัวข้อ) + <b>Sarabun</b> (เนื้อหา) — ฟอนต์ไทยมีหัว อ่านง่าย</li>
+          <li>คงระบบ <b>Accessibility</b> เดิม: ปรับขนาดอักษร 3 ระดับ, โหมดตัดกันสูง (ขาว/เหลืองพื้นดำ), รองรับ reduced-motion</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="phase">
+      <div class="phase-card">
+        <div class="phase-top"><span class="phase-num">2</span><h2>ดึงข้อมูลจริง + หน้ารอง</h2><span class="phase-date">11 มิ.ย.</span></div>
+        <ul>
+          <li>เชื่อมหน้ารอง <b>เกี่ยวกับเรา / ข่าวสาร / ข้อบังคับ</b> ให้เมนูคลิกได้จริง</li>
+          <li>นำไฟล์จริงจากโฟลเดอร์งานเข้าระบบ: <b>โลโก้ 6 สมาคม</b>, อินโฟกราฟิก, เอกสาร PDF</li>
+          <li>จัดโครงสร้างไฟล์ <b>Pic/ · Doc/</b> ชื่อ ASCII ปลอดภัยตอน deploy</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="phase">
+      <div class="phase-card">
+        <div class="phase-top"><span class="phase-num">3</span><h2>ปรับดีไซน์ให้เรียบสะอาด</h2><span class="phase-date">15 มิ.ย.</span></div>
+        <ul>
+          <li>เปลี่ยน <b>emoji หลากสี → SVG icon เส้นโทนเขียว</b> ทั้งเว็บ (เปลี่ยนสีตามโหมด contrast อัตโนมัติ)</li>
+          <li>เอา icon และภาษาอังกฤษหน้าหัวข้อออก ให้สไตล์เรียบ</li>
+          <li>จัด <b>โลโก้หลัก</b> — แบบกลมสมมาตร (header) + แบบแนวนอน (footer)</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="phase">
+      <div class="phase-card">
+        <div class="phase-top"><span class="phase-num">4</span><h2>เนื้อหาทางการ — เกี่ยวกับเรา</h2><span class="phase-date">15 มิ.ย.</span></div>
+        <ul>
+          <li>เพิ่มเนื้อหาทางการครบถ้วน: <b>ความเป็นมา · วัตถุประสงค์ 10 ข้อ · วิสัยทัศน์ · พันธกิจ</b></li>
+          <li><b>คณะกรรมการบริหาร 30 รายชื่อ</b> + รูปผู้บริหาร 6 ท่าน + ภาพคณะกรรมการเต็ม</li>
+          <li><b>ผลงานที่ภาคภูมิใจ</b> 5 ด้าน (กฎหมาย/นโยบาย/เครือข่าย/พิทักษ์สิทธิ/ต่างประเทศ)</li>
+          <li>แก้ข้อมูลติดต่อ <b>องค์การสมาชิก 6 สมาคม</b> — เพิ่มเว็บไซต์, แยกโทรสาร, แก้ที่อยู่</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="phase">
+      <div class="phase-card">
+        <div class="phase-top"><span class="phase-num">5</span><h2>สร้างหน้าใหม่ + ข้อมูลจริง</h2><span class="phase-date">15 มิ.ย.</span></div>
+        <ul>
+          <li><b>เจ้าหน้าที่สมาคม</b> — ผังโครงสร้าง + ตารางรายชื่อ 12 คน</li>
+          <li><b>สภาฯ ประจำจังหวัด</b> — รูป + ตาราง 67 จังหวัด 4 ภาค (จากไฟล์ Excel · กดโทรได้)</li>
+          <li><b>คลังสื่อ / อินโฟกราฟิก</b> — กรองหมวด + ค้นหา แบบหน้าข่าวสาร</li>
+          <li><b>DTH Magazine</b> + <b>ข้อเสนอเชิงนโยบาย</b> — ดาวน์โหลด PDF</li>
+          <li>จัดเมนูใหม่ <b>4 หมวด</b> — ทุกรายการลิงก์หน้าจริงในเว็บ ไม่มีค้าง</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="phase">
+      <div class="phase-card">
+        <div class="phase-top"><span class="phase-num">6</span><h2>Responsive + Animation</h2><span class="phase-date">15 มิ.ย.</span></div>
+        <ul>
+          <li>ปรับการแสดงผล <b>มือถือ</b> — การ์ด 2 คอลัมน์, โลโก้เครือข่าย 4 คอลัมน์, ตารางเลื่อนแนวนอน, ฟอนต์ไม่เบียดบรรทัด</li>
+          <li>ใส่ <b>scroll-reveal animation</b> (เนื้อหาลอยขึ้นตอนเลื่อนถึง) + hero caption</li>
+          <li><b>แถบกลับขึ้นด้านบน</b> เลื่อนขึ้นจากขอบล่าง + ปุ่มติดต่อลอย</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="phase">
+      <div class="phase-card">
+        <div class="phase-top"><span class="phase-num">7</span><h2>Backup + Deploy</h2><span class="phase-date">15 มิ.ย.</span></div>
+        <ul>
+          <li>สำรองไฟล์เฉพาะที่ใช้งานเป็น <b>.zip</b> + เก็บใน Git</li>
+          <li>จัดทำเอกสาร <b>README · Site Map · Flow</b> การทำงาน</li>
+          <li>Deploy ขึ้น <b>GitHub Pages</b> — เผยแพร่ออนไลน์</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="tech">
+    <h2>เทคโนโลยีที่ใช้</h2>
+    <div class="tech-grid">
+      <div class="tech-item"><strong>HTML5 + CSS3</strong><span>โครงสร้างและสไตล์ ไม่พึ่ง framework หนัก</span></div>
+      <div class="tech-item"><strong>Vanilla JavaScript</strong><span>slider · แท็บกรอง · เมนู · animation</span></div>
+      <div class="tech-item"><strong>Anuphan · Sarabun</strong><span>ฟอนต์ไทย Google Fonts</span></div>
+      <div class="tech-item"><strong>GitHub Pages</strong><span>โฮสต์เว็บ static ฟรี</span></div>
+      <div class="tech-item"><strong>Accessibility (a11y)</strong><span>ปรับอักษร · โหมดตัดกันสูง · skip link</span></div>
+      <div class="tech-item"><strong>Responsive</strong><span>รองรับมือถือ–เดสก์ท็อป</span></div>
+    </div>
+  </div>
+
+  <div class="doc-nav">
+    <a href="dth-v2.html">← กลับหน้าแรก</a>
+    <a href="sitemap.html" class="ghost">Site Map &amp; Flow</a>
+    <a href="https://github.com/itsupport-owatmaid/dth-redesign" target="_blank" rel="noopener" class="ghost">ดูซอร์สโค้ดบน GitHub →</a>
+  </div>
+
+  <p class="foot">เว็บไซต์สภาคนพิการทุกประเภทแห่งประเทศไทย · Redesign v2.1 "Human &amp; Natural" · มิถุนายน 2569</p>
+</div>
+</body>
+</html>
