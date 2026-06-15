@@ -90,7 +90,7 @@
         <div class="sub">
           <a href="proposals.html">ข้อเสนอ</a>
           <a href="media.html?cat=law">กฎหมาย</a>
-          <a href="magazine.html">DTH-Magazine</a>
+          <a href="media.html?cat=magazine">DTH-Magazine</a>
           <a href="dth-v2.html#rights">สิทธิคนพิการที่ควรรู้</a>
           <a href="dth-v2.html#qa">คำถามที่พบบ่อย</a>
           <a href="media.html">คลังสื่อ / อินโฟกราฟิก</a>
@@ -121,6 +121,7 @@
       <button class="tab" data-cat="rights" type="button">สิทธิและสวัสดิการ</button>
       <button class="tab" data-cat="law" type="button">กฎหมาย</button>
       <button class="tab" data-cat="home" type="button">ที่อยู่อาศัย</button>
+      <button class="tab" data-cat="magazine" type="button">วารสาร DTH</button>
     </div>
     <div class="hub-toolbar">
       <div class="hub-search">
@@ -154,11 +155,19 @@
         <div class="thumb"><span class="mtype">อินโฟกราฟิก</span><img src="Pic/infographic/home-environment-2567.jpg" alt="การปรับสภาพแวดล้อมที่อยู่อาศัยสำหรับคนพิการ" loading="lazy" onerror="this.parentElement.classList.add('ph');this.parentElement.innerHTML='&#127912;'"></div>
         <div class="body"><div class="meta">อินโฟกราฟิก</div><h3>การปรับสภาพแวดล้อมที่อยู่อาศัยสำหรับคนพิการ</h3></div>
       </a>
+      <a class="card hub-card" data-cat="magazine" href="Doc/magazine/dth-magazine-vol14.pdf" target="_blank" rel="noopener">
+        <div class="thumb"><span class="mtype">วารสาร DTH</span><div class="ph" style="display:grid;place-items:center;width:100%;height:100%"><svg class="ph-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H7a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7Z"/><path d="M14 2v5h5"/><path d="M9 13h6M9 17h6"/></svg></div></div>
+        <div class="body"><div class="meta">PDF · 13 MB</div><h3>DTH Magazine ฉบับที่ 14 — Colleague</h3></div>
+      </a>
+      <a class="card hub-card" data-cat="magazine" href="Doc/magazine/dth-magazine-vol13.pdf" target="_blank" rel="noopener">
+        <div class="thumb"><span class="mtype">วารสาร DTH</span><div class="ph" style="display:grid;place-items:center;width:100%;height:100%"><svg class="ph-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H7a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7Z"/><path d="M14 2v5h5"/><path d="M9 13h6M9 17h6"/></svg></div></div>
+        <div class="body"><div class="meta">PDF · 4.2 MB</div><h3>DTH Magazine ฉบับที่ 13 — Work Together Issue</h3></div>
+      </a>
     </div>
     <div id="hubEmpty" class="card" style="display:none;padding:40px;text-align:center;color:var(--muted)">
       <p style="margin-top:10px">ยังไม่มีรายการในหมวดนี้</p>
     </div>
-    <div class="pager"><div class="total">จำนวนทั้งหมด <b id="hubCount">6</b> รายการ</div></div>
+    <div class="pager"><div class="total">จำนวนทั้งหมด <b id="hubCount">8</b> รายการ</div></div>
   </div>
 </section>
 </main>
@@ -188,7 +197,7 @@
       <a href="news.html">ข่าวสารและกิจกรรม</a>
       <a href="dth-v2.html#rights">สิทธิคนพิการที่ควรรู้</a>
       <a href="media.html?cat=law">กฎหมาย</a>
-          <a href="magazine.html">DTH-Magazine</a>
+          <a href="media.html?cat=magazine">DTH-Magazine</a>
       <a href="regulations.html">เอกสารดาวน์โหลด</a>
       <a href="media.html">คลังสื่อ / อินโฟกราฟิก</a>
       <a href="dth-v2.html#contact">ติดต่อเรา</a>
@@ -231,7 +240,7 @@
     const empty=document.getElementById('hubEmpty');
     const count=document.getElementById('hubCount');
     const crumb=document.getElementById('crumbCat');
-    const names={all:'ทั้งหมด',rights:'สิทธิและสวัสดิการ',law:'กฎหมาย',home:'ที่อยู่อาศัย'};
+    const names={all:'ทั้งหมด',rights:'สิทธิและสวัสดิการ',law:'กฎหมาย',home:'ที่อยู่อาศัย',magazine:'วารสาร DTH'};
     const subOf={};
     let cat=new URLSearchParams(location.search).get('cat')||'all';
     if(!names[cat])cat='all';
