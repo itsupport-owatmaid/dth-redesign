@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>ข่าวสาร | สมาคมสภาคนพิการทุกประเภทแห่งประเทศไทย (DTH)</title>
+<title>คลังสื่อ / อินโฟกราฟิก | สมาคมสภาคนพิการทุกประเภทแห่งประเทศไทย (DTH)</title>
 <meta name="description" content="ข่าวประชาสัมพันธ์ กิจกรรม รายงานประจำปี และสาระน่ารู้ สมาคมสภาคนพิการทุกประเภทแห่งประเทศไทย (Disabilities Thailand)">
 <meta property="og:title" content="ข่าวสาร | Disabilities Thailand (DTH)">
 <meta property="og:type" content="website">
@@ -78,7 +78,7 @@
         </div>
       </div>
       <div class="has-sub">
-        <a href="news.html" class="active" aria-haspopup="true" aria-expanded="false">ข่าวสารและกิจกรรม <span class="caret" aria-hidden="true">▾</span></a>
+        <a href="news.html" aria-haspopup="true" aria-expanded="false">ข่าวสารและกิจกรรม <span class="caret" aria-hidden="true">▾</span></a>
         <div class="sub">
           <a href="news.html?cat=pr">ข่าวประชาสัมพันธ์</a>
           <a href="news.html?cat=activity">กิจกรรม</a>
@@ -86,7 +86,7 @@
         </div>
       </div>
       <div class="has-sub">
-        <a href="dth-v2.html#rights" aria-haspopup="true" aria-expanded="false">ข้อมูลสำคัญ <span class="caret" aria-hidden="true">▾</span></a>
+        <a href="dth-v2.html#rights" class="active" aria-haspopup="true" aria-expanded="false">ข้อมูลสำคัญ <span class="caret" aria-hidden="true">▾</span></a>
         <div class="sub">
           <a href="proposals.html">ข้อเสนอ</a>
           <a href="regulations.html#laws">กฎหมาย</a>
@@ -109,87 +109,56 @@
 
 <!-- ===== Breadcrumb ===== -->
 <nav class="breadcrumb" aria-label="เส้นทางนำทาง">
-  <div class="wrap"><a href="dth-v2.html">หน้าหลัก</a> <span aria-hidden="true">›</span> <span>ข่าวสาร</span> <span aria-hidden="true">›</span> <strong id="crumbCat">ทั้งหมด</strong></div>
+  <div class="wrap"><a href="dth-v2.html">หน้าแรก</a> <span aria-hidden="true">›</span> <span>ข้อมูลสำคัญ</span> <span aria-hidden="true">›</span> <strong>คลังสื่อ / อินโฟกราฟิก</strong></div>
 </nav>
 
 <main id="main">
 <section class="block" style="padding-top:clamp(20px,2.5vw,30px)">
   <div class="wrap">
-
-    <div class="kicker"><span class="ic" aria-hidden="true">📰</span><h1 style="font-size:clamp(1.5rem,2.9vw,2.25rem);font-weight:700;letter-spacing:-.02em;line-height:1.15">ข่าวสาร</h1></div>
-
-    <!-- Category chips (คลิกเพื่อแยกแสดงผลตามหมวด) -->
-    <div class="tabbar" id="catBar" aria-label="หมวดหมู่ข่าวสาร" style="margin-bottom:clamp(18px,2.5vw,26px)">
+    <div class="kicker"><h1 style="font-size:clamp(1.5rem,2.9vw,2.25rem);font-weight:600;line-height:1.2">คลังสื่อ / อินโฟกราฟิก</h1></div>
+    <div class="tabbar" id="catBar" aria-label="หมวดหมู่คลังสื่อ" style="margin-bottom:clamp(18px,2.5vw,26px)">
       <button class="tab active" data-cat="all" type="button">ทั้งหมด</button>
-      <button class="tab" data-cat="pr" type="button">ข่าวประชาสัมพันธ์</button>
-      <button class="tab" data-cat="activity" type="button">กิจกรรม</button>
-      <button class="tab" data-cat="report" type="button">รายงานประจำปี</button>
-      <button class="tab" data-cat="knowledge" type="button">สาระน่ารู้</button>
+      <button class="tab" data-cat="rights" type="button">สิทธิและสวัสดิการ</button>
+      <button class="tab" data-cat="law" type="button">กฎหมาย</button>
+      <button class="tab" data-cat="home" type="button">ที่อยู่อาศัย</button>
     </div>
-
-    <!-- Toolbar -->
     <div class="hub-toolbar">
       <div class="hub-search">
-        <input type="text" id="hubSearch" placeholder="ใส่คำที่ต้องการค้นหา…" aria-label="ค้นหาข่าวสาร">
+        <input type="text" id="hubSearch" placeholder="ใส่คำที่ต้องการค้นหา…" aria-label="ค้นหาคลังสื่อ">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m21 21-4.34-4.34"></path><circle cx="11" cy="11" r="8"></circle></svg>
       </div>
-      <select class="hub-select" id="hubSelect" aria-label="เลือกหมวดย่อยสาระน่ารู้">
-        <option value="">หมวดย่อยสาระน่ารู้</option>
-        <option value="health">สุขภาพ</option>
-        <option value="general">ทั่วไป</option>
-        <option value="blind">สมาคมคนตาบอดแห่งประเทศไทย</option>
-      </select>
+      <a href="https://dth.or.th/infographic" target="_blank" rel="noopener" class="see-all" style="white-space:nowrap">ดูทั้งหมดที่ dth.or.th <span class="arr" aria-hidden="true">&rarr;</span></a>
     </div>
-
-    <!-- News grid -->
     <div class="hub-grid" id="hubGrid">
-
-      <!-- ข่าวประชาสัมพันธ์ -->
-      <a class="card hub-card" data-cat="pr" href="https://dth.or.th/wp-content/uploads/2024/09/ข้อบังคับสภาคนพิการพ.ศ.25602565.pdf" target="_blank" rel="noopener">
-        <div class="thumb"><span class="mtype">ข่าวประชาสัมพันธ์</span><div class="ph" style="display:grid;place-items:center;font-size:3rem;width:100%;height:100%"><svg class="ph-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H7a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7Z"/><path d="M14 2v5h5"/><path d="M9 13h6M9 17h6"/></svg></div></div>
-        <div class="body"><div class="meta"><svg class="im" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg> 16-09-2567</div><h3>เผยแพร่ข้อบังคับสมาคมสภาคนพิการทุกประเภทฯ พ.ศ. 2560 (แก้ไขเพิ่มเติม 2565)</h3><p>ดาวน์โหลดข้อบังคับสมาคมฉบับปรับปรุงล่าสุดได้แล้ว ทั้งรูปแบบ PDF และ Word</p></div>
+      <a class="card hub-card" data-cat="rights" href="https://dth.or.th/infographic/" target="_blank" rel="noopener">
+        <div class="thumb"><span class="mtype">อินโฟกราฟิก</span><img src="https://dth.or.th/wp-content/uploads/2022/07/275229039_1594676890888765_1550337596592218467_n-300x212.jpg" alt="สิทธิของผู้ดูแลคนพิการ" loading="lazy" onerror="this.parentElement.classList.add('ph');this.parentElement.innerHTML='&#127912;'"></div>
+        <div class="body"><div class="meta"><svg class="im" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg> 32,475</div><h3>สิทธิของผู้ดูแลคนพิการ</h3></div>
       </a>
-
-      <!-- กิจกรรม -->
-      <a class="card hub-card" data-cat="activity" href="https://www.facebook.com/share/1Ez81X9Yjh/" target="_blank" rel="noopener">
-        <div class="thumb"><span class="mtype">กิจกรรม</span><img src="https://dth.or.th/wp-content/uploads/2024/09/หน้าปกเว็บไซต์ประชุมสมัชชา-ยาว.png" alt="การประชุมสมัชชาคนพิการ" loading="lazy" onerror="this.parentElement.classList.add('ph');this.parentElement.innerHTML='🤝'"></div>
-        <div class="body"><div class="meta"><svg class="im" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg> ติดตามกำหนดการผ่านเพจ</div><h3>การประชุมสมัชชาคนพิการแห่งชาติ</h3><p>ร่วมขับเคลื่อนนโยบายและสิทธิคนพิการไปด้วยกัน ติดตามรายละเอียดกิจกรรมล่าสุดผ่าน Facebook ของสมาคม</p></div>
+      <a class="card hub-card" data-cat="rights" href="https://dth.or.th/infographic/" target="_blank" rel="noopener">
+        <div class="thumb"><span class="mtype">อินโฟกราฟิก</span><img src="https://dth.or.th/wp-content/uploads/2022/07/273556717_1580157409007380_985939727756942970_n-300x212.jpg" alt="ที่จอดรถคนพิการ" loading="lazy" onerror="this.parentElement.classList.add('ph');this.parentElement.innerHTML='&#127912;'"></div>
+        <div class="body"><div class="meta"><svg class="im" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg> 31,921</div><h3>ที่จอดรถคนพิการ</h3></div>
       </a>
-
-      <!-- สาระน่ารู้ -->
-      <a class="card hub-card" data-cat="knowledge health" href="https://dth.or.th/knowledge/%e0%b9%80%e0%b8%aa%e0%b9%89%e0%b8%99%e0%b9%80%e0%b8%a5%e0%b8%b7%e0%b8%ad%e0%b8%94%e0%b8%82%e0%b8%ad%e0%b8%94/" target="_blank" rel="noopener">
-        <div class="thumb"><span class="mtype">สุขภาพ</span><img src="https://dth.or.th/wp-content/uploads/2022/07/279270879_1630628107293643_3234477952132787000_n-300x212.jpg" alt="เส้นเลือดขอด อีกหนึ่งโรคยอดฮิตของวัยทำงาน" loading="lazy" onerror="this.parentElement.classList.add('ph');this.parentElement.innerHTML='🩺'"></div>
-        <div class="body"><div class="meta"><svg class="im" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg> 25-07-2565 · <svg class="im" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg> 2,877</div><h3>เส้นเลือดขอด อีกหนึ่งโรคยอดฮิตของวัยทำงาน</h3><p>เส้นเลือดขอด อีกหนึ่งโรคยอดฮิตของวัยทำงาน เมื่อเกิดขึ้นแล้วจะทำให้มีอาการปวด จา…</p></div>
+      <a class="card hub-card" data-cat="rights" href="https://dth.or.th/infographic/" target="_blank" rel="noopener">
+        <div class="thumb"><span class="mtype">อินโฟกราฟิก</span><img src="https://dth.or.th/wp-content/uploads/2022/07/275194508_1594645250891929_4929658142830719063_n-300x212.jpg" alt="สิทธิค่าโดยสารอัตราพิเศษในระบบขนส่งสาธารณะ" loading="lazy" onerror="this.parentElement.classList.add('ph');this.parentElement.innerHTML='&#127912;'"></div>
+        <div class="body"><div class="meta"><svg class="im" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg> 28,924</div><h3>สิทธิค่าโดยสารอัตราพิเศษในระบบขนส่งสาธารณะ</h3></div>
       </a>
-      <a class="card hub-card" data-cat="knowledge health" href="https://dth.or.th/knowledge/%e0%b8%a0%e0%b8%b2%e0%b8%a7%e0%b8%b0%e0%b8%82%e0%b9%89%e0%b8%ad%e0%b8%aa%e0%b8%b0%e0%b9%82%e0%b8%9e%e0%b8%81%e0%b9%80%e0%b8%aa%e0%b8%b7%e0%b9%88%e0%b8%ad%e0%b8%a1/" target="_blank" rel="noopener">
-        <div class="thumb"><span class="mtype">สุขภาพ</span><img src="https://dth.or.th/wp-content/uploads/2022/07/กลุ่มไหนเสี่ยงมีภาวะข้อสะโพกเสื่อม-300x212.jpg" alt="กลุ่มไหนเสี่ยงมีภาวะข้อสะโพกเสื่อม" loading="lazy" onerror="this.parentElement.classList.add('ph');this.parentElement.innerHTML='🦴'"></div>
-        <div class="body"><div class="meta"><svg class="im" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg> 25-07-2565 · <svg class="im" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg> 2,821</div><h3>กลุ่มไหนเสี่ยงมีภาวะข้อสะโพกเสื่อม</h3><p>กลุ่มไหนเสี่ยงมีภาวะข้อสะโพกเสื่อม ข้อสะโพกเป็นอวัยวะที่ใช้ในการช่วยพยุงและรับน้…</p></div>
+      <a class="card hub-card" data-cat="law" href="https://dth.or.th/infographic/" target="_blank" rel="noopener">
+        <div class="thumb"><span class="mtype">อินโฟกราฟิก</span><img src="https://dth.or.th/wp-content/uploads/2022/07/275425030_1598676160488838_995252658959268142_n-300x212.jpg" alt="ช่วยเหลือทางกฎหมายแก่คนพิการ" loading="lazy" onerror="this.parentElement.classList.add('ph');this.parentElement.innerHTML='&#127912;'"></div>
+        <div class="body"><div class="meta"><svg class="im" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg> 4,710</div><h3>ช่วยเหลือทางกฎหมายแก่คนพิการ</h3></div>
       </a>
-      <a class="card hub-card" data-cat="knowledge general" href="https://dth.or.th/knowledge/%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b9%80%e0%b8%82%e0%b9%89%e0%b8%b2%e0%b8%aa%e0%b8%b1%e0%b8%87%e0%b8%84%e0%b8%a1%e0%b8%82%e0%b8%ad%e0%b8%87%e0%b8%9a%e0%b8%b8%e0%b8%84%e0%b8%84%e0%b8%a5%e0%b8%ad%e0%b8%ad/" target="_blank" rel="noopener">
-        <div class="thumb"><span class="mtype">ทั่วไป</span><img src="https://dth.or.th/wp-content/uploads/2022/07/289098221_586550159662695_1032763863887327249_n-300x225.jpg" alt="การเข้าสังคมของบุคคลออทิสติก หลังสถานการณ์โควิด-19" loading="lazy" onerror="this.parentElement.classList.add('ph');this.parentElement.innerHTML='🧩'"></div>
-        <div class="body"><div class="meta"><svg class="im" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg> 05-07-2565 · <svg class="im" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg> 2,893</div><h3>การเข้าสังคมของบุคคลออทิสติก หลังสถานการณ์โควิด-19</h3><p>การเข้าสังคมของบุคคลออทิสติก หลังสถานการณ์โควิด-19 อัษฎากรณ์ ขันตี …</p></div>
+      <a class="card hub-card" data-cat="home" href="Pic/infographic/home-mod-7steps.jpg" target="_blank" rel="noopener">
+        <div class="thumb"><span class="mtype">อินโฟกราฟิก</span><img src="Pic/infographic/home-mod-7steps.jpg" alt="การปรับสภาพบ้านสำหรับคนพิการ 7 ขั้นตอน" loading="lazy" onerror="this.parentElement.classList.add('ph');this.parentElement.innerHTML='&#127912;'"></div>
+        <div class="body"><div class="meta">อินโฟกราฟิก</div><h3>การปรับสภาพบ้านสำหรับคนพิการ 7 ขั้นตอน</h3></div>
       </a>
-      <a class="card hub-card" data-cat="knowledge blind" href="https://dth.or.th/knowledge/https-web-facebook-com-tabodthai-photos-a-434572563305797-5424047981024872/" target="_blank" rel="noopener">
-        <div class="thumb"><span class="mtype">สมาคมคนตาบอดฯ</span><img src="https://dth.or.th/wp-content/uploads/2022/07/284793305_5424047971024873_3993741284349771105_n-1-300x200.jpg" alt="เคยไหม? เวลาพบคนตาบอดจะข้ามถนน อยากจะช่วยแต่ไม่รู้ว่าจะทำอย่างไร" loading="lazy" onerror="this.parentElement.classList.add('ph');this.parentElement.innerHTML='🦯'"></div>
-        <div class="body"><div class="meta"><svg class="im" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg> 05-07-2565 · <svg class="im" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg> 5,518</div><h3>เคยไหม? เวลาพบคนตาบอดจะข้ามถนน … อยากจะช่วยแต่ไม่รู้ว่าจะทำอย่างไร??</h3><p>เคยไหม? เวลาพบคนตาบอดจะข้ามถนน … อยากจะช่วยแต่ไม่รู้ว่าจะทำอย่างไร?? การพ…</p></div>
-      </a>
-      <a class="card hub-card" data-cat="knowledge general" href="https://dth.or.th/knowledge/45-%e0%b8%aa%e0%b8%96%e0%b8%b2%e0%b8%99%e0%b8%9e%e0%b8%a2%e0%b8%b2%e0%b8%9a%e0%b8%b2%e0%b8%a5%e0%b9%80%e0%b8%ad%e0%b8%81%e0%b8%8a%e0%b8%99/" target="_blank" rel="noopener">
-        <div class="thumb"><span class="mtype">ทั่วไป</span><img src="https://dth.or.th/wp-content/uploads/2022/07/1-300x300.jpg" alt="45 สถานพยาบาลเอกชนที่สามารถออกเอกสารรับรองความพิการ" loading="lazy" onerror="this.parentElement.classList.add('ph');this.parentElement.innerHTML='🏥'"></div>
-        <div class="body"><div class="meta"><svg class="im" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg> 05-07-2565 · <svg class="im" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg> 19,906</div><h3>45 สถานพยาบาลเอกชนที่สามารถออกเอกสารรับรองความพิการ</h3><p>๔๕ สถานพยาบาลเอกชนที่สามารถออกเอกสารรับรองความพิการ (๑) โรงพยาบาลเพชรเวช เขตห้วย…</p></div>
+      <a class="card hub-card" data-cat="home" href="Pic/infographic/home-environment-2567.jpg" target="_blank" rel="noopener">
+        <div class="thumb"><span class="mtype">อินโฟกราฟิก</span><img src="Pic/infographic/home-environment-2567.jpg" alt="การปรับสภาพแวดล้อมที่อยู่อาศัยสำหรับคนพิการ" loading="lazy" onerror="this.parentElement.classList.add('ph');this.parentElement.innerHTML='&#127912;'"></div>
+        <div class="body"><div class="meta">อินโฟกราฟิก</div><h3>การปรับสภาพแวดล้อมที่อยู่อาศัยสำหรับคนพิการ</h3></div>
       </a>
     </div>
-
-    <!-- Empty state -->
     <div id="hubEmpty" class="card" style="display:none;padding:40px;text-align:center;color:var(--muted)">
-      <div style="font-size:2.6rem" aria-hidden="true">🗂️</div>
       <p style="margin-top:10px">ยังไม่มีรายการในหมวดนี้</p>
-      <p style="margin-top:6px;font-size:.9rem">ติดตามข้อมูลอัปเดตได้ที่ <a href="https://www.facebook.com/share/1Ez81X9Yjh/" target="_blank" rel="noopener" style="color:var(--brand-dark);font-weight:600">Facebook ของสมาคม</a> หรือ <a href="https://dth.or.th/download" target="_blank" rel="noopener" style="color:var(--brand-dark);font-weight:600">เอกสารดาวน์โหลด dth.or.th</a></p>
     </div>
-
-    <div class="pager">
-      <div class="total">จำนวนทั้งหมด <b id="hubCount">7</b> รายการ</div>
-    </div>
-
+    <div class="pager"><div class="total">จำนวนทั้งหมด <b id="hubCount">6</b> รายการ</div></div>
   </div>
 </section>
 </main>
@@ -261,8 +230,8 @@
     const empty=document.getElementById('hubEmpty');
     const count=document.getElementById('hubCount');
     const crumb=document.getElementById('crumbCat');
-    const names={all:'ทั้งหมด',pr:'ข่าวประชาสัมพันธ์',activity:'กิจกรรม',report:'รายงานประจำปี',knowledge:'สาระน่ารู้',health:'สาระน่ารู้ · สุขภาพ',general:'สาระน่ารู้ · ทั่วไป',blind:'สาระน่ารู้ · สมาคมคนตาบอดฯ'};
-    const subOf={health:'knowledge',general:'knowledge',blind:'knowledge'};
+    const names={all:'ทั้งหมด',rights:'สิทธิและสวัสดิการ',law:'กฎหมาย',home:'ที่อยู่อาศัย'};
+    const subOf={};
     let cat=new URLSearchParams(location.search).get('cat')||'all';
     if(!names[cat])cat='all';
 
@@ -282,13 +251,13 @@
       crumb.textContent=names[cat];
       const main=subOf[cat]||cat;
       chips.forEach(ch=>ch.classList.toggle('active',ch.dataset.cat===main));
-      sel.value=subOf[cat]?cat:'';
+      if(sel)sel.value=subOf[cat]?cat:'';
       const url=new URL(location);
       if(cat==='all')url.searchParams.delete('cat');else url.searchParams.set('cat',cat);
       history.replaceState(null,'',url);
     }
     chips.forEach(ch=>ch.addEventListener('click',()=>{cat=ch.dataset.cat;apply();}));
-    sel.addEventListener('change',()=>{cat=sel.value||'knowledge';apply();});
+    if(sel)sel.addEventListener('change',()=>{cat=sel.value||'all';apply();});
     search.addEventListener('input',apply);
     apply();
   })();
