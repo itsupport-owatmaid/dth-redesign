@@ -9,6 +9,9 @@ if ( ! defined( 'ABSPATH' ) ) { exit; }
 
 define( 'DTH_URI', get_template_directory_uri() );
 
+// ระบบจัดการเนื้อหา (Custom Post Types)
+require_once __DIR__ . '/inc/cms.php';
+
 add_action( 'after_setup_theme', function () {
 	add_theme_support( 'title-tag' );
 	add_theme_support( 'post-thumbnails' );
@@ -70,6 +73,11 @@ add_action( 'after_switch_theme', function () {
 	if ( $home_id ) {
 		update_option( 'show_on_front', 'page' );
 		update_option( 'page_on_front', $home_id );
+	}
+
+	// seed ข้อมูลจังหวัดครั้งแรก
+	if ( function_exists( 'dth_seed_provinces' ) ) {
+		dth_seed_provinces();
 	}
 
 	// เปิด permalink สวย + flush

@@ -113,111 +113,30 @@ get_header();
 <section class="block">
   <div class="wrap">
     <div class="kicker"><h2>รายชื่อประธานสภาคนพิการประจำจังหวัด</h2></div>
-    <p class="prov-note">ชุดปี 2567–2568 · รวม 68 จังหวัด แบ่งตาม 4 ภูมิภาค (คลิกที่ภาพเพื่อดูขนาดเต็ม)</p>
+    <?php
+    $dth_regions = dth_regions();
+    $dth_grouped = dth_get_provinces_grouped();
+    $dth_total = 0; foreach ( $dth_grouped as $dth_rows ) { $dth_total += count( $dth_rows ); }
+    ?>
+    <p class="prov-note">ชุดปี 2567–2568 · รวม <?php echo (int) $dth_total; ?> จังหวัด แบ่งตาม <?php echo count( $dth_regions ); ?> ภูมิภาค (คลิกที่ภาพเพื่อดูขนาดเต็ม)</p>
+    <?php foreach ( $dth_regions as $dth_rk => $dth_rinfo ) :
+        $dth_rows = $dth_grouped[ $dth_rk ];
+        if ( empty( $dth_rows ) ) { continue; }
+        $dth_poster = DTH_URI . '/' . $dth_rinfo['poster']; ?>
     <div class="prov-region">
-      <h3 class="region-title">ภาคเหนือ <span>16 จังหวัด</span></h3>
-      <figure class="board-poster region-poster"><a href="<?php echo DTH_URI; ?>/Pic/provinces/north.png" target="_blank" rel="noopener" aria-label="ดูภาพภาคเหนือขนาดเต็ม"><img src="<?php echo DTH_URI; ?>/Pic/provinces/north.png" alt="สภาคนพิการประจำจังหวัด ภาคเหนือ" loading="lazy"></a></figure>
+      <h3 class="region-title"><?php echo esc_html( $dth_rinfo['label'] ); ?> <span><?php echo count( $dth_rows ); ?> จังหวัด</span></h3>
+      <figure class="board-poster region-poster"><a href="<?php echo esc_url( $dth_poster ); ?>" target="_blank" rel="noopener" aria-label="ดูภาพ<?php echo esc_attr( $dth_rinfo['label'] ); ?>ขนาดเต็ม"><img src="<?php echo esc_url( $dth_poster ); ?>" alt="สภาคนพิการประจำจังหวัด <?php echo esc_attr( $dth_rinfo['label'] ); ?>" loading="lazy"></a></figure>
       <div class="table-wrap">
         <table class="board-table prov-table">
           <thead><tr><th scope="col">จังหวัด</th><th scope="col">ชื่อประธานสภาจังหวัด</th><th scope="col">ประเภทความพิการ</th><th scope="col">เบอร์โทร</th></tr></thead>
           <tbody>
-            <tr><td>เชียงใหม่</td><td>ผศ.ดวงพร  อ่อนหวาน</td><td>ออทิสติก</td><td><a href="tel:0897004396">089-7004396</a></td></tr>
-            <tr><td>เชียงราย</td><td>นายพรศักดิ์  สีสม</td><td>สายตา</td><td><a href="tel:0619724715">061-9724715</a></td></tr>
-            <tr><td>แพร่</td><td>นางสาวนิตยา  ท้าวทา</td><td>การได้ยิน</td><td><a href="tel:0983603252">098-3603252</a></td></tr>
-            <tr><td>แม่ฮ่องสอน</td><td>นายเรวัตร  วงศ์ศักดิ์ศรี</td><td>ออทิสติก</td><td><a href="tel:0819982268">081-9982268</a></td></tr>
-            <tr><td>น่าน</td><td>นายบุญเริ่ม  ทิศานุรักษ์</td><td>สายตา</td><td><a href="tel:0637962508">063-7962508</a></td></tr>
-            <tr><td>กำแพงเพชร</td><td>นายสีมาลา  เอี่ยมศรี</td><td>เคลื่อนไหว</td><td><a href="tel:0869378535">086-9378535</a></td></tr>
-            <tr><td>ตาก</td><td>พันโทสุชาติ  โท่มาก</td><td>สติปัญญา</td><td><a href="tel:0910035708">091-0035708</a></td></tr>
-            <tr><td>นครสวรรค์</td><td>นายนิภัทร  ทองเงิน</td><td>การได้ยิน</td><td><a href="tel:0616527696">061-6527696</a></td></tr>
-            <tr><td>พะเยา</td><td>นายเต็ม  มณีวรรณ์</td><td>จิตใจ</td><td><a href="tel:0857070723">085-7070723</a></td></tr>
-            <tr><td>พิจิตร</td><td>นางสาวรินทร์ลภัส  บัณฑิตสกุลชัย</td><td>เคลื่อนไหว</td><td><a href="tel:0954530899">095-453 0899 </a></td></tr>
-            <tr><td>พิษณุโลก</td><td>นายอิศรุจน์  อิศรางกรู ณ อยุธยา</td><td>การได้ยิน</td><td><a href="tel:0956295107">095-6295107</a></td></tr>
-            <tr><td>ลำปาง</td><td>นางกิตติยา  รัตนพรรณ</td><td>สติปัญญา</td><td><a href="tel:0966988368">096-6988368</a></td></tr>
-            <tr><td>ลำพูน</td><td>นางชลธิชา  พิพัฒนไมตรี</td><td>การได้ยิน</td><td><a href="tel:0832049153">083-2049153</a></td></tr>
-            <tr><td>สุโขทัย</td><td>นายไพรวัลย์  ถึงจีน</td><td>การได้ยิน</td><td><a href="tel:0621576202">062-1576202</a></td></tr>
-            <tr><td>อุตรดิตถ์</td><td>นายสมพล  พงษ์พันธ์</td><td>การได้ยิน</td><td><a href="tel:0821700425">082-1700425</a></td></tr>
-            <tr><td>อุทัยธานี</td><td>นายสุนันท์  แซ่โล้ว</td><td>เคลื่อนไหว</td><td><a href="tel:0979311146">097-9311146</a></td></tr>
+            <?php foreach ( $dth_rows as $dth_p ) :
+                $dth_tel = preg_replace( '/\D/', '', $dth_p['phone'] ); ?>
+            <tr><td><?php echo esc_html( $dth_p['name'] ); ?></td><td><?php echo esc_html( $dth_p['chair'] ); ?></td><td><?php echo esc_html( $dth_p['dtype'] ); ?></td><td><?php echo $dth_p['phone'] ? '<a href="tel:' . esc_attr( $dth_tel ) . '">' . esc_html( $dth_p['phone'] ) . '</a>' : ''; ?></td></tr>
+            <?php endforeach; ?>
           </tbody></table></div>
     </div>
-    <div class="prov-region">
-      <h3 class="region-title">ภาคตะวันออกเฉียงเหนือ (อีสาน) <span>19 จังหวัด</span></h3>
-      <figure class="board-poster region-poster"><a href="<?php echo DTH_URI; ?>/Pic/provinces/isan.png" target="_blank" rel="noopener" aria-label="ดูภาพภาคตะวันออกเฉียงเหนือ (อีสาน)ขนาดเต็ม"><img src="<?php echo DTH_URI; ?>/Pic/provinces/isan.png" alt="สภาคนพิการประจำจังหวัด ภาคตะวันออกเฉียงเหนือ (อีสาน)" loading="lazy"></a></figure>
-      <div class="table-wrap">
-        <table class="board-table prov-table">
-          <thead><tr><th scope="col">จังหวัด</th><th scope="col">ชื่อประธานสภาจังหวัด</th><th scope="col">ประเภทความพิการ</th><th scope="col">เบอร์โทร</th></tr></thead>
-          <tbody>
-            <tr><td>เลย</td><td>นายสีหนารถ  อินทร์จา</td><td>สายตา</td><td><a href="tel:0870454146">087-0454146</a></td></tr>
-            <tr><td>กาฬสินธุ์</td><td>นายฉลาด  นะตะวัน</td><td>สายตา</td><td><a href="tel:0806232328">080-6232328</a></td></tr>
-            <tr><td>ขอนแก่น</td><td>นายอาทิตย์  เกตุโท</td><td>การได้ยิน</td><td><a href="tel:0985906696">098-5906696</a></td></tr>
-            <tr><td>ชัยภูมิ</td><td>นางจินตนา  หล้าแก้ว</td><td>ออทิสติก</td><td><a href="tel:0804667837">080-4667837</a></td></tr>
-            <tr><td>นครพนม</td><td>นางสาวนิลวรรณ  ปิติพัฒน์</td><td>การได้ยิน</td><td><a href="tel:0923155549">092-3155549</a></td></tr>
-            <tr><td>นครราชสีมา</td><td>นางสาวรัตนา  สีนาค</td><td>การได้ยิน</td><td><a href="tel:0918280793">091-8280793</a></td></tr>
-            <tr><td>บึงกาฬ</td><td>นางผ่องศรี  โพธิเสน</td><td>เคลื่อนไหว</td><td><a href="tel:0907990622">090-7990622</a></td></tr>
-            <tr><td>บุรีรัมย์</td><td>นายวิสิทธิ์  จันทร์สิงห์</td><td>จิตใจ</td><td><a href="tel:0990757671">099-0757671</a></td></tr>
-            <tr><td>มหาสารคาม</td><td>นายทรงยศ  วันสา</td><td>การได้ยิน</td><td><a href="tel:0986174534">098-6174534</a></td></tr>
-            <tr><td>มุกดาหาร</td><td>นายสุชาติ  คนเพียร</td><td>สายตา</td><td><a href="tel:0985595672">098-5595672</a></td></tr>
-            <tr><td>ยโสธร</td><td>นางสาวชุติมา  ศรีทราไชย</td><td>เคลื่อนไหว</td><td><a href="tel:0818787619">081-8787619</a></td></tr>
-            <tr><td>ร้อยเอ็ด</td><td>นางศุภนุช  เชิงหอม</td><td>สติปัญญา</td><td><a href="tel:0995087991">099-5087991</a></td></tr>
-            <tr><td>ศรีสะเกษ</td><td>นายจีระศักดิ์   พรหมทา</td><td>การได้ยิน</td><td><a href="tel:0971466033">097-1466033</a></td></tr>
-            <tr><td>สกลนคร</td><td>นายปัญญา จันทะเสน</td><td>สายตา</td><td><a href="tel:0996678322">099-6678322</a></td></tr>
-            <tr><td>สุรินทร์</td><td>นางสาวจุฑาภัทร  โนนใหญ่</td><td>สติปัญญา</td><td><a href="tel:0624647081">062-4647081</a></td></tr>
-            <tr><td>หนองคาย</td><td>นายชยุต  มณีรัตน์</td><td>เคลื่อนไหว</td><td><a href="tel:0849576554">084-9576554</a></td></tr>
-            <tr><td>อำนาจเจริญ</td><td>นางนุจรินทร์  ถือสัตย์</td><td>สติปัญญา</td><td><a href="tel:0985849345">098-5849345</a></td></tr>
-            <tr><td>อุดรธานี</td><td>นางสาวยุวดี  เพ็ชรพลอย</td><td>การได้ยิน</td><td><a href="tel:0938209958">093-8209958</a></td></tr>
-            <tr><td>อุบลราชธานี</td><td>นางสาวชนิกูล  สวัสดิ์พันธ์</td><td>เคลื่อนไหว</td><td><a href="tel:0890984566">089-0984566</a></td></tr>
-          </tbody></table></div>
-    </div>
-    <div class="prov-region">
-      <h3 class="region-title">ภาคกลาง <span>19 จังหวัด</span></h3>
-      <figure class="board-poster region-poster"><a href="<?php echo DTH_URI; ?>/Pic/provinces/central.png" target="_blank" rel="noopener" aria-label="ดูภาพภาคกลางขนาดเต็ม"><img src="<?php echo DTH_URI; ?>/Pic/provinces/central.png" alt="สภาคนพิการประจำจังหวัด ภาคกลาง" loading="lazy"></a></figure>
-      <div class="table-wrap">
-        <table class="board-table prov-table">
-          <thead><tr><th scope="col">จังหวัด</th><th scope="col">ชื่อประธานสภาจังหวัด</th><th scope="col">ประเภทความพิการ</th><th scope="col">เบอร์โทร</th></tr></thead>
-          <tbody>
-            <tr><td>เพชรบุรี</td><td>นางสาวศิรินันท์  นิลสุข</td><td>เคลื่อนไหว</td><td><a href="tel:0899139713">089-9139713</a></td></tr>
-            <tr><td>กรุงเทพมหานคร</td><td>นางสาวเพ็ญนภา  นันทดิลก</td><td>สติปัญญา</td><td><a href="tel:0818273475">081-8273475</a></td></tr>
-            <tr><td>จันทบุรี</td><td>นางยุพยง  วณอังศุธร</td><td>การได้ยิน</td><td><a href="tel:0849288762">084-9288762</a></td></tr>
-            <tr><td>ฉะเชิงเทรา</td><td>นางนภาพร  สวนเลิศ</td><td>การได้ยิน</td><td><a href="tel:0959066896">095-9066896</a></td></tr>
-            <tr><td>ชลบุรี</td><td>นายณรงค์  ไปวันเสาร์</td><td>เคลื่อนไหว</td><td><a href="tel:0816691111">081-6691111</a></td></tr>
-            <tr><td>นครนายก</td><td>นางสาวนารีรัตน์ รสหอม</td><td>สายตา</td><td><a href="tel:0890955209">089-0955209</a></td></tr>
-            <tr><td>นครปฐม</td><td>นางจินดา  ดีสุกใส</td><td>จิตใจ</td><td><a href="tel:0955482262">095-5482262</a></td></tr>
-            <tr><td>นนทบุรี</td><td>นายพรทร  ขุนสะอาด</td><td>สติปัญญา</td><td><a href="tel:0819289268">081-9289268</a></td></tr>
-            <tr><td>ปทุมธานี</td><td>นางวาสนา  สำลีรัตน์</td><td>ออทิสติก</td><td><a href="tel:0897817050">089-7817050</a></td></tr>
-            <tr><td>ปราจีนบุรี</td><td>นายสุชาติ  ห้วยแก้ว</td><td>สายตา</td><td><a href="tel:0830498744">083-0498744</a></td></tr>
-            <tr><td>พระนครศรีอยุธยา</td><td>นางสาวชุตินันท์  พุ่มพฤกษ์</td><td>จิตใจ</td><td><a href="tel:0991748529">099-1748529</a></td></tr>
-            <tr><td>ระยอง</td><td>นายสมศักดิ์  จันทร์พราหมณ์</td><td>เคลื่อนไหว</td><td><a href="tel:0870396633">087-0396633</a></td></tr>
-            <tr><td>ราชบุรี</td><td>นางวรวรรณ  องค์อภิชาติ</td><td>การได้ยิน</td><td><a href="tel:0922522404">092-2522404</a></td></tr>
-            <tr><td>สมุทรปราการ</td><td>ดร. สิงห์คำ  มณีจันสุข</td><td>เคลื่อนไหว</td><td><a href="tel:0818319544">081-8319544 </a></td></tr>
-            <tr><td>สมุทรสงคราม</td><td>นางนฤมล  เอมมาวัฒน์</td><td>สติปัญญา</td><td><a href="tel:0802315246">080-2315246</a></td></tr>
-            <tr><td>สมุทรสาคร</td><td>นายเกษม  จันทร์คง</td><td>เคลื่อนไหว</td><td><a href="tel:0892225372">089-2225372</a></td></tr>
-            <tr><td>สระแก้ว</td><td>นายวรพงศ์  วงษ์ศรีแก้ว</td><td>การได้ยิน</td><td><a href="tel:0647795571">064-7795571</a></td></tr>
-            <tr><td>สิงห์บุรี</td><td>นายเฉลิมพร  มั่นคง</td><td>การได้ยิน</td><td><a href="tel:0917814569">091-7814569</a></td></tr>
-            <tr><td>อ่างทอง</td><td>นายทศพร  บินกาซัน</td><td>จิตใจ</td><td><a href="tel:0801098396">080-1098396</a></td></tr>
-          </tbody></table></div>
-    </div>
-    <div class="prov-region">
-      <h3 class="region-title">ภาคใต้ <span>14 จังหวัด</span></h3>
-      <figure class="board-poster region-poster"><a href="<?php echo DTH_URI; ?>/Pic/provinces/south.png" target="_blank" rel="noopener" aria-label="ดูภาพภาคใต้ขนาดเต็ม"><img src="<?php echo DTH_URI; ?>/Pic/provinces/south.png" alt="สภาคนพิการประจำจังหวัด ภาคใต้" loading="lazy"></a></figure>
-      <div class="table-wrap">
-        <table class="board-table prov-table">
-          <thead><tr><th scope="col">จังหวัด</th><th scope="col">ชื่อประธานสภาจังหวัด</th><th scope="col">ประเภทความพิการ</th><th scope="col">เบอร์โทร</th></tr></thead>
-          <tbody>
-            <tr><td>กระบี่</td><td>นายประดิษฐ์  แซ่ด่าน</td><td>สายตา</td><td><a href="tel:0887906649">088-7906649</a></td></tr>
-            <tr><td>ชุมพร</td><td>นางจินตนา  เล่งระบำ</td><td>สติปัญญา</td><td><a href="tel:0950157993">095-0157993</a></td></tr>
-            <tr><td>ตรัง</td><td>นางณัชชา  กู้สุจริต</td><td>การได้ยิน</td><td><a href="tel:0810822459">081-0822459</a></td></tr>
-            <tr><td>นครศรีธรรมราช</td><td>นายธนภณ  ภควัตเกศกุล</td><td>ออทิสติก</td><td><a href="tel:0818090864">081-8090864</a></td></tr>
-            <tr><td>นราธิวาส</td><td>นายอับดุลเลาะ  มะจำ</td><td>สายตา</td><td><a href="tel:0843968238">084-3968238</a></td></tr>
-            <tr><td>ปัตตานี</td><td>นายอาหามะ  มะหาจิ</td><td>สายตา</td><td><a href="tel:0807086963">080-7086963</a></td></tr>
-            <tr><td>พังงา</td><td>นายสุรเชษฐ์  แอนุ้ย</td><td>การได้ยิน</td><td><a href="tel:0968107143">096-8107143</a></td></tr>
-            <tr><td>พัทลุง</td><td>นายบุญสิทธิ์  หนูแสง</td><td>สายตา</td><td><a href="tel:0851211005">085-1211005</a></td></tr>
-            <tr><td>ภูเก็ต</td><td>นางณัจฉรียา   ชูแก้ว</td><td>สติปัญญา</td><td><a href="tel:0828243514">082-8243514</a></td></tr>
-            <tr><td>ยะลา</td><td>นางสาวซูรียะห์  เซ็งยี</td><td>การได้ยิน</td><td><a href="tel:0616805402">061-6805402</a></td></tr>
-            <tr><td>ระนอง</td><td>นายกฤตภาส  เอกโอฬารกุล</td><td>ออทิสติก</td><td><a href="tel:0625364449">062-5364449</a></td></tr>
-            <tr><td>สงขลา</td><td>นายประเสริฐ  ณรงค์กูล</td><td>การได้ยิน</td><td><a href="tel:0801475486">080-1475486</a></td></tr>
-            <tr><td>สตูล</td><td>นายอภิเดช  พรหมเมฆ</td><td>การได้ยิน</td><td><a href="tel:0887854022">088-7854022</a></td></tr>
-            <tr><td>สุราษฏร์ธานี</td><td>นายจำนงค์  เต๊ะปู</td><td>การได้ยิน</td><td><a href="tel:0898673192">089-8673192</a></td></tr>
-          </tbody></table></div>
-    </div>
+    <?php endforeach; ?>
     <p class="prov-soon">จังหวัดที่ยังไม่ปรากฏในรายการ อยู่ระหว่างปรับปรุงข้อมูล</p>
   </div>
 </section>
