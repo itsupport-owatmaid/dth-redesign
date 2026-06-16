@@ -1,0 +1,65 @@
+<?php
+/** เนื้อหาหน้า (HTML block) สำหรับแก้ในหลังบ้าน — ทีละหน้า */
+if ( ! defined( 'ABSPATH' ) ) { exit; }
+function dth_page_content_seed() {
+	return array(
+		'proposals' => '<!-- wp:html -->
+<!-- ===== Breadcrumb ===== -->
+<nav class="breadcrumb" aria-label="เส้นทางนำทาง">
+  <div class="wrap"><a href="{{HOME}}/">หน้าแรก</a> <span aria-hidden="true">›</span> <span>ข้อมูลสำคัญ</span> <span aria-hidden="true">›</span> <strong>ข้อเสนอ</strong></div>
+</nav>
+
+<!-- ===== Page hero ===== -->
+<section class="page-hero">
+  <h1>ข้อเสนอเชิงนโยบาย</h1>
+  <p class="lead">ข้อเสนอของสมาคมสภาคนพิการทุกประเภทแห่งประเทศไทยต่อภาครัฐ เพื่อสิทธิและคุณภาพชีวิตที่เท่าเทียมของคนพิการ</p>
+</section>
+
+<main id="main">
+<section class="block">
+  <div class="wrap">
+    <div class="kicker"><h2>ข้อเสนอเชิงนโยบายต่อภาครัฐ</h2></div>
+    <p class="prov-note">ข้อเสนอของสมาคมสภาคนพิการทุกประเภทแห่งประเทศไทย เพื่อขับเคลื่อนสิทธิและคุณภาพชีวิตคนพิการ</p>
+    <a class="card mag-card" href="{{DTH}}/Doc/proposals/proposal-gov-2568.pdf" target="_blank" rel="noopener" style="max-width:560px;margin-bottom:clamp(22px,3vw,32px)">
+      <span class="mag-ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M14 2H7a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7Z"/><path d="M14 2v5h5"/><path d="M9 13h6M9 17h6"/></svg></span>
+      <div class="body">
+        <h3>ข้อเสนอคนพิการต่อรัฐบาล</h3>
+        <div class="meta">24 ธันวาคม 2568 · PDF · 426 KB · ดาวน์โหลด</div>
+      </div>
+    </a>
+    <div class="prov-grid">
+      <figure class="board-poster"><a href="{{DTH}}/Pic/proposals/proposal-1.jpg" target="_blank" rel="noopener" aria-label="ดูภาพขนาดเต็ม"><img src="{{DTH}}/Pic/proposals/proposal-1.jpg" alt="ข้อเสนอคนพิการต่อรัฐบาล หน้า 1" loading="lazy"></a></figure>
+      <figure class="board-poster"><a href="{{DTH}}/Pic/proposals/proposal-2.jpg" target="_blank" rel="noopener" aria-label="ดูภาพขนาดเต็ม"><img src="{{DTH}}/Pic/proposals/proposal-2.jpg" alt="ข้อเสนอคนพิการต่อรัฐบาล หน้า 2" loading="lazy"></a></figure>
+      <figure class="board-poster"><a href="{{DTH}}/Pic/proposals/proposal-3.jpg" target="_blank" rel="noopener" aria-label="ดูภาพขนาดเต็ม"><img src="{{DTH}}/Pic/proposals/proposal-3.jpg" alt="ข้อเสนอคนพิการต่อรัฐบาล หน้า 3" loading="lazy"></a></figure>
+      <figure class="board-poster"><a href="{{DTH}}/Pic/proposals/proposal-4.jpg" target="_blank" rel="noopener" aria-label="ดูภาพขนาดเต็ม"><img src="{{DTH}}/Pic/proposals/proposal-4.jpg" alt="ข้อเสนอคนพิการต่อรัฐบาล หน้า 4" loading="lazy"></a></figure>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ===== Footer ===== -->
+<!-- /wp:html -->',
+	);
+}
+
+/** แทนตัวแปร path ในเนื้อหาให้เป็น URL จริง (พกพาได้ทุก domain/โฟลเดอร์ธีม) */
+add_filter( 'the_content', function ( $html ) {
+	if ( strpos( $html, '{{DTH}}' ) === false && strpos( $html, '{{HOME}}' ) === false ) {
+		return $html;
+	}
+	$html = str_replace( '{{DTH}}', get_template_directory_uri(), $html );
+	$html = str_replace( '{{HOME}}', untrailingslashit( home_url() ), $html );
+	return $html;
+}, 9 );
+
+/** ใส่เนื้อหาเริ่มต้นให้หน้า (เฉพาะหน้าที่ยังว่าง) — รองรับการเพิ่มทีละหน้า */
+function dth_seed_page_contents() {
+	foreach ( dth_page_content_seed() as $slug => $content ) {
+		$page = get_page_by_path( $slug );
+		if ( ! $page ) { continue; }
+		$current = trim( (string) $page->post_content );
+		if ( $current !== '' ) { continue; } // มีเนื้อหาแล้ว (ผู้ใช้แก้ไว้) ไม่ทับ
+		wp_update_post( array( 'ID' => $page->ID, 'post_content' => $content ) );
+	}
+}
+add_action( 'admin_init', 'dth_seed_page_contents' );

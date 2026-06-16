@@ -11,6 +11,8 @@ define( 'DTH_URI', get_template_directory_uri() );
 
 // ระบบจัดการเนื้อหา (Custom Post Types)
 require_once __DIR__ . '/inc/cms.php';
+// เนื้อหาแต่ละหน้า (แก้ได้ในหลังบ้าน)
+require_once __DIR__ . '/inc/page-content.php';
 
 add_action( 'after_setup_theme', function () {
 	add_theme_support( 'title-tag' );
