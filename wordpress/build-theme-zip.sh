@@ -11,16 +11,16 @@ case "$OUT_ARG" in
 esac
 TMP="$(mktemp -d)"
 
-mkdir -p "$TMP/dth"
-cp -r wp-content/themes/dth/. "$TMP/dth/"
-cp -r "$REPO_ROOT/Pic" "$TMP/dth/Pic"
-cp -r "$REPO_ROOT/Doc" "$TMP/dth/Doc"
+mkdir -p "$TMP/dth-theme"
+cp -r wp-content/themes/dth/. "$TMP/dth-theme/"
+cp -r "$REPO_ROOT/Pic" "$TMP/dth-theme/Pic"
+cp -r "$REPO_ROOT/Doc" "$TMP/dth-theme/Doc"
 
 rm -f "$OUT_ABS"
 if command -v zip >/dev/null 2>&1; then
-  ( cd "$TMP" && zip -qr "$OUT_ABS" dth )
+  ( cd "$TMP" && zip -qr "$OUT_ABS" dth-theme )
 else
-  ( cd "$TMP" && python3 -c "import shutil,sys; shutil.make_archive(sys.argv[1].removesuffix('.zip'),'zip','.','dth')" "$OUT_ABS" )
+  ( cd "$TMP" && python3 -c "import shutil,sys; shutil.make_archive(sys.argv[1].removesuffix('.zip'),'zip','.','dth-theme')" "$OUT_ABS" )
 fi
 rm -rf "$TMP"
 echo "✅ สร้างไฟล์: $OUT_ABS  ($(du -h "$OUT_ABS" | cut -f1))"
