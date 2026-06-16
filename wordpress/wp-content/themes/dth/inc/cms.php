@@ -126,6 +126,13 @@ function dth_get_provinces_grouped() {
 	return $out;
 }
 
+/** seed อัตโนมัติครั้งเดียว แม้ธีมจะเปิดใช้อยู่ก่อนแล้ว */
+add_action( 'admin_init', function () {
+	if ( get_option( 'dth_provinces_seeded' ) ) { return; }
+	dth_seed_provinces();
+	update_option( 'dth_provinces_seeded', 1 );
+} );
+
 /** Seed ข้อมูลจังหวัดครั้งแรก (ถ้ายังไม่มี) */
 function dth_seed_provinces() {
 	$existing = get_posts( array( 'post_type' => 'dth_province', 'posts_per_page' => 1, 'fields' => 'ids' ) );
