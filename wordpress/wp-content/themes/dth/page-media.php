@@ -123,19 +123,19 @@ get_header();
     </div>
     <div class="hub-grid" id="hubGrid">
       <a class="card hub-card" data-cat="rights" href="https://dth.or.th/infographic/" target="_blank" rel="noopener">
-        <div class="thumb"><span class="mtype">อินโฟกราฟิก</span><img src="https://dth.or.th/wp-content/uploads/2022/07/275229039_1594676890888765_1550337596592218467_n-300x212.jpg" alt="สิทธิของผู้ดูแลคนพิการ" loading="lazy" onerror="this.parentElement.classList.add('ph');this.parentElement.innerHTML='&#127912;'"></div>
+        <div class="thumb"><span class="mtype">อินโฟกราฟิก</span><img src="<?php echo DTH_URI; ?>/Pic/external/275229039_1594676890888765_1550337596592218467_n-300x212.jpg" alt="สิทธิของผู้ดูแลคนพิการ" loading="lazy" onerror="this.parentElement.classList.add('ph');this.parentElement.innerHTML='&#127912;'"></div>
         <div class="body"><div class="meta"><svg class="im" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg> 32,475</div><h3>สิทธิของผู้ดูแลคนพิการ</h3></div>
       </a>
       <a class="card hub-card" data-cat="rights" href="https://dth.or.th/infographic/" target="_blank" rel="noopener">
-        <div class="thumb"><span class="mtype">อินโฟกราฟิก</span><img src="https://dth.or.th/wp-content/uploads/2022/07/273556717_1580157409007380_985939727756942970_n-300x212.jpg" alt="ที่จอดรถคนพิการ" loading="lazy" onerror="this.parentElement.classList.add('ph');this.parentElement.innerHTML='&#127912;'"></div>
+        <div class="thumb"><span class="mtype">อินโฟกราฟิก</span><img src="<?php echo DTH_URI; ?>/Pic/external/273556717_1580157409007380_985939727756942970_n-300x212.jpg" alt="ที่จอดรถคนพิการ" loading="lazy" onerror="this.parentElement.classList.add('ph');this.parentElement.innerHTML='&#127912;'"></div>
         <div class="body"><div class="meta"><svg class="im" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg> 31,921</div><h3>ที่จอดรถคนพิการ</h3></div>
       </a>
       <a class="card hub-card" data-cat="rights" href="https://dth.or.th/infographic/" target="_blank" rel="noopener">
-        <div class="thumb"><span class="mtype">อินโฟกราฟิก</span><img src="https://dth.or.th/wp-content/uploads/2022/07/275194508_1594645250891929_4929658142830719063_n-300x212.jpg" alt="สิทธิค่าโดยสารอัตราพิเศษในระบบขนส่งสาธารณะ" loading="lazy" onerror="this.parentElement.classList.add('ph');this.parentElement.innerHTML='&#127912;'"></div>
+        <div class="thumb"><span class="mtype">อินโฟกราฟิก</span><img src="<?php echo DTH_URI; ?>/Pic/external/275194508_1594645250891929_4929658142830719063_n-300x212.jpg" alt="สิทธิค่าโดยสารอัตราพิเศษในระบบขนส่งสาธารณะ" loading="lazy" onerror="this.parentElement.classList.add('ph');this.parentElement.innerHTML='&#127912;'"></div>
         <div class="body"><div class="meta"><svg class="im" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg> 28,924</div><h3>สิทธิค่าโดยสารอัตราพิเศษในระบบขนส่งสาธารณะ</h3></div>
       </a>
       <a class="card hub-card" data-cat="law" href="https://dth.or.th/infographic/" target="_blank" rel="noopener">
-        <div class="thumb"><span class="mtype">อินโฟกราฟิก</span><img src="https://dth.or.th/wp-content/uploads/2022/07/275425030_1598676160488838_995252658959268142_n-300x212.jpg" alt="ช่วยเหลือทางกฎหมายแก่คนพิการ" loading="lazy" onerror="this.parentElement.classList.add('ph');this.parentElement.innerHTML='&#127912;'"></div>
+        <div class="thumb"><span class="mtype">อินโฟกราฟิก</span><img src="<?php echo DTH_URI; ?>/Pic/external/275425030_1598676160488838_995252658959268142_n-300x212.jpg" alt="ช่วยเหลือทางกฎหมายแก่คนพิการ" loading="lazy" onerror="this.parentElement.classList.add('ph');this.parentElement.innerHTML='&#127912;'"></div>
         <div class="body"><div class="meta"><svg class="im" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg> 4,710</div><h3>ช่วยเหลือทางกฎหมายแก่คนพิการ</h3></div>
       </a>
       <a class="card hub-card" data-cat="home" href="<?php echo DTH_URI; ?>/Pic/infographic/home-mod-7steps.jpg" target="_blank" rel="noopener">
