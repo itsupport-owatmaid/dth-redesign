@@ -1,0 +1,12 @@
+/*
+Theme Name: DTH — Disabilities Thailand
+Theme URI: https://dth.or.th/
+Author: DTH Web Team
+Description: ธีม WordPress ของเว็บไซต์สมาคมสภาคนพิการทุกประเภทแห่งประเทศไทย (Disabilities Thailand) แปลงจากเว็บ static เดิม คงหน้าตาและฟีเจอร์การเข้าถึง (a11y) ไว้ครบ
+Version: 1.0.0
+Requires at least: 6.0
+Requires PHP: 7.4
+Text Domain: dth
+*/
+
+/* สไตล์จริงทั้งหมดอยู่ใน dth-v2.css ซึ่งถูก enqueue ผ่าน functions.php */

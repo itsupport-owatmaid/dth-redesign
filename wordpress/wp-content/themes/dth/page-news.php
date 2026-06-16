@@ -1,0 +1,323 @@
+<?php
+/**
+ * Template: news (จาก news.html) — คงหน้าตาและสคริปต์เดิม
+ */
+get_header();
+?>
+<a href="#main" class="skip">ข้ามไปยังเนื้อหาหลัก</a>
+
+<!-- ===== Top utility bar ===== -->
+<div class="topbar">
+  <div class="wrap">
+    <div class="left"><span>ปากเสียงเพื่อสิทธิและคุณภาพชีวิตที่เท่าเทียมของคนพิการทุกคน</span></div>
+    <div class="right">
+      <span class="lang"><b>TH</b><span>|</span><a href="#">EN</a></span>
+      <span class="top-social" aria-label="โซเชียลมีเดีย">
+        <a href="https://www.facebook.com/share/1Ez81X9Yjh/" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 21v-8h2.5l.4-3h-2.9V8.2c0-.9.3-1.5 1.5-1.5H16.5V4.1S15.4 4 14.3 4c-2.3 0-3.8 1.4-3.8 3.9V10H8v3h2.5v8h3Z"/></svg></a>
+        <a href="https://x.com/disabilitiesth" target="_blank" rel="noopener" aria-label="X (Twitter)"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.24 2.25h3.31l-7.23 8.26L23 21.75h-6.66l-5.22-6.82-5.97 6.82H1.84l7.73-8.84L1.25 2.25h6.83l4.71 6.23 5.45-6.23Zm-1.16 17.52h1.83L7.01 4.13H5.04l12.04 15.64Z"/></svg></a>
+        <a href="https://youtube.com/@disabilitiesthailand945" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23 7.5s-.22-1.55-.9-2.23c-.86-.9-1.82-.9-2.26-.96C16.7 4.05 12 4.05 12 4.05s-4.7 0-7.84.26c-.44.06-1.4.06-2.26.96C1.22 5.95 1 7.5 1 7.5S.77 9.31.77 11.13v1.7C.77 14.65 1 16.46 1 16.46s.22 1.55.9 2.23c.86.9 1.99.87 2.49.97 1.8.17 7.61.22 7.61.22s4.7-.01 7.84-.27c.44-.06 1.4-.06 2.26-.96.68-.68.9-2.23.9-2.23s.23-1.81.23-3.63v-1.7c0-1.82-.23-3.63-.23-3.63ZM9.75 14.6V8.74l6.02 2.94-6.02 2.92Z"/></svg></a>
+        <a href="https://www.tiktok.com/@disabilitiesth" target="_blank" rel="noopener" aria-label="TikTok"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.5 2h-3v13.5a2.5 2.5 0 1 1-2.5-2.5c.27 0 .53.04.78.12V9.9a5.6 5.6 0 0 0-.78-.06A5.55 5.55 0 1 0 16.5 15V8.4a6.86 6.86 0 0 0 4 1.28V6.6a3.86 3.86 0 0 1-4-3.83V2Z"/></svg></a>
+      </span>
+    </div>
+  </div>
+</div>
+
+<!-- ===== Accessibility bar ===== -->
+<div class="a11y-bar" role="region" aria-label="ปรับการแสดงผลเพื่อการเข้าถึง">
+  <div class="wrap">
+    <div class="a11y-group">
+      <span>ขนาดตัวอักษร</span>
+      <button class="a11y-btn" data-fs=".9" aria-label="อักษรขนาดเล็ก">ก</button>
+      <button class="a11y-btn active" data-fs="1" aria-label="อักษรขนาดปกติ" style="font-size:1rem">ก</button>
+      <button class="a11y-btn" data-fs="1.18" aria-label="อักษรขนาดใหญ่" style="font-size:1.2rem">ก</button>
+    </div>
+    <div class="a11y-group">
+      <span>การแสดงผล</span>
+      <button class="a11y-btn active" data-theme="" aria-label="แสดงผลปกติ">C</button>
+      <button class="a11y-btn sw-white" data-theme="hc-white" aria-label="อักษรขาวพื้นดำ">C</button>
+      <button class="a11y-btn sw-yellow" data-theme="hc-yellow" aria-label="อักษรเหลืองพื้นดำ">C</button>
+    </div>
+  </div>
+</div>
+
+<!-- ===== Header ===== -->
+<header class="site" id="top">
+  <div class="nav">
+    <a href="<?php echo esc_url( home_url('/') ); ?>" class="brand" aria-label="หน้าแรก สมาคมสภาคนพิการทุกประเภทแห่งประเทศไทย">
+      <span class="logo"><img src="<?php echo DTH_URI; ?>/Pic/dth-logo.png" alt="โลโก้ Disabilities Thailand" onerror="this.style.display='none'"></span>
+      <span class="name"><b>สภาคนพิการทุกประเภทแห่งประเทศไทย</b><span>Disabilities Thailand</span></span>
+    </a>
+    <nav class="nav-pill" id="menu" aria-label="เมนูหลัก">
+      <a href="<?php echo esc_url( home_url('/') ); ?>">หน้าแรก</a>
+      <div class="has-sub">
+        <a href="<?php echo esc_url( home_url('/about/') ); ?>" aria-haspopup="true" aria-expanded="false">เกี่ยวกับเรา <span class="caret" aria-hidden="true">▾</span></a>
+        <div class="sub">
+          <a href="<?php echo esc_url( home_url('/about/') ); ?>#history">ความเป็นมา</a>
+          <a href="<?php echo esc_url( home_url('/about/') ); ?>#board">คณะกรรมการ</a>
+          <a href="<?php echo esc_url( home_url('/staff/') ); ?>">เจ้าหน้าที่สมาคม</a>
+          <a href="<?php echo esc_url( home_url('/about/') ); ?>#milestones">ผลงานสภา</a>
+          <a href="<?php echo esc_url( home_url('/regulations/') ); ?>">ข้อบังคับ/ระเบียบ</a>
+          <a href="<?php echo esc_url( home_url('/') ); ?>#contact">ติดต่อเรา</a>
+        </div>
+      </div>
+      <div class="has-sub">
+        <a href="<?php echo esc_url( home_url('/') ); ?>#network" aria-haspopup="true" aria-expanded="false">เครือข่าย <span class="caret" aria-hidden="true">▾</span></a>
+        <div class="sub">
+          <a href="<?php echo esc_url( home_url('/about/') ); ?>#members">องค์การคนพิการ</a>
+          <a href="<?php echo esc_url( home_url('/provinces/') ); ?>">สภาฯ ประจำจังหวัด</a>
+          <a href="<?php echo esc_url( home_url('/') ); ?>#network">หน่วยงานที่เกี่ยวข้อง</a>
+        </div>
+      </div>
+      <div class="has-sub">
+        <a href="<?php echo esc_url( home_url('/news/') ); ?>" class="active" aria-haspopup="true" aria-expanded="false">ข่าวสารและกิจกรรม <span class="caret" aria-hidden="true">▾</span></a>
+        <div class="sub">
+          <a href="<?php echo esc_url( home_url('/news/') ); ?>?cat=pr">ข่าวประชาสัมพันธ์</a>
+          <a href="<?php echo esc_url( home_url('/news/') ); ?>?cat=activity">กิจกรรม</a>
+          <a href="<?php echo esc_url( home_url('/news/') ); ?>?cat=report">รายงานประจำปี</a>
+        </div>
+      </div>
+      <div class="has-sub">
+        <a href="<?php echo esc_url( home_url('/') ); ?>#rights" aria-haspopup="true" aria-expanded="false">ข้อมูลสำคัญ <span class="caret" aria-hidden="true">▾</span></a>
+        <div class="sub">
+          <a href="<?php echo esc_url( home_url('/proposals/') ); ?>">ข้อเสนอ</a>
+          <a href="<?php echo esc_url( home_url('/media/') ); ?>?cat=law">กฎหมาย</a>
+          <a href="<?php echo esc_url( home_url('/media/') ); ?>?cat=magazine">DTH-Magazine</a>
+          <a href="<?php echo esc_url( home_url('/') ); ?>#rights">สิทธิคนพิการที่ควรรู้</a>
+          <a href="<?php echo esc_url( home_url('/') ); ?>#qa">คำถามที่พบบ่อย</a>
+          <a href="<?php echo esc_url( home_url('/media/') ); ?>">คลังสื่อ / อินโฟกราฟิก</a>
+        </div>
+      </div>
+    </nav>
+    <div class="nav-actions">
+      <div class="search-mini" role="search">
+        <input type="text" placeholder="ค้นหา…" aria-label="ค้นหา">
+        <button aria-label="ค้นหา">⌕</button>
+      </div>
+    </div>
+    <button class="burger" id="burger" aria-label="เปิดเมนู" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<!-- ===== Breadcrumb ===== -->
+<nav class="breadcrumb" aria-label="เส้นทางนำทาง">
+  <div class="wrap"><a href="<?php echo esc_url( home_url('/') ); ?>">หน้าหลัก</a> <span aria-hidden="true">›</span> <span>ข่าวสาร</span> <span aria-hidden="true">›</span> <strong id="crumbCat">ทั้งหมด</strong></div>
+</nav>
+
+<main id="main">
+<section class="block" style="padding-top:clamp(20px,2.5vw,30px)">
+  <div class="wrap">
+
+    <div class="kicker"><span class="ic" aria-hidden="true">📰</span><h1 style="font-size:clamp(1.5rem,2.9vw,2.25rem);font-weight:700;letter-spacing:-.02em;line-height:1.15">ข่าวสาร</h1></div>
+
+    <!-- Category chips (คลิกเพื่อแยกแสดงผลตามหมวด) -->
+    <div class="tabbar" id="catBar" aria-label="หมวดหมู่ข่าวสาร" style="margin-bottom:clamp(18px,2.5vw,26px)">
+      <button class="tab active" data-cat="all" type="button">ทั้งหมด</button>
+      <button class="tab" data-cat="pr" type="button">ข่าวประชาสัมพันธ์</button>
+      <button class="tab" data-cat="activity" type="button">กิจกรรม</button>
+      <button class="tab" data-cat="report" type="button">รายงานประจำปี</button>
+      <button class="tab" data-cat="knowledge" type="button">สาระน่ารู้</button>
+    </div>
+
+    <!-- Toolbar -->
+    <div class="hub-toolbar">
+      <div class="hub-search">
+        <input type="text" id="hubSearch" placeholder="ใส่คำที่ต้องการค้นหา…" aria-label="ค้นหาข่าวสาร">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m21 21-4.34-4.34"></path><circle cx="11" cy="11" r="8"></circle></svg>
+      </div>
+      <select class="hub-select" id="hubSelect" aria-label="เลือกหมวดย่อยสาระน่ารู้">
+        <option value="">หมวดย่อยสาระน่ารู้</option>
+        <option value="health">สุขภาพ</option>
+        <option value="general">ทั่วไป</option>
+        <option value="blind">สมาคมคนตาบอดแห่งประเทศไทย</option>
+      </select>
+    </div>
+
+    <!-- News grid -->
+    <div class="hub-grid" id="hubGrid">
+
+      <!-- ข่าวประชาสัมพันธ์ -->
+      <a class="card hub-card" data-cat="pr" href="https://dth.or.th/wp-content/uploads/2024/09/ข้อบังคับสภาคนพิการพ.ศ.25602565.pdf" target="_blank" rel="noopener">
+        <div class="thumb"><span class="mtype">ข่าวประชาสัมพันธ์</span><div class="ph" style="display:grid;place-items:center;font-size:3rem;width:100%;height:100%"><svg class="ph-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H7a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7Z"/><path d="M14 2v5h5"/><path d="M9 13h6M9 17h6"/></svg></div></div>
+        <div class="body"><div class="meta"><svg class="im" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg> 16-09-2567</div><h3>เผยแพร่ข้อบังคับสมาคมสภาคนพิการทุกประเภทฯ พ.ศ. 2560 (แก้ไขเพิ่มเติม 2565)</h3><p>ดาวน์โหลดข้อบังคับสมาคมฉบับปรับปรุงล่าสุดได้แล้ว ทั้งรูปแบบ PDF และ Word</p></div>
+      </a>
+
+      <!-- กิจกรรม -->
+      <a class="card hub-card" data-cat="activity" href="https://www.facebook.com/share/1Ez81X9Yjh/" target="_blank" rel="noopener">
+        <div class="thumb"><span class="mtype">กิจกรรม</span><img src="https://dth.or.th/wp-content/uploads/2024/09/หน้าปกเว็บไซต์ประชุมสมัชชา-ยาว.png" alt="การประชุมสมัชชาคนพิการ" loading="lazy" onerror="this.parentElement.classList.add('ph');this.parentElement.innerHTML='🤝'"></div>
+        <div class="body"><div class="meta"><svg class="im" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg> ติดตามกำหนดการผ่านเพจ</div><h3>การประชุมสมัชชาคนพิการแห่งชาติ</h3><p>ร่วมขับเคลื่อนนโยบายและสิทธิคนพิการไปด้วยกัน ติดตามรายละเอียดกิจกรรมล่าสุดผ่าน Facebook ของสมาคม</p></div>
+      </a>
+
+      <!-- สาระน่ารู้ -->
+      <a class="card hub-card" data-cat="knowledge health" href="https://dth.or.th/knowledge/%e0%b9%80%e0%b8%aa%e0%b9%89%e0%b8%99%e0%b9%80%e0%b8%a5%e0%b8%b7%e0%b8%ad%e0%b8%94%e0%b8%82%e0%b8%ad%e0%b8%94/" target="_blank" rel="noopener">
+        <div class="thumb"><span class="mtype">สุขภาพ</span><img src="https://dth.or.th/wp-content/uploads/2022/07/279270879_1630628107293643_3234477952132787000_n-300x212.jpg" alt="เส้นเลือดขอด อีกหนึ่งโรคยอดฮิตของวัยทำงาน" loading="lazy" onerror="this.parentElement.classList.add('ph');this.parentElement.innerHTML='🩺'"></div>
+        <div class="body"><div class="meta"><svg class="im" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg> 25-07-2565 · <svg class="im" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg> 2,877</div><h3>เส้นเลือดขอด อีกหนึ่งโรคยอดฮิตของวัยทำงาน</h3><p>เส้นเลือดขอด อีกหนึ่งโรคยอดฮิตของวัยทำงาน เมื่อเกิดขึ้นแล้วจะทำให้มีอาการปวด จา…</p></div>
+      </a>
+      <a class="card hub-card" data-cat="knowledge health" href="https://dth.or.th/knowledge/%e0%b8%a0%e0%b8%b2%e0%b8%a7%e0%b8%b0%e0%b8%82%e0%b9%89%e0%b8%ad%e0%b8%aa%e0%b8%b0%e0%b9%82%e0%b8%9e%e0%b8%81%e0%b9%80%e0%b8%aa%e0%b8%b7%e0%b9%88%e0%b8%ad%e0%b8%a1/" target="_blank" rel="noopener">
+        <div class="thumb"><span class="mtype">สุขภาพ</span><img src="https://dth.or.th/wp-content/uploads/2022/07/กลุ่มไหนเสี่ยงมีภาวะข้อสะโพกเสื่อม-300x212.jpg" alt="กลุ่มไหนเสี่ยงมีภาวะข้อสะโพกเสื่อม" loading="lazy" onerror="this.parentElement.classList.add('ph');this.parentElement.innerHTML='🦴'"></div>
+        <div class="body"><div class="meta"><svg class="im" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg> 25-07-2565 · <svg class="im" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg> 2,821</div><h3>กลุ่มไหนเสี่ยงมีภาวะข้อสะโพกเสื่อม</h3><p>กลุ่มไหนเสี่ยงมีภาวะข้อสะโพกเสื่อม ข้อสะโพกเป็นอวัยวะที่ใช้ในการช่วยพยุงและรับน้…</p></div>
+      </a>
+      <a class="card hub-card" data-cat="knowledge general" href="https://dth.or.th/knowledge/%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b9%80%e0%b8%82%e0%b9%89%e0%b8%b2%e0%b8%aa%e0%b8%b1%e0%b8%87%e0%b8%84%e0%b8%a1%e0%b8%82%e0%b8%ad%e0%b8%87%e0%b8%9a%e0%b8%b8%e0%b8%84%e0%b8%84%e0%b8%a5%e0%b8%ad%e0%b8%ad/" target="_blank" rel="noopener">
+        <div class="thumb"><span class="mtype">ทั่วไป</span><img src="https://dth.or.th/wp-content/uploads/2022/07/289098221_586550159662695_1032763863887327249_n-300x225.jpg" alt="การเข้าสังคมของบุคคลออทิสติก หลังสถานการณ์โควิด-19" loading="lazy" onerror="this.parentElement.classList.add('ph');this.parentElement.innerHTML='🧩'"></div>
+        <div class="body"><div class="meta"><svg class="im" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg> 05-07-2565 · <svg class="im" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg> 2,893</div><h3>การเข้าสังคมของบุคคลออทิสติก หลังสถานการณ์โควิด-19</h3><p>การเข้าสังคมของบุคคลออทิสติก หลังสถานการณ์โควิด-19 อัษฎากรณ์ ขันตี …</p></div>
+      </a>
+      <a class="card hub-card" data-cat="knowledge blind" href="https://dth.or.th/knowledge/https-web-facebook-com-tabodthai-photos-a-434572563305797-5424047981024872/" target="_blank" rel="noopener">
+        <div class="thumb"><span class="mtype">สมาคมคนตาบอดฯ</span><img src="https://dth.or.th/wp-content/uploads/2022/07/284793305_5424047971024873_3993741284349771105_n-1-300x200.jpg" alt="เคยไหม? เวลาพบคนตาบอดจะข้ามถนน อยากจะช่วยแต่ไม่รู้ว่าจะทำอย่างไร" loading="lazy" onerror="this.parentElement.classList.add('ph');this.parentElement.innerHTML='🦯'"></div>
+        <div class="body"><div class="meta"><svg class="im" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg> 05-07-2565 · <svg class="im" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg> 5,518</div><h3>เคยไหม? เวลาพบคนตาบอดจะข้ามถนน … อยากจะช่วยแต่ไม่รู้ว่าจะทำอย่างไร??</h3><p>เคยไหม? เวลาพบคนตาบอดจะข้ามถนน … อยากจะช่วยแต่ไม่รู้ว่าจะทำอย่างไร?? การพ…</p></div>
+      </a>
+      <a class="card hub-card" data-cat="knowledge general" href="https://dth.or.th/knowledge/45-%e0%b8%aa%e0%b8%96%e0%b8%b2%e0%b8%99%e0%b8%9e%e0%b8%a2%e0%b8%b2%e0%b8%9a%e0%b8%b2%e0%b8%a5%e0%b9%80%e0%b8%ad%e0%b8%81%e0%b8%8a%e0%b8%99/" target="_blank" rel="noopener">
+        <div class="thumb"><span class="mtype">ทั่วไป</span><img src="https://dth.or.th/wp-content/uploads/2022/07/1-300x300.jpg" alt="45 สถานพยาบาลเอกชนที่สามารถออกเอกสารรับรองความพิการ" loading="lazy" onerror="this.parentElement.classList.add('ph');this.parentElement.innerHTML='🏥'"></div>
+        <div class="body"><div class="meta"><svg class="im" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg> 05-07-2565 · <svg class="im" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg> 19,906</div><h3>45 สถานพยาบาลเอกชนที่สามารถออกเอกสารรับรองความพิการ</h3><p>๔๕ สถานพยาบาลเอกชนที่สามารถออกเอกสารรับรองความพิการ (๑) โรงพยาบาลเพชรเวช เขตห้วย…</p></div>
+      </a>
+    </div>
+
+    <!-- Empty state -->
+    <div id="hubEmpty" class="card" style="display:none;padding:40px;text-align:center;color:var(--muted)">
+      <div style="font-size:2.6rem" aria-hidden="true">🗂️</div>
+      <p style="margin-top:10px">ยังไม่มีรายการในหมวดนี้</p>
+      <p style="margin-top:6px;font-size:.9rem">ติดตามข้อมูลอัปเดตได้ที่ <a href="https://www.facebook.com/share/1Ez81X9Yjh/" target="_blank" rel="noopener" style="color:var(--brand-dark);font-weight:600">Facebook ของสมาคม</a> หรือ <a href="https://dth.or.th/download" target="_blank" rel="noopener" style="color:var(--brand-dark);font-weight:600">เอกสารดาวน์โหลด dth.or.th</a></p>
+    </div>
+
+    <div class="pager">
+      <div class="total">จำนวนทั้งหมด <b id="hubCount">7</b> รายการ</div>
+    </div>
+
+  </div>
+</section>
+</main>
+
+<!-- ===== Footer ===== -->
+<footer class="site">
+  <div class="wrap">
+    <div class="foot">
+      <div class="flogo"><img src="<?php echo DTH_URI; ?>/Pic/dth-logo-wide.png" alt="โลโก้ DTH" onerror="this.style.display='none'"></div>
+      <div>
+        <h4>สมาคมสภาคนพิการทุกประเภทแห่งประเทศไทย</h4>
+        <address>
+          255 ห้อง 6-8 ชั้น 3 อาคาร APCD ถนนราชวิถี<br>
+          แขวงทุ่งพญาไท เขตราชเทวี กรุงเทพมหานคร 10400<br>
+          โทรศัพท์ <a href="tel:023544260">02-354-4260</a><br>
+          อีเมล <a href="mailto:disabilitiesth@gmail.com">disabilitiesth@gmail.com</a>
+        </address>
+      </div>
+    </div>
+    <div class="foot-policy">
+      <a href="<?php echo esc_url( home_url('/') ); ?>#top">หน้าแรก</a>
+      <a href="<?php echo esc_url( home_url('/about/') ); ?>">เกี่ยวกับเรา</a>
+      <a href="<?php echo esc_url( home_url('/about/') ); ?>#board">คณะกรรมการ</a>
+      <a href="<?php echo esc_url( home_url('/about/') ); ?>#milestones">ผลงานสภา</a>
+      <a href="<?php echo esc_url( home_url('/about/') ); ?>#members">องค์การคนพิการ</a>
+      <a href="<?php echo esc_url( home_url('/') ); ?>#network">หน่วยงานที่เกี่ยวข้อง</a>
+      <a href="<?php echo esc_url( home_url('/news/') ); ?>">ข่าวสารและกิจกรรม</a>
+      <a href="<?php echo esc_url( home_url('/') ); ?>#rights">สิทธิคนพิการที่ควรรู้</a>
+      <a href="<?php echo esc_url( home_url('/media/') ); ?>?cat=law">กฎหมาย</a>
+          <a href="<?php echo esc_url( home_url('/media/') ); ?>?cat=magazine">DTH-Magazine</a>
+      <a href="<?php echo esc_url( home_url('/regulations/') ); ?>">เอกสารดาวน์โหลด</a>
+      <a href="<?php echo esc_url( home_url('/media/') ); ?>">คลังสื่อ / อินโฟกราฟิก</a>
+      <a href="<?php echo esc_url( home_url('/') ); ?>#contact">ติดต่อเรา</a>
+      <a href="<?php echo esc_url( home_url('/sitemap/') ); ?>">ผังเว็บไซต์</a>
+      <a href="<?php echo esc_url( home_url('/development/') ); ?>">ขั้นตอนการพัฒนา</a>
+      <a href="https://dth.or.th/" target="_blank" rel="noopener">เว็บไซต์ทางการ dth.or.th</a>
+    </div>
+    <div class="foot-copy">© 2569 สงวนลิขสิทธิ์โดยสมาคมสภาคนพิการทุกประเภทแห่งประเทศไทย (Disabilities Thailand)</div>
+  </div>
+</footer>
+
+<script>
+  // a11y font size
+  document.querySelectorAll('[data-fs]').forEach(b=>b.addEventListener('click',()=>{
+    document.documentElement.style.setProperty('--fs',b.dataset.fs);
+    document.querySelectorAll('[data-fs]').forEach(x=>x.classList.remove('active'));b.classList.add('active');
+  }));
+  // a11y contrast
+  document.querySelectorAll('[data-theme]').forEach(b=>b.addEventListener('click',()=>{
+    document.body.classList.remove('hc-white','hc-yellow');
+    if(b.dataset.theme)document.body.classList.add(b.dataset.theme);
+    document.querySelectorAll('[data-theme]').forEach(x=>x.classList.remove('active'));b.classList.add('active');
+  }));
+  // header shadow
+  const hdr=document.querySelector('header.site');
+  addEventListener('scroll',()=>hdr.classList.toggle('scrolled',scrollY>10));
+  // mobile menu
+  const burger=document.getElementById('burger'),menu=document.getElementById('menu');
+  burger.addEventListener('click',()=>{const o=menu.classList.toggle('open');burger.setAttribute('aria-expanded',o);});
+  document.querySelectorAll('.has-sub > a').forEach(a=>a.addEventListener('click',e=>{
+    if(matchMedia('(max-width:760px)').matches){e.preventDefault();const li=a.parentElement,o=li.classList.toggle('open');a.setAttribute('aria-expanded',o);}
+  }));
+
+  // ---- Category filter (reads ?cat= and chip clicks) ----
+  (function(){
+    const cards=[...document.querySelectorAll('#hubGrid .hub-card')];
+    const chips=[...document.querySelectorAll('#catBar .tab')];
+    const sel=document.getElementById('hubSelect');
+    const search=document.getElementById('hubSearch');
+    const empty=document.getElementById('hubEmpty');
+    const count=document.getElementById('hubCount');
+    const crumb=document.getElementById('crumbCat');
+    const names={all:'ทั้งหมด',pr:'ข่าวประชาสัมพันธ์',activity:'กิจกรรม',report:'รายงานประจำปี',knowledge:'สาระน่ารู้',health:'สาระน่ารู้ · สุขภาพ',general:'สาระน่ารู้ · ทั่วไป',blind:'สาระน่ารู้ · สมาคมคนตาบอดฯ'};
+    const subOf={health:'knowledge',general:'knowledge',blind:'knowledge'};
+    let cat=new URLSearchParams(location.search).get('cat')||'all';
+    if(!names[cat])cat='all';
+
+    function apply(){
+      const q=search.value.trim();
+      let n=0;
+      cards.forEach(c=>{
+        const cats=c.dataset.cat.split(' ');
+        const okCat=cat==='all'||cats.includes(cat);
+        const okQ=!q||c.textContent.includes(q);
+        const show=okCat&&okQ;
+        c.style.display=show?'':'none';
+        if(show)n++;
+      });
+      empty.style.display=n?'none':'';
+      count.textContent=n;
+      crumb.textContent=names[cat];
+      const main=subOf[cat]||cat;
+      chips.forEach(ch=>ch.classList.toggle('active',ch.dataset.cat===main));
+      sel.value=subOf[cat]?cat:'';
+      const url=new URL(location);
+      if(cat==='all')url.searchParams.delete('cat');else url.searchParams.set('cat',cat);
+      history.replaceState(null,'',url);
+    }
+    chips.forEach(ch=>ch.addEventListener('click',()=>{cat=ch.dataset.cat;apply();}));
+    sel.addEventListener('change',()=>{cat=sel.value||'knowledge';apply();});
+    search.addEventListener('input',apply);
+    apply();
+  })();
+</script>
+<!-- back to top -->
+<button class="to-top" id="toTop" type="button">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5"/><path d="m5 12 7-7 7 7"/></svg>
+  กลับไปด้านบนเว็บไซต์
+</button>
+<script>
+(()=>{const b=document.getElementById('toTop');if(!b)return;
+const onS=()=>{const on=scrollY+innerHeight>=document.documentElement.scrollHeight-320&&scrollY>200;b.classList.toggle('show',on);document.body.classList.toggle('totop-on',on);};
+addEventListener('scroll',onS,{passive:true});onS();
+b.addEventListener('click',()=>scrollTo({top:0,behavior:'smooth'}));})();
+</script>
+<!-- scroll reveal -->
+<script>
+(()=>{ // animate content into view; respects reduced-motion
+if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+const sel='.kicker,.news-head,.card,.partner,.qa-item,.qa-tile,.member-card,.board-card,.obj-list li,.ms-cat,.ms p,.vision-quote,.about-stat,.hotline,.rights-shell,.prose p,.obj-intro,.tabbar,.fb-embed,.table-wrap,.board-poster,.hub-card,.hub-side-item,.timeline li,.page-hero .logo-badge,.page-hero .lead,.foot';
+const els=[...document.querySelectorAll(sel)].filter(el=>!el.closest('.rv'));
+const groups=new Map();
+els.forEach(el=>{el.classList.add('rv');
+  const p=el.parentElement,i=groups.get(p)||0;
+  el.style.setProperty('--rvd',Math.min(i*70,420)+'ms');groups.set(p,i+1)});
+let pending=els.slice(),throttled=false;
+const reveal=el=>{el.classList.add('in');
+  setTimeout(()=>{el.classList.remove('rv','in');el.style.removeProperty('--rvd')},950+parseInt(el.style.getPropertyValue('--rvd')||0))};
+const check=()=>{const vh=innerHeight;
+  pending=pending.filter(el=>{const r=el.getBoundingClientRect();
+    if(r.top<vh*.94){reveal(el);return false}return true});
+  if(!pending.length){removeEventListener('scroll',onScroll);removeEventListener('resize',onScroll)}};
+const onScroll=()=>{if(throttled)return;throttled=true;setTimeout(()=>{throttled=false;check()},90)};
+addEventListener('scroll',onScroll,{passive:true});
+addEventListener('resize',onScroll,{passive:true});
+check();
+})();
+</script>
+<?php
+get_footer();

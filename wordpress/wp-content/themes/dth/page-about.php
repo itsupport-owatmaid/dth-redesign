@@ -1,0 +1,492 @@
+<?php
+/**
+ * Template: about (จาก about.html) — คงหน้าตาและสคริปต์เดิม
+ */
+get_header();
+?>
+<a href="#main" class="skip">ข้ามไปยังเนื้อหาหลัก</a>
+
+<!-- ===== Top utility bar ===== -->
+<div class="topbar">
+  <div class="wrap">
+    <div class="left"><span>ปากเสียงเพื่อสิทธิและคุณภาพชีวิตที่เท่าเทียมของคนพิการทุกคน</span></div>
+    <div class="right">
+      <span class="lang"><b>TH</b><span>|</span><a href="#">EN</a></span>
+      <span class="top-social" aria-label="โซเชียลมีเดีย">
+        <a href="https://www.facebook.com/share/1Ez81X9Yjh/" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 21v-8h2.5l.4-3h-2.9V8.2c0-.9.3-1.5 1.5-1.5H16.5V4.1S15.4 4 14.3 4c-2.3 0-3.8 1.4-3.8 3.9V10H8v3h2.5v8h3Z"/></svg></a>
+        <a href="https://x.com/disabilitiesth" target="_blank" rel="noopener" aria-label="X (Twitter)"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.24 2.25h3.31l-7.23 8.26L23 21.75h-6.66l-5.22-6.82-5.97 6.82H1.84l7.73-8.84L1.25 2.25h6.83l4.71 6.23 5.45-6.23Zm-1.16 17.52h1.83L7.01 4.13H5.04l12.04 15.64Z"/></svg></a>
+        <a href="https://youtube.com/@disabilitiesthailand945" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23 7.5s-.22-1.55-.9-2.23c-.86-.9-1.82-.9-2.26-.96C16.7 4.05 12 4.05 12 4.05s-4.7 0-7.84.26c-.44.06-1.4.06-2.26.96C1.22 5.95 1 7.5 1 7.5S.77 9.31.77 11.13v1.7C.77 14.65 1 16.46 1 16.46s.22 1.55.9 2.23c.86.9 1.99.87 2.49.97 1.8.17 7.61.22 7.61.22s4.7-.01 7.84-.27c.44-.06 1.4-.06 2.26-.96.68-.68.9-2.23.9-2.23s.23-1.81.23-3.63v-1.7c0-1.82-.23-3.63-.23-3.63ZM9.75 14.6V8.74l6.02 2.94-6.02 2.92Z"/></svg></a>
+        <a href="https://www.tiktok.com/@disabilitiesth" target="_blank" rel="noopener" aria-label="TikTok"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.5 2h-3v13.5a2.5 2.5 0 1 1-2.5-2.5c.27 0 .53.04.78.12V9.9a5.6 5.6 0 0 0-.78-.06A5.55 5.55 0 1 0 16.5 15V8.4a6.86 6.86 0 0 0 4 1.28V6.6a3.86 3.86 0 0 1-4-3.83V2Z"/></svg></a>
+      </span>
+    </div>
+  </div>
+</div>
+
+<!-- ===== Accessibility bar ===== -->
+<div class="a11y-bar" role="region" aria-label="ปรับการแสดงผลเพื่อการเข้าถึง">
+  <div class="wrap">
+    <div class="a11y-group">
+      <span>ขนาดตัวอักษร</span>
+      <button class="a11y-btn" data-fs=".9" aria-label="อักษรขนาดเล็ก">ก</button>
+      <button class="a11y-btn active" data-fs="1" aria-label="อักษรขนาดปกติ" style="font-size:1rem">ก</button>
+      <button class="a11y-btn" data-fs="1.18" aria-label="อักษรขนาดใหญ่" style="font-size:1.2rem">ก</button>
+    </div>
+    <div class="a11y-group">
+      <span>การแสดงผล</span>
+      <button class="a11y-btn active" data-theme="" aria-label="แสดงผลปกติ">C</button>
+      <button class="a11y-btn sw-white" data-theme="hc-white" aria-label="อักษรขาวพื้นดำ">C</button>
+      <button class="a11y-btn sw-yellow" data-theme="hc-yellow" aria-label="อักษรเหลืองพื้นดำ">C</button>
+    </div>
+  </div>
+</div>
+
+<!-- ===== Header ===== -->
+<header class="site" id="top">
+  <div class="nav">
+    <a href="<?php echo esc_url( home_url('/') ); ?>" class="brand" aria-label="หน้าแรก สมาคมสภาคนพิการทุกประเภทแห่งประเทศไทย">
+      <span class="logo"><img src="<?php echo DTH_URI; ?>/Pic/dth-logo.png" alt="โลโก้ Disabilities Thailand" onerror="this.style.display='none'"></span>
+      <span class="name"><b>สภาคนพิการทุกประเภทแห่งประเทศไทย</b><span>Disabilities Thailand</span></span>
+    </a>
+    <nav class="nav-pill" id="menu" aria-label="เมนูหลัก">
+      <a href="<?php echo esc_url( home_url('/') ); ?>">หน้าแรก</a>
+      <div class="has-sub">
+        <a href="<?php echo esc_url( home_url('/about/') ); ?>" class="active" aria-haspopup="true" aria-expanded="false">เกี่ยวกับเรา <span class="caret" aria-hidden="true">▾</span></a>
+        <div class="sub">
+          <a href="<?php echo esc_url( home_url('/about/') ); ?>#history">ความเป็นมา</a>
+          <a href="<?php echo esc_url( home_url('/about/') ); ?>#board">คณะกรรมการ</a>
+          <a href="<?php echo esc_url( home_url('/staff/') ); ?>">เจ้าหน้าที่สมาคม</a>
+          <a href="<?php echo esc_url( home_url('/about/') ); ?>#milestones">ผลงานสภา</a>
+          <a href="<?php echo esc_url( home_url('/regulations/') ); ?>">ข้อบังคับ/ระเบียบ</a>
+          <a href="<?php echo esc_url( home_url('/') ); ?>#contact">ติดต่อเรา</a>
+        </div>
+      </div>
+      <div class="has-sub">
+        <a href="<?php echo esc_url( home_url('/') ); ?>#network" aria-haspopup="true" aria-expanded="false">เครือข่าย <span class="caret" aria-hidden="true">▾</span></a>
+        <div class="sub">
+          <a href="<?php echo esc_url( home_url('/about/') ); ?>#members">องค์การคนพิการ</a>
+          <a href="<?php echo esc_url( home_url('/provinces/') ); ?>">สภาฯ ประจำจังหวัด</a>
+          <a href="<?php echo esc_url( home_url('/') ); ?>#network">หน่วยงานที่เกี่ยวข้อง</a>
+        </div>
+      </div>
+      <div class="has-sub">
+        <a href="<?php echo esc_url( home_url('/news/') ); ?>" aria-haspopup="true" aria-expanded="false">ข่าวสารและกิจกรรม <span class="caret" aria-hidden="true">▾</span></a>
+        <div class="sub">
+          <a href="<?php echo esc_url( home_url('/news/') ); ?>?cat=pr">ข่าวประชาสัมพันธ์</a>
+          <a href="<?php echo esc_url( home_url('/news/') ); ?>?cat=activity">กิจกรรม</a>
+          <a href="<?php echo esc_url( home_url('/news/') ); ?>?cat=report">รายงานประจำปี</a>
+        </div>
+      </div>
+      <div class="has-sub">
+        <a href="<?php echo esc_url( home_url('/') ); ?>#rights" aria-haspopup="true" aria-expanded="false">ข้อมูลสำคัญ <span class="caret" aria-hidden="true">▾</span></a>
+        <div class="sub">
+          <a href="<?php echo esc_url( home_url('/proposals/') ); ?>">ข้อเสนอ</a>
+          <a href="<?php echo esc_url( home_url('/media/') ); ?>?cat=law">กฎหมาย</a>
+          <a href="<?php echo esc_url( home_url('/media/') ); ?>?cat=magazine">DTH-Magazine</a>
+          <a href="<?php echo esc_url( home_url('/') ); ?>#rights">สิทธิคนพิการที่ควรรู้</a>
+          <a href="<?php echo esc_url( home_url('/') ); ?>#qa">คำถามที่พบบ่อย</a>
+          <a href="<?php echo esc_url( home_url('/media/') ); ?>">คลังสื่อ / อินโฟกราฟิก</a>
+        </div>
+      </div>
+    </nav>
+    <div class="nav-actions">
+      <div class="search-mini" role="search">
+        <input type="text" placeholder="ค้นหา…" aria-label="ค้นหา">
+        <button aria-label="ค้นหา">⌕</button>
+      </div>
+    </div>
+    <button class="burger" id="burger" aria-label="เปิดเมนู" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<!-- ===== Breadcrumb ===== -->
+<nav class="breadcrumb" aria-label="เส้นทางนำทาง">
+  <div class="wrap"><a href="<?php echo esc_url( home_url('/') ); ?>">หน้าแรก</a> <span aria-hidden="true">›</span> <span>เกี่ยวกับเรา</span> <span aria-hidden="true">›</span> <strong>ความเป็นมาของสมาคมฯ</strong></div>
+</nav>
+
+<!-- ===== Page hero ===== -->
+<section class="page-hero">
+  <div class="ic-row"><span class="ic" aria-hidden="true">🧩</span><h1>เกี่ยวกับสมาคม</h1></div>
+  <div class="logo-badge"><img src="<?php echo DTH_URI; ?>/Pic/dth-logo.png" alt="โลโก้สมาคมสภาคนพิการทุกประเภทแห่งประเทศไทย" onerror="this.parentElement.textContent='DTH'"></div>
+  <p class="lead">
+    <strong>สมาคมสภาคนพิการทุกประเภทแห่งประเทศไทย (Disabilities Thailand — DTH)</strong>
+    เป็น<strong>องค์กรร่ม (Umbrella Organization)</strong> ของขบวนการคนพิการระดับชาติ
+    ทำหน้าที่เป็นผู้แทนและปากเสียงของคนพิการทุกประเภท เพื่อขับเคลื่อนสิทธิ สวัสดิการ
+    และโอกาสที่เท่าเทียม สู่การมีส่วนร่วมในสังคมอย่างเต็มที่และเสมอภาคของคนพิการทุกคน
+  </p>
+</section>
+
+<main id="main">
+
+<!-- ===== History (ข้อความทางการจาก dth.or.th/about — คงเนื้อหาครบถ้วน) ===== -->
+<section class="block" id="history">
+  <div class="wrap">
+    <div class="kicker"><span class="ic" aria-hidden="true">📜</span><h2>ความเป็นมา</h2></div>
+    <div class="prose">
+      <p>สภาคนพิการทุกประเภทแห่งประเทศไทย กำเนิดขึ้นหลังปีคนพิการสากล เมื่อวันที่ 20 ตุลาคม 2526 โดยแกนนำคนพิการหลายท่านในขณะนั้น ซึ่งได้รับแรงบันดาลใจจากการเข้าร่วมประชุมสมัชชาคนพิการ</p>
+      <p>“คนพิการสากล” (DISABLED PEOPLE’S INTERNATIONAL) ณ ประเทศสิงคโปร์ ในปี พ.ศ. 2524 ซึ่งมีวัตถุประสงค์ (ธีม) หลัก คือ “คนพิการควรจะมีสิทธิเข้ามีส่วนร่วมในสังคมอย่างเต็มที่และเสมอภาค (Full Participation and Equality) เช่นบุคคลทั่วไปในฐานะที่เป็นส่วนหนึ่งของสังคม”</p>
+      <p>ด้วยเหตุที่ตระหนักดีในสภาพความเป็นจริงว่าคนพิการในประเทศไทยได้ถูกละเลยทอดทิ้งจากรัฐและสังคมมาเป็นเวลานาน คนพิการไม่เคยได้มีสิทธิ และโดยที่คนพิการแต่ละประเภทในประเทศไทยมิได้รวมตัวเป็นอันหนึ่งอันเดียวกันทำให้ขาดพลังในการขับเคลื่อนนโยบายและกฎหมายที่เกี่ยวข้องกับคนพิการ</p>
+      <p>ดังนั้นผู้นำคนพิการประเภทต่างๆ เช่น ผู้นำสมาคมคนตาบอดแห่งประเทศไทย ผู้นำสมาคมคนหูหนวกแห่งประเทศไทย ผู้นำสมาคมคนพิการแห่งประเทศไทย และผู้นำสมาคมผู้ปกครองเพื่อคนพิการทางสติปัญญาแห่งประเทศไทย จึงได้ร่วมประชุมปรึกษาหารือกัน เพื่อจะรวมตัวกันเป็นองค์กรเดียวเพื่อทำหน้าที่เป็นผู้แทน เป็นปากเสียงให้กับคนพิการทั้งมวล โดยรณรงค์เรียกร้องให้มีกฎหมาย มีระเบียบข้อบังคับที่จะให้ประโยชน์ต่อคนพิการทุกประเภท ในที่สุดเมื่อวันที่ 20-22 ตุลาคม 2526 ที่จังหวัดเชียงใหม่ โดยมีคนพิการทุกประเภทและตัวแทนจากทั่วทุกภูมิภาคของประเทศไทยเข้าร่วมประชุมและมีมติให้จัดตั้ง “สภาคนพิการทุกประเภทแห่งประเทศไทย”</p>
+      <p>ปัจจุบันสภาคนพิการทุกประเภทแห่งประเทศไทยเป็นองค์การขับเคลื่อนเชิงนโยบายด้านคนพิการระดับชาติ ซึ่งถูกรับรองฐานะไว้ในพระราชบัญญัติส่งเสริมและพัฒนาคุณภาพชีวิตคนพิการ พ.ศ. 2550 เป็นองค์กรร่ม (Umbrella Organization) มีสมาชิกสามัญถาวร คือ องค์การด้านคนพิการแต่ละประเภทระดับชาติ 6 องค์การ ได้แก่ สมาคมคนตาบอดแห่งประเทศไทย สมาคมคนหูหนวกแห่งประเทศไทย สมาคมคนพิการแห่งประเทศไทย สมาคมเพื่อคนพิการทางสติปัญญาแห่งประเทศไทย สมาคมเพื่อผู้บกพร่องทางจิตแห่งประเทศไทย และสมาคมผู้ปกครองบุคคลออทิซึม(ไทย) รวมทั้งมีสมาชิกสามัญทั่วไป ได้แก่ สภาคนพิการทุกประเภทประจำจังหวัดที่เป็นสาขาอยู่ใน 77 จังหวัด อีกทั้งยังมีสมาชิกวิสามัญซึ่งเป็นภาคีเครือข่ายองค์กรด้านคนพิการอื่น</p>
+      <div class="about-stat">
+        <div><div class="num">2526</div><div class="lab">ปีที่ก่อตั้ง (พ.ศ.)</div></div>
+        <div><div class="num">6</div><div class="lab">องค์การสมาชิกระดับชาติ</div></div>
+        <div><div class="num">77</div><div class="lab">สภาคนพิการประจำจังหวัด</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Objectives (ข้อบังคับฯ ข้อ 4 — คงเนื้อหาครบถ้วน) ===== -->
+<section class="block wash-leaf">
+  <div class="wrap">
+    <div class="kicker"><span class="ic" aria-hidden="true">🧭</span><h2>วัตถุประสงค์</h2></div>
+    <ol class="obj-list">
+      <li>เสนอแนะ แก้ไขเพิ่มเติม ขับเคลื่อน และติดตามการบังคับใช้ กฎหมาย นโยบาย ยุทธศาสตร์ แผนงาน ตลอดจนพันธกรณีระหว่างประเทศ เพื่อการส่งเสริมและพัฒนาคุณภาพชีวิตคนพิการ รวมทั้งผลักดันให้มีการผนวกรวมประเด็นคนพิการเข้าสู่การพัฒนากระแสหลัก</li>
+      <li>เป็นสภาคนพิการทุกประเภทแห่งประเทศไทย เพื่อเสริมสร้างความเข้มแข็งและการมีธรรมาภิบาลขององค์การคนพิการแต่ละประเภทและองค์กรด้านคนพิการ</li>
+      <li>ส่งเสริมและสนับสนุนการพัฒนาเครือข่ายองค์กรด้านคนพิการ เพื่อให้เกิดการทำงานร่วมกันอย่างเป็นปึกแผ่นและมีเอกภาพระหว่างคนพิการแต่ละประเภท โดยเฉพาะผ่านกลไกสภาคนพิการทุกประเภทประจำจังหวัด</li>
+      <li>ส่งเสริมและสนับสนุนการมีส่วนร่วมขององค์การคนพิการแต่ละประเภทและองค์กรของคนพิการในฐานะเป็นหุ้นส่วนกับภาครัฐ ภาคธุรกิจเอกชน และภาคประชาสังคม ให้ได้รับการยอมรับอย่างมีศักดิ์ศรีและเท่าเทียมกัน เพื่อการพัฒนาที่ยั่งยืน</li>
+      <li>เสริมสร้างความเข้าใจและเจตคติเชิงสร้างสรรค์ต่อคนพิการและความพิการ</li>
+      <li>ทำหน้าที่พิทักษ์สิทธิคนพิการ และเป็นผู้ร้องขอหรือฟ้องคดีแทนองค์การคนพิการแต่ละประเภทหรือองค์กรด้านคนพิการเฉพาะในกรณีที่มีผลกระทบต่อคนพิการโดยรวม รวมทั้งส่งเสริมให้สมาชิกให้บริการและความช่วยเหลือต่างๆ แก่คนพิการ</li>
+      <li>ทำหน้าที่เป็นองค์กรประสานงานร่วมขององค์การคนพิการแต่ละประเภท รวมถึงการเข้าร่วมเป็นผู้แทนในคณะกรรมการหรือคณะอนุกรรมการตามที่กฎหมายกำหนดให้ผู้แทนองค์กรคนพิการระดับชาติเป็นกรรมการหรืออนุกรรมการ</li>
+      <li>ดำเนินกิจการกระจายเสียง กิจการโทรทัศน์ และกิจการสื่อสารอื่น ด้านการส่งเสริมและพัฒนาคุณภาพชีวิตของคนพิการเพื่อประโยชน์สาธารณะโดยไม่แสวงผลกำไร</li>
+      <li>ส่งเสริมและสนับสนุนการศึกษาวิจัยและงานวิชาการ เพื่อนำไปใช้ในการขับเคลื่อนและติดตามการบังคับใช้กฎหมายและนโยบายด้านคนพิการ</li>
+      <li>ไม่เกี่ยวข้องกับการเมืองและมีวัตถุประสงค์ไม่ค้ากำไร</li>
+    </ol>
+  </div>
+</section>
+
+<!-- ===== Vision (ข้อความทางการ — คงเนื้อหาครบถ้วน) ===== -->
+<section class="block wash-mint">
+  <div class="wrap">
+    <div class="vm-head"><span class="ic" aria-hidden="true">🎯</span><h2>วิสัยทัศน์</h2></div>
+    <blockquote class="vision-quote">
+      <p>“สภาคนพิการทุกประเภทแห่งประเทศไทยเข้มแข็ง มีธรรมาภิบาล เป็นกลไกหลักร่วมกับองค์การคนพิการแต่ละประเภทในการขับเคลื่อนนโยบายด้านคนพิการ และเป็นหุ้นส่วนสำคัญในการพัฒนาที่ยั่งยืน”</p>
+    </blockquote>
+  </div>
+</section>
+
+<!-- ===== Mission (ข้อความทางการ — คงเนื้อหาครบถ้วน) ===== -->
+<section class="block">
+  <div class="wrap">
+    <div class="vm-head"><span class="ic" aria-hidden="true">🚩</span><h2>พันธกิจ</h2></div>
+    <ol class="obj-list mission-list">
+      <li>เสริมสร้างความเข้มแข็ง ความเป็นปึกแผ่น และการมีธรรมาภิบาลของสภาคนพิการทุกประเภทแห่งประเทศไทยและสภาคนพิการทุกประเภทประจำจังหวัด</li>
+      <li>ขับเคลื่อนและติดตามการบังคับใช้กฎหมาย นโยบาย ยุทธศาสตร์ แผนงาน ตลอดจนพันธกรณีระหว่างประเทศ เพื่อการส่งเสริมและพัฒนาคุณภาพชีวิตคนพิการ รวมทั้งผลักดันให้มีการผนวกรวมประเด็นคนพิการเข้าสู่การพัฒนากระแสหลัก</li>
+      <li>ส่งเสริมและสนับสนุนการมีส่วนร่วมของสภาคนพิการทุกประเภทแห่งประเทศไทยและสภาคนพิการทุกประเภทประจำจังหวัด ในฐานะเป็นหุ้นส่วนกับภาครัฐ ภาคเอกชน และภาคส่วนอื่น เพื่อการพัฒนาที่ยั่งยืน</li>
+    </ol>
+  </div>
+</section>
+
+<!-- ===== Board (รายนามทางการ — คงเนื้อหาครบถ้วน) ===== -->
+<section class="block" id="board">
+  <div class="wrap">
+    <div class="kicker"><span class="ic" aria-hidden="true">👥</span><h2>คณะกรรมการบริหารสมาคมสภาคนพิการทุกประเภทแห่งประเทศไทย ชุดปัจจุบัน</h2></div>
+
+    <div class="board-grid">
+      <figure class="board-card"><img src="<?php echo DTH_URI; ?>/Pic/รูปนายก/cut/board-witthayut.png" alt="นายวิทยุต บุนนาค" loading="lazy" onerror="this.style.display='none'"><figcaption><strong>นายวิทยุต  บุนนาค</strong><span>นายกสมาคมสภาคนพิการทุกประเภทแห่งประเทศไทย/ประธานฝ่ายศิลปะ วัฒนธรรม และภาษา</span></figcaption></figure>
+      <figure class="board-card"><img src="<?php echo DTH_URI; ?>/Pic/รูปนายก/cut/board-ekkamon.png" alt="นายเอกกมล แพทยานันท์" loading="lazy" onerror="this.style.display='none'"><figcaption><strong>นายเอกกมล  แพทยานันท์</strong><span>อุปนายก คนที่ 1/เหรัญญิก/ประธานฝ่ายต่างประเทศและขับเคลื่อนนโยบายสาธารณะ</span></figcaption></figure>
+      <figure class="board-card"><img src="<?php echo DTH_URI; ?>/Pic/รูปนายก/cut/board-suchart.png" alt="นายสุชาติ โอวาทวรรณสกุล" loading="lazy" onerror="this.style.display='none'"><figcaption><strong>นายสุชาติ  โอวาทวรรณสกุล</strong><span>อุปนายก คนที่ 2</span></figcaption></figure>
+      <figure class="board-card"><img src="<?php echo DTH_URI; ?>/Pic/รูปนายก/cut/board-choosak.png" alt="นายชูศักดิ์ จันทยานนท์" loading="lazy" onerror="this.style.display='none'"><figcaption><strong>นายชูศักดิ์   จันทยานนท์</strong><span>อุปนายก คนที่ 3/เลขาธิการ/ประธานฝ่ายวิสาหกิจเพื่อสังคม</span></figcaption></figure>
+      <figure class="board-card"><img src="<?php echo DTH_URI; ?>/Pic/รูปนายก/cut/board-nutcharee.png" alt="นางนุชจารี คล้ายสุวรรณ" loading="lazy" onerror="this.style.display='none'"><figcaption><strong>นางนุชจารี  คล้ายสุวรรณ</strong><span>อุปนายก คนที่ 4/ปฏิคม</span></figcaption></figure>
+      <figure class="board-card"><img src="<?php echo DTH_URI; ?>/Pic/รูปนายก/cut/board-suphachip.png" alt="นายศุภชีพ ดิษเทศ" loading="lazy" onerror="this.style.display='none'"><figcaption><strong>นายศุภชีพ  ดิษเทศ</strong><span>อุปนายก คนที่ 5/นายทะเบียน</span></figcaption></figure>
+    </div>
+
+    <div class="board-layout">
+    <div class="table-wrap">
+      <table class="board-table">
+        <thead>
+          <tr><th scope="col">ที่</th><th scope="col">ชื่อ-นามสกุล</th><th scope="col">ตำแหน่ง</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>1</td><td>นายวิทยุต  บุนนาค</td><td>นายกสมาคมสภาคนพิการทุกประเภทแห่งประเทศไทย/ประธานฝ่ายศิลปะ วัฒนธรรม และภาษา</td></tr>
+          <tr><td>2</td><td>นายเอกกมล  แพทยานันท์</td><td>อุปนายก คนที่ 1/เหรัญญิก/ประธานฝ่ายต่างประเทศและขับเคลื่อนนโยบายสาธารณะ</td></tr>
+          <tr><td>3</td><td>นายสุชาติ  โอวาทวรรณสกุล</td><td>อุปนายก คนที่ 2</td></tr>
+          <tr><td>4</td><td>นายชูศักดิ์   จันทยานนท์</td><td>อุปนายก คนที่ 3/เลขาธิการ/ประธานฝ่ายวิสาหกิจเพื่อสังคม</td></tr>
+          <tr><td>5</td><td>นางนุชจารี  คล้ายสุวรรณ</td><td>อุปนายก คนที่ 4/ปฏิคม</td></tr>
+          <tr><td>6</td><td>นายศุภชีพ  ดิษเทศ</td><td>อุปนายก คนที่ 5/นายทะเบียน</td></tr>
+          <tr><td>7</td><td>นางกัณฐมณี พฤกษะวัน</td><td>กรรมการ/ประธานฝ่ายประชาสัมพันธ์และสื่อสารองค์กร</td></tr>
+          <tr><td>8</td><td>นายกิตติพงษ์ หาดทวายกาญจน์</td><td>กรรมการ/ประธานฝ่ายการท่องเที่ยวและกีฬา</td></tr>
+          <tr><td>9</td><td>นายชัชชัย วิจิตรจรรยา</td><td>กรรมการ/ประธานฝ่ายเทคโนโลยีสารสนเทศและการสื่อสาร</td></tr>
+          <tr><td>10</td><td>นางสาวญาณี ชีวะเจริญ</td><td>กรรมการ/ประธานฝ่ายจิตอาสาและพัฒนาศักยภาพ</td></tr>
+          <tr><td>11</td><td>นายเทวพงษ์ พวงเพชร</td><td>กรรมการ/ประธานฝ่ายส่งเสริมและพัฒนาผู้นำคนพิการ</td></tr>
+          <tr><td>12</td><td>นายปราโมทย์ ธรรมสโรช</td><td>กรรมการ/ประธานฝ่ายการศึกษา</td></tr>
+          <tr><td>13</td><td>นายพลทร ขุนสะอาด</td><td>กรรมการ/ประธานฝ่ายเด็กและเยาวชน</td></tr>
+          <tr><td>14</td><td>นายภัทรพันธุ์ กฤษณา</td><td>กรรมการ/ประธานฝ่ายสิ่งอำนวยความสะดวกสำหรับคนพิการ</td></tr>
+          <tr><td>15</td><td>นางวาสนา สำลีรัตน์</td><td>กรรมการ/ประธานฝ่ายสวัสดิการ</td></tr>
+          <tr><td>16</td><td>นายสมชาย ปัญญ์เอกวงศ์</td><td>กรรมการ/ประธานฝ่ายกฎหมายและสิทธิมนุษยชน</td></tr>
+          <tr><td>17</td><td>นายสุบิน แบขุนทด</td><td>กรรมการ/ประธานฝ่ายส่งเสริมอาชีพและการจ้างงาน</td></tr>
+          <tr><td>18</td><td>นางสาวอรุณวดี ลิ้มอังกูร</td><td>กรรมการ/ประธานฝ่ายการแพทย์</td></tr>
+          <tr><td>19</td><td>นางอรุณี ลิ้มมณี</td><td>กรรมการ/ประธานฝ่ายสตรีและกลุ่มเป้าหมายพิเศษ</td></tr>
+          <tr><td>20</td><td>นางกัญญาวีร์ แขวงโสภา</td><td>กรรมการ</td></tr>
+          <tr><td>21</td><td>นางสาวกิจจาพร ชื่นบุญ</td><td>กรรมการ</td></tr>
+          <tr><td>22</td><td>นางสาวฐิติพร พริ้งเพลิด</td><td>กรรมการ</td></tr>
+          <tr><td>23</td><td>นางฑิฆัมพร บุญศรี</td><td>กรรมการ</td></tr>
+          <tr><td>24</td><td>นางณัชชา กู้สุจริต</td><td>กรรมการ</td></tr>
+          <tr><td>25</td><td>นางสาวปรียาพรรณ มีษา</td><td>กรรมการ</td></tr>
+          <tr><td>26</td><td>นางสาวพัตสุณี สุรินทร์</td><td>กรรมการ</td></tr>
+          <tr><td>27</td><td>นายภักดี พิกุลหอม</td><td>กรรมการ</td></tr>
+          <tr><td>28</td><td>นางวันเพ็ญ นิภานันท์</td><td>กรรมการ</td></tr>
+          <tr><td>29</td><td>นายสามารถ ห้องกระจก</td><td>กรรมการ</td></tr>
+          <tr><td>30</td><td>นายสุรเชษฐ์ คำนวล</td><td>กรรมการ</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <figure class="board-poster">
+      <a href="<?php echo DTH_URI; ?>/Pic/board-executives.png" target="_blank" rel="noopener" aria-label="ดูภาพคณะผู้บริหารขนาดเต็ม">
+        <img src="<?php echo DTH_URI; ?>/Pic/board-executives.png" alt="ภาพคณะผู้บริหารสมาคมสภาคนพิการทุกประเภทแห่งประเทศไทย" loading="lazy" onerror="this.closest('figure').style.display='none'">
+      </a>
+      <figcaption>คณะผู้บริหารสมาคมสภาคนพิการทุกประเภทแห่งประเทศไทย — คลิกเพื่อดูภาพขนาดเต็ม</figcaption>
+    </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Milestones (ข้อความทางการ — คงเนื้อหาครบถ้วน) ===== -->
+<section class="block wash-mint" id="milestones">
+  <div class="wrap">
+    <div class="kicker"><span class="ic" aria-hidden="true">🏆</span><h2>ผลงานที่ภาคภูมิใจ</h2></div>
+    <div class="ms">
+      <h3 class="ms-cat">ด้านกฎหมาย</h3>
+      <p><strong>ปี 2534</strong> สภาคนพิการฯ สามารถผลักดันพระราชบัญญัติการฟื้นฟูสมรรถภาพคนพิการ พ.ศ. 2534 ซึ่งเป็นกฎหมายฉบับแรกด้านคนพิการ ทำให้เกิดหน่วยงานและคณะกรรมการที่ทำงานเรื่องคนพิการเป็นรูปธรรม มีการจดทะเบียนและให้บริการแก่คนพิการในด้านต่างๆ เช่น การฟื้นฟูสมรรถภาพทางการแพทย์ การศึกษา การประกอบอาชีพ และการได้รับสิ่งอำนวยความสะดวก</p>
+      <p><strong>ปี 2540</strong> สภาคนพิการฯ ผลักดันให้รัฐธรรมนูญปี 2540 บัญญัติเรื่องสิทธิของคนพิการไว้ได้สำเร็จ “มาตรา 55 บุคคลซึ่งพิการหรือทุพพลภาพ มีสิทธิได้รับสิ่งอำนวยความสะดวก อันเป็นสาธารณะและความช่วยเหลืออื่นจากรัฐ ทั้งนี้ ตามที่กฎหมายบัญญัติ”</p>
+      <p><strong>ปี 2550</strong> สภาคนพิการฯ ผลักดันให้ รัฐธรรมนูญปี 2550 บัญญัติเรื่องการห้ามเลือกปฏิบัติโดยไม่เป็นธรรมต่อบุคคลเพราะเหตุแห่ง “ความพิการ” ไว้เป็นครั้งแรกในมาตรา 30 และปฏิรูปพระราชบัญญัติการฟื้นฟูสมรรถภาพคนพิการ พ.ศ. 2534 ให้เป็นพระราชบัญญัติส่งเสริมและพัฒนาคุณภาพชีวิตคนพิการ พ.ศ. 2550 ที่เปลี่ยนจาก “ฐานคิดแบบเวทนานิยม/สงเคราะห์/ช่วยเหลือ” เป็น “ฐานสิทธิ”</p>
+      <p><strong>ปี 2551</strong> สภาคนพิการฯ ผลักดันให้มีการประกาศใช้ พระราชบัญญัติการจัดการศึกษาสำหรับคนพิการ พ.ศ. 2551</p>
+      <p><strong>ปี 2560-2561</strong> สภาคนพิการฯ ผลักดันให้มีการแก้ไขพระราชบัญญัติลิขสิทธิ์ พ.ศ. 2537 เพื่อกำหนดให้คนพิการได้รับโอกาสอย่างเท่าเทียมกับบุคคลอื่นในการเข้าถึงงานอันมีลิขสิทธิ์ โดยให้สามารถทำซ้ำหรือดัดแปลงงานอันมีลิขสิทธิ์ เช่น วรรณกรรม ศิลปกรรม ให้อยู่ในรูปแบบที่คนพิการเข้าถึงได้ เช่น อักษรเบรลล์ ภาษามือ รวมทั้งเพื่อให้ประเทศไทยเข้าเป็นภาคีแห่งสนธิสัญญามาร์ราเคช (Marrakesh Treaty) ขององค์การทรัพย์สินทางปัญญาโลก</p>
+      <p><strong>ปี 2561</strong> สภาคนพิการฯ ได้จัดทำข้อเสนอต่อร่างพระราชบัญญัติการศึกษาแห่งชาติ พ.ศ. …. ฉบับรับฟังความคิดเห็นวันที่ 15 มิถุนายน 2561 โดยคณะกรรมการอิสระเพื่อการปฏิรูปการศึกษา เพื่อขอให้ 1) ใส่คำว่า“คนพิการ” ไว้ทั้งในบทนิยามและในทุกมาตราที่เกี่ยวข้อง 2) เพิ่มศูนย์การเรียนเฉพาะความพิการ 3) กำหนดให้คนพิการสามารถเข้าถึงและใช้ประโยชน์ได้จากบริการสารสนเทศด้านการศึกษา 4) ขอให้มีการจัดชั้นเรียนในรูปแบบที่สอดคล้องกับความต้องการจำเป็นพิเศษทางการศึกษา และ 5) ขอให้บัญญัติคำว่า “ออทิสติก” ไว้ในกฎหมายอันจะช่วยให้บุคคลออทิสติกได้รับสิทธิทางการศึกษา</p>
+      <h3 class="ms-cat">ด้านนโยบาย</h3>
+      <p><strong>ปี 2559-2561</strong> ให้คนพิการที่เป็นผู้ประกันตนตามกฎหมายประกันสังคมที่ได้รับประโยชน์ทดแทนจากการเจ็บป่วย สามารถเลือกรับบริการสาธารณสุขจากกฎหมายว่าด้วยหลักประกันสุขภาพแห่งชาติ (บัตรทอง) อย่างใดอย่างหนึ่งแทนได้</p>
+      <p><strong>ปี 2560-2561</strong> สภาคนพิการฯ ผลักดันให้คนพิการและผู้ดูแลคนพิการสามารถเข้าถึง “การกู้ยืมเงินทุนเพื่อใช้ในการประกอบอาชีพ” ได้ง่ายขึ้นเร็วขึ้นไม่ติดขัด โดยผู้ขอกู้ยืมเงินทุนประกอบอาชีพเป็นรายบุคคลซึ่งเป็นคนพิการหรือผู้ดูแลคนพิการ สามารถขอกู้ยืมเงินในท้องที่ใดที่ตนได้ประกอบอาชีพอยู่อย่างแท้จริงได้ โดยไม่จำเป็นจะต้องเป็นภูมิลำเนาตามทะเบียนบ้านอีกต่อไป และให้นิติบุคคล (องค์การคนพิการแต่ละประเภท/สมาคมต่าง ๆ) สามารถค้ำประกันผู้ขอกู้ทั้งที่เป็นรายบุคคลหรือรายกลุ่มก็ได้</p>
+      <h3 class="ms-cat">ด้านการพัฒนาเครือข่าย</h3>
+      <p><strong>ปี 2526-2560</strong> สภาคนพิการฯ ได้จัด “สมัชชาคนพิการแห่งชาติ” ต่อเนื่องมาเป็นระยะเวลาเกือบ 30 ปี โดยเป็นงานประจำปีที่ผู้นำคนพิการทั่วประเทศได้มีโอกาสมาพบปะพูดคุยแลกเปลี่ยน รวมทั้งกำหนดแนวนโยบายการทำงานของสภาคนพิการฯ ร่วมกัน เช่น ปีที่ผ่านมาเน้นเรื่องการสร้างความเข้มแข็งให้แก่สภาคนพิการจังหวัดทั้ง 77 จังหวัด</p>
+      <h3 class="ms-cat">ด้านพิทักษ์คุ้มครองสิทธิของคนพิการ</h3>
+      <p><strong>ปี 2560-2561</strong> สภาคนพิการฯ ฟ้องศาลปกครองกลางให้เพิกถอนคำสั่งของกระทรวงการคลังที่ขอให้กองทุนส่งเสริมและพัฒนาคุณภาพชีวิตคนพิการนำเงินสภาพคล่องส่วนที่เกินความจำเป็นของทุนหมุนเวียนส่งคลังเป็นรายได้แผ่นดิน จำนวน 2,000 ล้านบาท</p>
+      <h3 class="ms-cat">ด้านต่างประเทศ</h3>
+      <p><strong>ปี 2559</strong> สภาคนพิการฯ ได้ร่วมมือกับมูลนิธิสถาบันวิจัยเพื่อการพัฒนาคนพิการ ประเทศไทย จัดทำ”รายงานคู่ขนานการปฏิบัติตามอนุสัญญาว่าด้วยสิทธิคนพิการของประเทศไทย” ซึ่งประเทศไทยเป็นประเทศแรกในอาเซียนที่จัดทำรายงานคู่ขนาน และได้ไปนำเสนอรายงานดังกล่าวต่อคณะกรรมการว่าด้วยสิทธิคนพิการแห่งสหประชาชาติ ที่นครเจนีวา สวิสเซอร์แลนด์ เมื่อวันที่ 30 มีนาคม 2559</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Member organizations ===== -->
+<section class="block wash-leaf" id="members">
+  <div class="wrap">
+    <div class="kicker"><span class="ic" aria-hidden="true">🏛️</span><h2>องค์การสมาชิก 6 องค์การ</h2></div>
+    <div class="members-grid">
+
+      <div class="member-card">
+        <div class="mc-head">
+          <img src="<?php echo DTH_URI; ?>/Pic/members/blind.png" alt="โลโก้สมาคมคนตาบอดแห่งประเทศไทย" onerror="this.style.display='none'">
+          <h3>สมาคมคนตาบอดแห่งประเทศไทย</h3>
+        </div>
+        <div class="mc-info">
+          <span><svg class="mi" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg> 85/1-2 ซอยบุญอยู่ ถ.ดินแดง แขวงสามเสนใน เขตพญาไท กทม. 10400</span>
+          <span><svg class="mi" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.08 4.18 2 2 0 0 1 4.06 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg> <a href="tel:022476031">02-247-6031</a> ต่อ 304</span>
+          <span><svg class="mi" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9V2h12v7"/><path d="M6 18H4a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg> โทรสาร 02-245-9846</span>
+          <span><svg class="mi" viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg> <a href="mailto:sarabun@tab.or.th">sarabun@tab.or.th</a></span>
+          <span><svg class="mi" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg> <a href="https://www.tab.or.th/" target="_blank" rel="noopener">www.tab.or.th</a></span>
+        </div>
+        <a class="pill-btn ghost mc-fb" href="https://www.facebook.com/TabodThai?locale=th_TH" target="_blank" rel="noopener">Facebook Page →</a>
+      </div>
+
+      <div class="member-card">
+        <div class="mc-head">
+          <img src="<?php echo DTH_URI; ?>/Pic/members/intellectual.jpg" alt="โลโก้สมาคมผู้ปกครองคนพิการทางสติปัญญาแห่งประเทศไทย" onerror="this.style.display='none'">
+          <h3>สมาคมผู้ปกครองคนพิการทางสติปัญญาแห่งประเทศไทย</h3>
+        </div>
+        <div class="mc-info">
+          <span><svg class="mi" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg> 49/6 ซ.รามอินทรา 8 (วัดไตรรัตนาราม) เขตบางเขน กทม. 10220</span>
+          <span><svg class="mi" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.08 4.18 2 2 0 0 1 4.06 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg> <a href="tel:029719727">02-971-9727</a></span>
+          <span><svg class="mi" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9V2h12v7"/><path d="M6 18H4a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg> โทรสาร 02-552-1606</span>
+          <span><svg class="mi" viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg> <a href="mailto:pikarnpanya@gmail.com">pikarnpanya@gmail.com</a></span>
+          <span><svg class="mi" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg> <a href="https://apidth.com/" target="_blank" rel="noopener">apidth.com</a></span>
+        </div>
+        <a class="pill-btn ghost mc-fb" href="https://www.facebook.com/pikarnpanya.bangkok?locale=th_TH" target="_blank" rel="noopener">Facebook Page →</a>
+      </div>
+
+      <div class="member-card">
+        <div class="mc-head">
+          <img src="<?php echo DTH_URI; ?>/Pic/members/autism.jpg" alt="โลโก้สมาคมผู้ปกครองบุคคลออทิซึม (ไทย)" onerror="this.style.display='none'">
+          <h3>สมาคมผู้ปกครองบุคคลออทิซึม (ไทย)</h3>
+        </div>
+        <div class="mc-info">
+          <span><svg class="mi" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg> 140/47 ถ.อิสรภาพ 39 แขวงบ้านช่างหล่อ เขตบางกอกน้อย กทม. 10700</span>
+          <span><svg class="mi" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.08 4.18 2 2 0 0 1 4.06 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg> <a href="tel:024112899">02-411-2899</a></span>
+          <span><svg class="mi" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9V2h12v7"/><path d="M6 18H4a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg> โทรสาร 02-866-7125</span>
+          <span><svg class="mi" viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg> <a href="mailto:autisticthai@gmail.com">autisticthai@gmail.com</a></span>
+          <span><svg class="mi" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg> <a href="https://autism.autisticthai.com/" target="_blank" rel="noopener">autism.autisticthai.com</a></span>
+        </div>
+        <a class="pill-btn ghost mc-fb" href="https://www.facebook.com/APTAutismThailand?locale=th_TH" target="_blank" rel="noopener">Facebook Page →</a>
+      </div>
+
+      <div class="member-card">
+        <div class="mc-head">
+          <img src="<?php echo DTH_URI; ?>/Pic/members/deaf.png" alt="โลโก้สมาคมคนหูหนวกแห่งประเทศไทย" onerror="this.style.display='none'">
+          <h3>สมาคมคนหูหนวกแห่งประเทศไทย</h3>
+        </div>
+        <div class="mc-info">
+          <span><svg class="mi" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg> 1/8 ซอยอ่อนนุช 64 แขวงอ่อนนุช เขตสวนหลวง กรุงเทพฯ 10250</span>
+          <span><svg class="mi" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.08 4.18 2 2 0 0 1 4.06 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg> <a href="tel:020127459">02-012-7459-60</a></span>
+          <span><svg class="mi" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9V2h12v7"/><path d="M6 18H4a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg> โทรสาร 02-012-7461</span>
+          <span><svg class="mi" viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg> <a href="mailto:nadt.info@gmail.com">nadt.info@gmail.com</a></span>
+          <span><svg class="mi" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg> <a href="https://www.nadt.or.th/" target="_blank" rel="noopener">www.nadt.or.th</a></span>
+        </div>
+        <a class="pill-btn ghost mc-fb" href="https://www.facebook.com/nadthailand?locale=th_TH" target="_blank" rel="noopener">Facebook Page →</a>
+      </div>
+
+      <div class="member-card">
+        <div class="mc-head">
+          <img src="<?php echo DTH_URI; ?>/Pic/members/physical.png" alt="โลโก้สมาคมคนพิการแห่งประเทศไทย" onerror="this.style.display='none'">
+          <h3>สมาคมคนพิการแห่งประเทศไทย</h3>
+        </div>
+        <div class="mc-info">
+          <span><svg class="mi" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg> 77/4-5 หมู่ 2 ถนนชัยพฤกษ์ ต.คลองพระอุดม อ.ปากเกร็ด จ.นนทบุรี 11120</span>
+          <span><svg class="mi" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.08 4.18 2 2 0 0 1 4.06 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg> <a href="tel:021471820">02-147-1820</a>, <a href="tel:021471821">02-147-1821</a></span>
+          <span><svg class="mi" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9V2h12v7"/><path d="M6 18H4a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg> โทรสาร 02-147-2507</span>
+          <span><svg class="mi" viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg> <a href="mailto:apht2005@hotmail.com">apht2005@hotmail.com</a></span>
+          <span><svg class="mi" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg> <a href="https://www.apht-th.org/" target="_blank" rel="noopener">www.apht-th.org</a></span>
+        </div>
+        <a class="pill-btn ghost mc-fb" href="https://www.facebook.com/disabledofthailand?locale=th_TH" target="_blank" rel="noopener">Facebook Page →</a>
+      </div>
+
+      <div class="member-card">
+        <div class="mc-head">
+          <img src="<?php echo DTH_URI; ?>/Pic/members/mental.jpg" alt="โลโก้สมาคมเพื่อผู้บกพร่องทางจิตแห่งประเทศไทย" onerror="this.style.display='none'">
+          <h3>สมาคมเพื่อผู้บกพร่องทางจิตแห่งประเทศไทย</h3>
+        </div>
+        <div class="mc-info">
+          <span><svg class="mi" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg> 47 ม.4 อาคารหญิง 10 โรงพยาบาลศรีธัญญา ถนนติวานนท์ ตำบลตลาดขวัญ อำเภอเมือง จังหวัดนนทบุรี</span>
+          <span><svg class="mi" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.08 4.18 2 2 0 0 1 4.06 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg> <a href="tel:0992271233">099-227-1233</a>, <a href="tel:0831222354">083-122-2354</a>, <a href="tel:0627858738">062-785-8738</a></span>
+          <span><svg class="mi" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9V2h12v7"/><path d="M6 18H4a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg> โทรสาร 02-968-9667</span>
+          <span><svg class="mi" viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg> <a href="mailto:ami_dmh@hotmail.com">ami_dmh@hotmail.com</a></span>
+          <span><svg class="mi" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg> <a href="https://www.amith.org/" target="_blank" rel="noopener">www.amith.org</a></span>
+        </div>
+        <a class="pill-btn ghost mc-fb" href="https://www.facebook.com/amidmh.th?locale=th_TH" target="_blank" rel="noopener">Facebook Page →</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA ===== -->
+<section class="block">
+  <div class="wrap">
+    <div class="hotline">
+      <div class="l"><h3>อยากร่วมงานหรือสอบถามข้อมูลเพิ่มเติม?</h3><p>ติดต่อสมาคมสภาคนพิการทุกประเภทแห่งประเทศไทย</p></div>
+      <a href="<?php echo esc_url( home_url('/') ); ?>#contact" class="call" aria-label="ไปยังหน้าติดต่อ">ติดต่อเรา →</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ===== Footer ===== -->
+<footer class="site">
+  <div class="wrap">
+    <div class="foot">
+      <div class="flogo"><img src="<?php echo DTH_URI; ?>/Pic/dth-logo-wide.png" alt="โลโก้ DTH" onerror="this.style.display='none'"></div>
+      <div>
+        <h4>สมาคมสภาคนพิการทุกประเภทแห่งประเทศไทย</h4>
+        <address>
+          255 ห้อง 6-8 ชั้น 3 อาคาร APCD ถนนราชวิถี<br>
+          แขวงทุ่งพญาไท เขตราชเทวี กรุงเทพมหานคร 10400<br>
+          โทรศัพท์ <a href="tel:023544260">02-354-4260</a><br>
+          อีเมล <a href="mailto:disabilitiesth@gmail.com">disabilitiesth@gmail.com</a>
+        </address>
+      </div>
+    </div>
+    <div class="foot-policy">
+      <a href="<?php echo esc_url( home_url('/') ); ?>#top">หน้าแรก</a>
+      <a href="<?php echo esc_url( home_url('/about/') ); ?>">เกี่ยวกับเรา</a>
+      <a href="<?php echo esc_url( home_url('/about/') ); ?>#board">คณะกรรมการ</a>
+      <a href="<?php echo esc_url( home_url('/about/') ); ?>#milestones">ผลงานสภา</a>
+      <a href="<?php echo esc_url( home_url('/about/') ); ?>#members">องค์การคนพิการ</a>
+      <a href="<?php echo esc_url( home_url('/') ); ?>#network">หน่วยงานที่เกี่ยวข้อง</a>
+      <a href="<?php echo esc_url( home_url('/news/') ); ?>">ข่าวสารและกิจกรรม</a>
+      <a href="<?php echo esc_url( home_url('/') ); ?>#rights">สิทธิคนพิการที่ควรรู้</a>
+      <a href="<?php echo esc_url( home_url('/media/') ); ?>?cat=law">กฎหมาย</a>
+          <a href="<?php echo esc_url( home_url('/media/') ); ?>?cat=magazine">DTH-Magazine</a>
+      <a href="<?php echo esc_url( home_url('/regulations/') ); ?>">เอกสารดาวน์โหลด</a>
+      <a href="<?php echo esc_url( home_url('/media/') ); ?>">คลังสื่อ / อินโฟกราฟิก</a>
+      <a href="<?php echo esc_url( home_url('/') ); ?>#contact">ติดต่อเรา</a>
+      <a href="<?php echo esc_url( home_url('/sitemap/') ); ?>">ผังเว็บไซต์</a>
+      <a href="<?php echo esc_url( home_url('/development/') ); ?>">ขั้นตอนการพัฒนา</a>
+      <a href="https://dth.or.th/" target="_blank" rel="noopener">เว็บไซต์ทางการ dth.or.th</a>
+    </div>
+    <div class="foot-copy">© 2569 สงวนลิขสิทธิ์โดยสมาคมสภาคนพิการทุกประเภทแห่งประเทศไทย (Disabilities Thailand)</div>
+  </div>
+</footer>
+
+<!-- ===== Floating contact ===== -->
+<div class="fab-wrap" id="fab">
+  <div class="fab-panel" id="fabPanel" role="menu" aria-label="ช่องทางติดต่อ">
+    <a class="fab-item" href="https://www.facebook.com/share/1Ez81X9Yjh/" target="_blank" rel="noopener" role="menuitem"><span class="ico ico-fb" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 21v-8h2.5l.4-3h-2.9V8.2c0-.9.3-1.5 1.5-1.5H16.5V4.1S15.4 4 14.3 4c-2.3 0-3.8 1.4-3.8 3.9V10H8v3h2.5v8h3Z"/></svg></span> Facebook</a>
+    <a class="fab-item" href="tel:023544260" role="menuitem"><span class="ico ico-tel" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.6c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.4 0 .8-.3 1l-2.3 2.2Z"/></svg></span> โทร 02-354-4260</a>
+    <a class="fab-item" href="mailto:disabilitiesth@gmail.com" role="menuitem"><span class="ico ico-mail" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="m4 7 8 6 8-6"/></svg></span> อีเมล</a>
+  </div>
+  <button class="fab-main" id="fabMain" aria-label="เปิดช่องทางติดต่อ" aria-expanded="false" aria-controls="fabPanel">
+    <img class="ic-open" src="<?php echo DTH_URI; ?>/Pic/dth-logo.png" alt="" aria-hidden="true">
+    <svg class="ic-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg>
+  </button>
+</div>
+
+<script>
+  // Accessibility: font size
+  document.querySelectorAll('[data-fs]').forEach(b=>b.addEventListener('click',()=>{
+    document.documentElement.style.setProperty('--fs',b.dataset.fs);
+    document.querySelectorAll('[data-fs]').forEach(x=>x.classList.remove('active'));b.classList.add('active');
+  }));
+  // Accessibility: contrast
+  document.querySelectorAll('[data-theme]').forEach(b=>b.addEventListener('click',()=>{
+    document.body.classList.remove('hc-white','hc-yellow');
+    if(b.dataset.theme)document.body.classList.add(b.dataset.theme);
+    document.querySelectorAll('[data-theme]').forEach(x=>x.classList.remove('active'));b.classList.add('active');
+  }));
+  // Header shadow
+  const hdr=document.querySelector('header.site');
+  addEventListener('scroll',()=>hdr.classList.toggle('scrolled',scrollY>10));
+  // Mobile menu
+  const burger=document.getElementById('burger'),menu=document.getElementById('menu');
+  burger.addEventListener('click',()=>{const o=menu.classList.toggle('open');burger.setAttribute('aria-expanded',o);});
+  document.querySelectorAll('.has-sub > a').forEach(a=>a.addEventListener('click',e=>{
+    if(matchMedia('(max-width:760px)').matches){e.preventDefault();const li=a.parentElement,o=li.classList.toggle('open');a.setAttribute('aria-expanded',o);}
+  }));
+  // Floating contact
+  const fab=document.getElementById('fab'),fabMain=document.getElementById('fabMain');
+  fabMain.addEventListener('click',()=>{const o=fab.classList.toggle('open');fabMain.setAttribute('aria-expanded',o);});
+  document.addEventListener('click',e=>{if(fab.classList.contains('open')&&!fab.contains(e.target)){fab.classList.remove('open');fabMain.setAttribute('aria-expanded','false');}});
+</script>
+<!-- back to top -->
+<button class="to-top" id="toTop" type="button">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5"/><path d="m5 12 7-7 7 7"/></svg>
+  กลับไปด้านบนเว็บไซต์
+</button>
+<script>
+(()=>{const b=document.getElementById('toTop');if(!b)return;
+const onS=()=>{const on=scrollY+innerHeight>=document.documentElement.scrollHeight-320&&scrollY>200;b.classList.toggle('show',on);document.body.classList.toggle('totop-on',on);};
+addEventListener('scroll',onS,{passive:true});onS();
+b.addEventListener('click',()=>scrollTo({top:0,behavior:'smooth'}));})();
+</script>
+<!-- scroll reveal -->
+<script>
+(()=>{ // animate content into view; respects reduced-motion
+if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+const sel='.kicker,.news-head,.card,.partner,.qa-item,.qa-tile,.member-card,.board-card,.obj-list li,.ms-cat,.ms p,.vision-quote,.about-stat,.hotline,.rights-shell,.prose p,.obj-intro,.tabbar,.fb-embed,.table-wrap,.board-poster,.hub-card,.hub-side-item,.timeline li,.page-hero .logo-badge,.page-hero .lead,.foot';
+const els=[...document.querySelectorAll(sel)].filter(el=>!el.closest('.rv'));
+const groups=new Map();
+els.forEach(el=>{el.classList.add('rv');
+  const p=el.parentElement,i=groups.get(p)||0;
+  el.style.setProperty('--rvd',Math.min(i*70,420)+'ms');groups.set(p,i+1)});
+let pending=els.slice(),throttled=false;
+const reveal=el=>{el.classList.add('in');
+  setTimeout(()=>{el.classList.remove('rv','in');el.style.removeProperty('--rvd')},950+parseInt(el.style.getPropertyValue('--rvd')||0))};
+const check=()=>{const vh=innerHeight;
+  pending=pending.filter(el=>{const r=el.getBoundingClientRect();
+    if(r.top<vh*.94){reveal(el);return false}return true});
+  if(!pending.length){removeEventListener('scroll',onScroll);removeEventListener('resize',onScroll)}};
+const onScroll=()=>{if(throttled)return;throttled=true;setTimeout(()=>{throttled=false;check()},90)};
+addEventListener('scroll',onScroll,{passive:true});
+addEventListener('resize',onScroll,{passive:true});
+check();
+})();
+</script>
+<?php
+get_footer();

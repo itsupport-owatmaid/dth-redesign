@@ -1,0 +1,66 @@
+# เว็บไซต์ DTH เวอร์ชัน WordPress (รันบนเครื่องด้วย Docker)
+
+แปลงเว็บไซต์ static เดิม (11 หน้า) เป็น **WordPress theme ชื่อ `dth`** โดย**คงหน้าตาและฟีเจอร์การเข้าถึง (a11y bar / คอนทราสต์สูง / ปรับขนาดอักษร) ไว้ครบ 100%** พร้อมชุด Docker สำหรับรันบนเครื่องตัวเองแบบคำสั่งเดียว
+
+---
+
+## สิ่งที่ต้องมีก่อน
+- **Docker Desktop** (Windows/macOS) — ติดตั้งจาก https://www.docker.com/products/docker-desktop/ แล้วเปิดให้ทำงาน
+
+## วิธีรัน (คำสั่งเดียว)
+
+1. ดึงโค้ดสาขานี้ลงเครื่อง (หรือดาวน์โหลด ZIP จาก GitHub สาขา `claude/vigilant-fermat-fdf363`)
+   ```bash
+   git clone <repo-url>
+   cd dth-redesign
+   git checkout claude/vigilant-fermat-fdf363
+   ```
+2. เข้าโฟลเดอร์ `wordpress/` แล้วสั่งรัน:
+   ```bash
+   cd wordpress
+   docker compose up -d
+   ```
+   ครั้งแรกจะดาวน์โหลด image + ติดตั้ง WordPress + สร้างหน้าทั้ง 11 หน้า + เปิดใช้ธีมให้อัตโนมัติ (รอ ~1–2 นาที)
+
+3. เปิดเบราว์เซอร์:
+   - **เว็บไซต์:** http://localhost:8080
+   - **หน้าแอดมิน:** http://localhost:8080/wp-admin
+     - ผู้ใช้: `admin`  ·  รหัสผ่าน: `admin123`
+
+> ดูสถานะการติดตั้งอัตโนมัติได้ด้วย `docker compose logs -f wpcli`
+
+## คำสั่งที่ใช้บ่อย
+```bash
+docker compose up -d        # เปิดเว็บ
+docker compose down         # ปิดเว็บ (ข้อมูลยังอยู่)
+docker compose down -v      # ปิด + ลบฐานข้อมูลทั้งหมด (เริ่มใหม่หมด)
+docker compose logs -f wpcli   # ดู log การติดตั้งอัตโนมัติ
+```
+
+---
+
+## โครงสร้างไฟล์
+```
+wordpress/
+├─ docker-compose.yml          # WordPress + MariaDB + ตัวติดตั้งอัตโนมัติ
+├─ init/setup.sh               # สคริปต์ติดตั้ง/สร้างหน้า/เปิดธีม
+└─ wp-content/themes/dth/      # ★ ธีม DTH
+   ├─ style.css                # หัวธีม (ชื่อ/รายละเอียด)
+   ├─ functions.php            # โหลดฟอนต์ + dth-v2.css
+   ├─ header.php / footer.php  # <head> และปิด body
+   ├─ dth-v2.css               # สไตล์หลัก (สำเนาจากเว็บเดิม)
+   ├─ front-page.php           # หน้าแรก
+   └─ page-*.php               # อีก 10 หน้า (about, staff, provinces, news, ...)
+```
+รูปภาพ (`Pic/`) และเอกสาร (`Doc/`) ใช้วิธี **bind-mount จาก repo** เข้าไปในธีมตอนรัน จึงไม่ต้องสำเนาซ้ำ และแก้รูปใน repo แล้วเห็นผลทันที
+
+## การแก้เนื้อหา
+- **แก้หน้าตา/ข้อความ:** แก้ไฟล์ใน `wp-content/themes/dth/` (เช่น `page-provinces.php`) แล้วรีเฟรชเบราว์เซอร์ — เห็นผลทันที (bind-mount)
+- **ชื่อหน้า/เมนู WordPress:** จัดการได้ในหน้าแอดมิน → Pages
+- โครงสร้างตอนนี้เป็นแบบ "หน้าตาคงเดิม" คือ markup ฝังในไฟล์ template โดยตรง (ยังไม่ได้ทำเป็น custom post type ที่แก้ผ่าน editor ได้)
+
+## ข้อจำกัด / หมายเหตุ
+- **ระดับการแปลง:** เป็น *theme หน้าตาคงเดิม* ตามที่เลือกไว้ — ยังไม่ได้แปลงข่าว/จังหวัด/กรรมการ เป็นข้อมูลที่แก้ผ่าน admin (นั่นคือออปชัน "CMS เต็มรูปแบบ" ซึ่งใช้เวลามากกว่า)
+- ลิงก์ภายในและ path รูปถูกปรับให้ชี้ผ่าน WordPress ให้อัตโนมัติแล้ว
+- รหัสผ่าน/ค่าต่าง ๆ ในไฟล์นี้สำหรับ **ใช้บนเครื่อง (local) เท่านั้น** อย่านำขึ้นเซิร์ฟเวอร์จริงโดยไม่เปลี่ยนรหัส
+- ถ้าจะนำขึ้น hosting จริง ให้ก็อปปี้โฟลเดอร์ธีม `dth` (พร้อม `Pic/`, `Doc/`, `dth-v2.css`) ไปไว้ใน `wp-content/themes/` แล้วเปิดใช้ธีม
