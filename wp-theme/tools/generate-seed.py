@@ -15,6 +15,19 @@ OUT = ROOT / "wp-theme/dth-theme/inc/seed-data.php"
 # Images referenced as "Pic/..." are sideloaded from this base at import time.
 ASSET_BASE = "https://itsupport-owatmaid.github.io/dth-redesign/"
 
+# The old dth.or.th uploads now answer 404, but the same artwork lives in this
+# repo. Rewrite those references to the copy we can actually fetch.
+DEAD_UPLOADS = {
+    "https://dth.or.th/wp-content/uploads/2022/04/logo-01.png": "Pic/file logo/logo-01.png",
+    "https://dth.or.th/wp-content/uploads/2022/04/logo-04.png": "Pic/file logo/logo-04.png",
+    "https://dth.or.th/wp-content/uploads/2022/04/logo-05.png": "Pic/file logo/logo-05.png",
+    "https://dth.or.th/wp-content/uploads/2022/04/logo-06.png": "Pic/file logo/logo-06.png",
+    "https://dth.or.th/wp-content/uploads/2022/04/logo-12.png": "Pic/file logo/logo-12.png",
+    "https://dth.or.th/wp-content/uploads/2022/04/logo-13.png": "Pic/file logo/logo-13.png",
+    "https://dth.or.th/wp-content/uploads/2022/07/CRPD.png": "Pic/file logo/crpd.png",
+    "https://dth.or.th/wp-content/uploads/2022/07/IDA-Logo.png": "Pic/file logo/IDA-Logo.png",
+}
+
 
 def soup(name):
     return BeautifulSoup((ROOT / name).read_text(encoding="utf-8"), "lxml")
@@ -28,6 +41,7 @@ def asset(url):
     """Absolute URL for a local Pic/ or Doc/ reference."""
     if not url:
         return ""
+    url = DEAD_UPLOADS.get(url, url)
     if url.startswith(("http://", "https://")):
         return url
     return ASSET_BASE + url.lstrip("./")
