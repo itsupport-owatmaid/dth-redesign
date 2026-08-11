@@ -1,0 +1,10 @@
+.dth-fields .dth-field { margin: 0 0 18px; }
+.dth-fields .dth-field label { font-size: 13px; }
+.dth-fields .description { color: #646970; font-size: 12px; }
+.dth-fields .dth-media { display: flex; gap: 8px; align-items: flex-start; }
+.dth-fields .dth-media .dth-media-input { flex: 1; }
+
+.dth-import-panel { max-width: 780px; }
+.dth-import-panel li { margin-bottom: 6px; }
+.dth-import-log { background: #fff; border: 1px solid #dcdcde; padding: 12px 16px; max-height: 320px; overflow: auto; }
+.dth-import-log li { margin: 0 0 4px; font-family: Menlo, Consolas, monospace; font-size: 12px; }
