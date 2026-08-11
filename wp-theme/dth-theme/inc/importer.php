@@ -32,8 +32,10 @@ function dth_import_page() {
 		return;
 	}
 
-	$queue     = get_option( DTH_IMAGE_QUEUE, array() );
-	$remaining = is_array( $queue ) ? count( $queue ) : 0;
+	$queue       = get_option( DTH_IMAGE_QUEUE, array() );
+	$remaining   = is_array( $queue ) ? count( $queue ) : 0;
+	$locations   = get_theme_mod( 'nav_menu_locations', array() );
+	$menus_ready = ! empty( $locations['primary'] ) && wp_get_nav_menu_object( $locations['primary'] );
 	$done      = isset( $_GET['dth_done'] ) ? sanitize_key( wp_unslash( $_GET['dth_done'] ) ) : ''; // phpcs:ignore WordPress.Security.NonceVerification.Recommended -- Read-only notice.
 	$auto      = isset( $_GET['dth_auto'] ) && '1' === $_GET['dth_auto']; // phpcs:ignore WordPress.Security.NonceVerification.Recommended -- Read-only flag.
 	?>
@@ -44,9 +46,11 @@ function dth_import_page() {
 			<div class="notice notice-success"><p><?php esc_html_e( 'นำเข้าเนื้อหาเรียบร้อยแล้ว — ขั้นตอนถัดไปคือดึงรูปภาพเข้าคลังสื่อ', 'dth' ); ?></p></div>
 		<?php elseif ( 'images' === $done ) : ?>
 			<div class="notice notice-success"><p><?php esc_html_e( 'ดึงรูปภาพเข้าคลังสื่อครบแล้ว', 'dth' ); ?></p></div>
+		<?php elseif ( 'structure' === $done ) : ?>
+			<div class="notice notice-success"><p><?php esc_html_e( 'สร้างเมนูและหน้าเว็บเรียบร้อยแล้ว', 'dth' ); ?></p></div>
 		<?php endif; ?>
 
-		<h2><?php esc_html_e( 'ขั้นที่ 1 — เนื้อหา เมนู และหน้าเว็บ', 'dth' ); ?></h2>
+		<h2><?php esc_html_e( 'ขั้นที่ 1 — เนื้อหาทั้งหมด', 'dth' ); ?></h2>
 		<p><?php esc_html_e( 'สร้างข่าว สื่อ คณะกรรมการ เจ้าหน้าที่ สภาฯ จังหวัด ข้อเสนอ สไลด์ สิทธิคนพิการ คำถามที่พบบ่อย องค์การเครือข่าย พร้อมหน้าเพจ เมนูหลัก และเมนูท้ายเว็บ จากเนื้อหาเว็บไซต์เดิมทั้งหมด', 'dth' ); ?></p>
 		<p><strong><?php esc_html_e( 'กดซ้ำได้ปลอดภัย', 'dth' ); ?></strong> — <?php esc_html_e( 'รายการที่นำเข้าไปแล้วจะถูกข้าม ไม่สร้างซ้ำ และไม่ทับเนื้อหาที่คุณแก้ไขเอง', 'dth' ); ?></p>
 		<form method="post">
@@ -57,7 +61,26 @@ function dth_import_page() {
 
 		<hr>
 
-		<h2><?php esc_html_e( 'ขั้นที่ 2 — ดึงรูปภาพเข้าคลังสื่อ', 'dth' ); ?></h2>
+		<h2><?php esc_html_e( 'ขั้นที่ 2 — เมนูและหน้าเว็บ', 'dth' ); ?></h2>
+		<p><?php esc_html_e( 'ขั้นที่ 1 สร้างส่วนนี้ให้อยู่แล้ว ปุ่มนี้มีไว้เผื่อกรณีที่ขั้นที่ 1 ทำงานไม่จบเพราะเซิร์ฟเวอร์ตัดเวลาก่อน (เนื้อหาเข้าครบแต่เมนูยังไม่ขึ้น) — ทำงานเร็วเพราะสร้างเฉพาะเมนูและหน้าเพจ', 'dth' ); ?></p>
+		<p>
+			<?php
+			if ( $menus_ready ) {
+				esc_html_e( 'สถานะ: เมนูหลักและเมนูท้ายเว็บถูกตั้งค่าแล้ว', 'dth' );
+			} else {
+				echo '<strong>' . esc_html__( 'สถานะ: ยังไม่มีเมนู — กดปุ่มด้านล่างเพื่อสร้าง', 'dth' ) . '</strong>';
+			}
+			?>
+		</p>
+		<form method="post">
+			<?php wp_nonce_field( 'dth_import_structure' ); ?>
+			<input type="hidden" name="dth_action" value="structure">
+			<?php submit_button( __( 'สร้างเมนูและหน้าเว็บ', 'dth' ), $menus_ready ? 'secondary' : 'primary', 'submit', false ); ?>
+		</form>
+
+		<hr>
+
+		<h2><?php esc_html_e( 'ขั้นที่ 3 — ดึงรูปภาพเข้าคลังสื่อ', 'dth' ); ?></h2>
 		<p><?php esc_html_e( 'รูปทั้งหมด (โลโก้ ภาพคณะกรรมการ ภาพข่าว อินโฟกราฟิก) จะถูกดาวน์โหลดเข้าคลังสื่อของเว็บนี้ เพื่อให้เจ้าหน้าที่เปลี่ยนรูปเองได้ในภายหลัง', 'dth' ); ?></p>
 		<p>
 			<?php
@@ -115,6 +138,13 @@ function dth_import_handle() {
 		exit;
 	}
 
+	if ( 'structure' === $action ) {
+		check_admin_referer( 'dth_import_structure' );
+		dth_import_structure();
+		wp_safe_redirect( admin_url( 'tools.php?page=dth-import&dth_done=structure' ) );
+		exit;
+	}
+
 	if ( 'images' === $action ) {
 		check_admin_referer( 'dth_import_images' );
 		$remaining = dth_import_images( DTH_IMAGE_BATCH );
@@ -129,6 +159,8 @@ function dth_import_handle() {
  * Create every post, term, page and menu from the seed data.
  */
 function dth_import_content() {
+	dth_relax_limits();
+
 	$seed  = dth_seed_data();
 	$queue = array();
 
@@ -259,6 +291,33 @@ function dth_import_content() {
 		) );
 	}
 
+	dth_queue_logo( $queue, $seed['asset_base'] );
+	update_option( DTH_IMAGE_QUEUE, array_merge( (array) get_option( DTH_IMAGE_QUEUE, array() ), $queue ) );
+
+	dth_import_structure();
+}
+
+/**
+ * Create the pages, front page and menus.
+ *
+ * Kept separate from the bulk row import so it can be re-run on its own: on
+ * slow shared hosting the content pass can hit max_execution_time before it
+ * reaches this point, which leaves the site with content but no menus.
+ */
+function dth_import_structure() {
+	dth_relax_limits();
+
+	$seed = dth_seed_data();
+
+	// Menu children point at news categories, which normally appear while the
+	// news rows import. Make sure they exist even when that pass did not finish.
+	foreach ( array( 'pr', 'activity', 'knowledge' ) as $slug ) {
+		if ( ! get_term_by( 'slug', $slug, 'dth_news_cat' ) ) {
+			$name = isset( $seed['category_names'][ $slug ] ) ? $seed['category_names'][ $slug ] : $slug;
+			wp_insert_term( $name, 'dth_news_cat', array( 'slug' => $slug ) );
+		}
+	}
+
 	$page_ids = array();
 	foreach ( $seed['pages'] as $slug => $page ) {
 		$page_ids[ $slug ] = dth_seed_page( $slug, $page['title'], $page['content'] );
@@ -270,10 +329,18 @@ function dth_import_content() {
 		update_option( 'page_on_front', $front_id );
 	}
 
-	dth_queue_logo( $queue, $seed['asset_base'] );
 	dth_build_menus( $page_ids );
+}
 
-	update_option( DTH_IMAGE_QUEUE, array_merge( (array) get_option( DTH_IMAGE_QUEUE, array() ), $queue ) );
+/**
+ * Lift the PHP time and memory ceilings for the import, where the host allows it.
+ */
+function dth_relax_limits() {
+	if ( function_exists( 'set_time_limit' ) ) {
+		@set_time_limit( 0 ); // phpcs:ignore WordPress.PHP.NoSilencedErrors.Discouraged -- Disabled on some hosts.
+	}
+	@ini_set( 'memory_limit', WP_MAX_MEMORY_LIMIT ); // phpcs:ignore WordPress.PHP.NoSilencedErrors.Discouraged, WordPress.PHP.IniSet.memory_limit_Blacklisted -- Disabled on some hosts.
+	ignore_user_abort( true );
 }
 
 /**

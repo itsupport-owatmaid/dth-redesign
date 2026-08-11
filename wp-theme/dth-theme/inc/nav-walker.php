@@ -7,6 +7,50 @@
 
 defined( 'ABSPATH' ) || exit;
 
+add_filter( 'wp_nav_menu_objects', 'dth_menu_ignore_anchor_current' );
+/**
+ * Keep in-page anchors out of the active state.
+ *
+ * WordPress compares a custom link against the current URL with its fragment
+ * stripped, so on the front page every "/#contact"-style item counts as the
+ * current item and drags its parents in as ancestors — the design highlights
+ * one pill, not five. Recompute the current/ancestor flags from links that
+ * actually point at another page.
+ *
+ * @param array $items Menu items.
+ * @return array Menu items.
+ */
+function dth_menu_ignore_anchor_current( $items ) {
+	$current = array();
+
+	foreach ( $items as $item ) {
+		if ( in_array( 'current-menu-item', $item->classes, true ) && false === strpos( (string) $item->url, '#' ) ) {
+			$current[ $item->ID ] = true;
+		}
+	}
+
+	$stale  = array( 'current-menu-item', 'current-menu-parent', 'current-menu-ancestor' );
+	$by_id  = array();
+
+	foreach ( $items as $item ) {
+		$item->classes     = array_values( array_diff( $item->classes, $stale ) );
+		$item->current     = isset( $current[ $item->ID ] );
+		$by_id[ $item->ID ] = $item;
+	}
+
+	foreach ( array_keys( $current ) as $id ) {
+		$by_id[ $id ]->classes[] = 'current-menu-item';
+
+		$parent = (int) $by_id[ $id ]->menu_item_parent;
+		while ( $parent && isset( $by_id[ $parent ] ) ) {
+			$by_id[ $parent ]->classes[] = 'current-menu-ancestor';
+			$parent                      = (int) $by_id[ $parent ]->menu_item_parent;
+		}
+	}
+
+	return $items;
+}
+
 /**
  * Primary menu: flat anchors at depth 0, wrapped in .has-sub/.sub when a
  * menu item has children.
