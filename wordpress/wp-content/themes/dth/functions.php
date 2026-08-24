@@ -21,6 +21,8 @@ require_once __DIR__ . '/inc/cpt-staff.php';
 require_once __DIR__ . '/inc/cpt-board.php';
 // CPT ข่าวสาร
 require_once __DIR__ . '/inc/cpt-news.php';
+// CPT คลังสื่อ
+require_once __DIR__ . '/inc/cpt-media.php';
 
 add_action( 'after_setup_theme', function () {
 	add_theme_support( 'title-tag' );
