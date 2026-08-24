@@ -1,0 +1,27 @@
+<!-- wp:html -->
+<!-- ===== Breadcrumb ===== -->
+<nav class="breadcrumb" aria-label="เส้นทางนำทาง">
+  <div class="wrap"><a href="{{HOME}}/">หน้าแรก</a> <span aria-hidden="true">›</span> <span>เกี่ยวกับเรา</span> <span aria-hidden="true">›</span> <strong>เจ้าหน้าที่สมาคม</strong></div>
+</nav>
+
+<!-- ===== Page hero ===== -->
+<section class="page-hero">
+  <h1>เจ้าหน้าที่สมาคม</h1>
+  <p class="lead">โครงสร้างและรายชื่อเจ้าหน้าที่ประจำสำนักงาน สมาคมสภาคนพิการทุกประเภทแห่งประเทศไทย</p>
+</section>
+
+<main id="main">
+<section class="block">
+  <div class="wrap">
+    <div class="kicker"><h2>โครงสร้างเจ้าหน้าที่สมาคม</h2></div>
+    <figure class="board-poster staff-poster">
+      <a href="{{DTH}}/Pic/staff-chart.png" target="_blank" rel="noopener" aria-label="ดูภาพขนาดเต็ม"><img src="{{DTH}}/Pic/staff-chart.png" alt="โครงสร้างเจ้าหน้าที่สมาคมสภาคนพิการทุกประเภทแห่งประเทศไทย" loading="lazy"></a>
+      <figcaption>ผังโครงสร้างเจ้าหน้าที่ — คลิกเพื่อดูภาพขนาดเต็ม</figcaption>
+    </figure>
+    [dth_staff]
+  </div>
+</section>
+</main>
+
+<!-- ===== Footer ===== -->
+<!-- /wp:html -->
