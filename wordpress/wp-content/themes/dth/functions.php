@@ -19,6 +19,8 @@ require_once __DIR__ . '/inc/floating-contact.php';
 require_once __DIR__ . '/inc/cpt-staff.php';
 // CPT กรรมการ
 require_once __DIR__ . '/inc/cpt-board.php';
+// CPT ข่าวสาร
+require_once __DIR__ . '/inc/cpt-news.php';
 
 add_action( 'after_setup_theme', function () {
 	add_theme_support( 'title-tag' );
