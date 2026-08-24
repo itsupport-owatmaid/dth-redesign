@@ -98,72 +98,8 @@ get_header();
   </div>
 </header>
 
-<!-- ===== Breadcrumb ===== -->
-<nav class="breadcrumb" aria-label="เส้นทางนำทาง">
-  <div class="wrap"><a href="<?php echo esc_url( home_url('/') ); ?>">หน้าแรก</a> <span aria-hidden="true">›</span> <span>ข้อมูลสำคัญ</span> <span aria-hidden="true">›</span> <strong>คลังสื่อ / อินโฟกราฟิก</strong></div>
-</nav>
+<?php the_content(); ?>
 
-<main id="main">
-<section class="block" style="padding-top:clamp(20px,2.5vw,30px)">
-  <div class="wrap">
-    <div class="kicker"><h1 style="font-size:clamp(1.5rem,2.9vw,2.25rem);font-weight:600;line-height:1.2">คลังสื่อ / อินโฟกราฟิก</h1></div>
-    <div class="tabbar" id="catBar" aria-label="หมวดหมู่คลังสื่อ" style="margin-bottom:clamp(18px,2.5vw,26px)">
-      <button class="tab active" data-cat="all" type="button">ทั้งหมด</button>
-      <button class="tab" data-cat="rights" type="button">สิทธิและสวัสดิการ</button>
-      <button class="tab" data-cat="law" type="button">กฎหมาย</button>
-      <button class="tab" data-cat="home" type="button">ที่อยู่อาศัย</button>
-      <button class="tab" data-cat="magazine" type="button">วารสาร DTH</button>
-    </div>
-    <div class="hub-toolbar">
-      <div class="hub-search">
-        <input type="text" id="hubSearch" placeholder="ใส่คำที่ต้องการค้นหา…" aria-label="ค้นหาคลังสื่อ">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m21 21-4.34-4.34"></path><circle cx="11" cy="11" r="8"></circle></svg>
-      </div>
-      <a href="https://dth.or.th/infographic" target="_blank" rel="noopener" class="see-all" style="white-space:nowrap">ดูทั้งหมดที่ dth.or.th <span class="arr" aria-hidden="true">&rarr;</span></a>
-    </div>
-    <div class="hub-grid" id="hubGrid">
-      <a class="card hub-card" data-cat="rights" href="https://dth.or.th/infographic/" target="_blank" rel="noopener">
-        <div class="thumb"><span class="mtype">อินโฟกราฟิก</span><img src="<?php echo DTH_URI; ?>/Pic/external/275229039_1594676890888765_1550337596592218467_n-300x212.jpg" alt="สิทธิของผู้ดูแลคนพิการ" loading="lazy" onerror="this.parentElement.classList.add('ph');this.parentElement.innerHTML='&#127912;'"></div>
-        <div class="body"><div class="meta"><svg class="im" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg> 32,475</div><h3>สิทธิของผู้ดูแลคนพิการ</h3></div>
-      </a>
-      <a class="card hub-card" data-cat="rights" href="https://dth.or.th/infographic/" target="_blank" rel="noopener">
-        <div class="thumb"><span class="mtype">อินโฟกราฟิก</span><img src="<?php echo DTH_URI; ?>/Pic/external/273556717_1580157409007380_985939727756942970_n-300x212.jpg" alt="ที่จอดรถคนพิการ" loading="lazy" onerror="this.parentElement.classList.add('ph');this.parentElement.innerHTML='&#127912;'"></div>
-        <div class="body"><div class="meta"><svg class="im" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg> 31,921</div><h3>ที่จอดรถคนพิการ</h3></div>
-      </a>
-      <a class="card hub-card" data-cat="rights" href="https://dth.or.th/infographic/" target="_blank" rel="noopener">
-        <div class="thumb"><span class="mtype">อินโฟกราฟิก</span><img src="<?php echo DTH_URI; ?>/Pic/external/275194508_1594645250891929_4929658142830719063_n-300x212.jpg" alt="สิทธิค่าโดยสารอัตราพิเศษในระบบขนส่งสาธารณะ" loading="lazy" onerror="this.parentElement.classList.add('ph');this.parentElement.innerHTML='&#127912;'"></div>
-        <div class="body"><div class="meta"><svg class="im" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg> 28,924</div><h3>สิทธิค่าโดยสารอัตราพิเศษในระบบขนส่งสาธารณะ</h3></div>
-      </a>
-      <a class="card hub-card" data-cat="law" href="https://dth.or.th/infographic/" target="_blank" rel="noopener">
-        <div class="thumb"><span class="mtype">อินโฟกราฟิก</span><img src="<?php echo DTH_URI; ?>/Pic/external/275425030_1598676160488838_995252658959268142_n-300x212.jpg" alt="ช่วยเหลือทางกฎหมายแก่คนพิการ" loading="lazy" onerror="this.parentElement.classList.add('ph');this.parentElement.innerHTML='&#127912;'"></div>
-        <div class="body"><div class="meta"><svg class="im" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg> 4,710</div><h3>ช่วยเหลือทางกฎหมายแก่คนพิการ</h3></div>
-      </a>
-      <a class="card hub-card" data-cat="home" href="<?php echo DTH_URI; ?>/Pic/infographic/home-mod-7steps.jpg" target="_blank" rel="noopener">
-        <div class="thumb"><span class="mtype">อินโฟกราฟิก</span><img src="<?php echo DTH_URI; ?>/Pic/infographic/home-mod-7steps.jpg" alt="การปรับสภาพบ้านสำหรับคนพิการ 7 ขั้นตอน" loading="lazy" onerror="this.parentElement.classList.add('ph');this.parentElement.innerHTML='&#127912;'"></div>
-        <div class="body"><div class="meta">อินโฟกราฟิก</div><h3>การปรับสภาพบ้านสำหรับคนพิการ 7 ขั้นตอน</h3></div>
-      </a>
-      <a class="card hub-card" data-cat="home" href="<?php echo DTH_URI; ?>/Pic/infographic/home-environment-2567.jpg" target="_blank" rel="noopener">
-        <div class="thumb"><span class="mtype">อินโฟกราฟิก</span><img src="<?php echo DTH_URI; ?>/Pic/infographic/home-environment-2567.jpg" alt="การปรับสภาพแวดล้อมที่อยู่อาศัยสำหรับคนพิการ" loading="lazy" onerror="this.parentElement.classList.add('ph');this.parentElement.innerHTML='&#127912;'"></div>
-        <div class="body"><div class="meta">อินโฟกราฟิก</div><h3>การปรับสภาพแวดล้อมที่อยู่อาศัยสำหรับคนพิการ</h3></div>
-      </a>
-      <a class="card hub-card" data-cat="magazine" href="<?php echo DTH_URI; ?>/Doc/magazine/dth-magazine-vol14.pdf" target="_blank" rel="noopener">
-        <div class="thumb"><span class="mtype">วารสาร DTH</span><div class="ph" style="display:grid;place-items:center;width:100%;height:100%"><svg class="ph-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H7a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7Z"/><path d="M14 2v5h5"/><path d="M9 13h6M9 17h6"/></svg></div></div>
-        <div class="body"><div class="meta">PDF · 13 MB</div><h3>DTH Magazine ฉบับที่ 14 — Colleague</h3></div>
-      </a>
-      <a class="card hub-card" data-cat="magazine" href="<?php echo DTH_URI; ?>/Doc/magazine/dth-magazine-vol13.pdf" target="_blank" rel="noopener">
-        <div class="thumb"><span class="mtype">วารสาร DTH</span><div class="ph" style="display:grid;place-items:center;width:100%;height:100%"><svg class="ph-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H7a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7Z"/><path d="M14 2v5h5"/><path d="M9 13h6M9 17h6"/></svg></div></div>
-        <div class="body"><div class="meta">PDF · 4.2 MB</div><h3>DTH Magazine ฉบับที่ 13 — Work Together Issue</h3></div>
-      </a>
-    </div>
-    <div id="hubEmpty" class="card" style="display:none;padding:40px;text-align:center;color:var(--muted)">
-      <p style="margin-top:10px">ยังไม่มีรายการในหมวดนี้</p>
-    </div>
-    <div class="pager"><div class="total">จำนวนทั้งหมด <b id="hubCount">8</b> รายการ</div></div>
-  </div>
-</section>
-</main>
-
-<!-- ===== Footer ===== -->
 <footer class="site">
   <div class="wrap">
     <div class="foot">

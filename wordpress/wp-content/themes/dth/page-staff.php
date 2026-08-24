@@ -98,49 +98,8 @@ get_header();
   </div>
 </header>
 
-<!-- ===== Breadcrumb ===== -->
-<nav class="breadcrumb" aria-label="เส้นทางนำทาง">
-  <div class="wrap"><a href="<?php echo esc_url( home_url('/') ); ?>">หน้าแรก</a> <span aria-hidden="true">›</span> <span>เกี่ยวกับเรา</span> <span aria-hidden="true">›</span> <strong>เจ้าหน้าที่สมาคม</strong></div>
-</nav>
+<?php the_content(); ?>
 
-<!-- ===== Page hero ===== -->
-<section class="page-hero">
-  <h1>เจ้าหน้าที่สมาคม</h1>
-  <p class="lead">โครงสร้างและรายชื่อเจ้าหน้าที่ประจำสำนักงาน สมาคมสภาคนพิการทุกประเภทแห่งประเทศไทย</p>
-</section>
-
-<main id="main">
-<section class="block">
-  <div class="wrap">
-    <div class="kicker"><h2>โครงสร้างเจ้าหน้าที่สมาคม</h2></div>
-    <figure class="board-poster staff-poster">
-      <a href="<?php echo DTH_URI; ?>/Pic/staff-chart.png" target="_blank" rel="noopener" aria-label="ดูภาพขนาดเต็ม"><img src="<?php echo DTH_URI; ?>/Pic/staff-chart.png" alt="โครงสร้างเจ้าหน้าที่สมาคมสภาคนพิการทุกประเภทแห่งประเทศไทย" loading="lazy"></a>
-      <figcaption>ผังโครงสร้างเจ้าหน้าที่ — คลิกเพื่อดูภาพขนาดเต็ม</figcaption>
-    </figure>
-    <div class="table-wrap" style="margin-top:clamp(28px,3.5vw,40px)">
-      <table class="board-table">
-        <thead><tr><th scope="col">ที่</th><th scope="col">ชื่อ-นามสกุล</th><th scope="col">ตำแหน่ง</th></tr></thead>
-        <tbody>
-            <tr><td>1</td><td>นางสาวจรรยา  บัวศร</td><td>ผู้อำนวยการสำนักงาน</td></tr>
-            <tr><td>2</td><td>นายรัตน์  กิจธรรม</td><td>ผู้อำนวยการฝ่ายต่างประเทศและขับเคลื่อนนโยบายสาธารณะ</td></tr>
-            <tr><td>3</td><td>นางสาวญาณิกา  อักษรนำ</td><td>ผู้อำนวยการฝ่ายกิจการภูมิภาคและองค์กรท้องถิ่น</td></tr>
-            <tr><td>4</td><td>นางสาววาริสา  ทรัพย์ประดิษฐ</td><td>ผู้อำนวยการฝ่ายวิจัยและพัฒนา</td></tr>
-            <tr><td>5</td><td>นางสาวศิริรัช  ไชยรัตน์</td><td>หัวหน้าฝ่ายประสานงานส่วนกลาง</td></tr>
-            <tr><td>6</td><td>นางสาวรตินันท์  เมฆฉาย</td><td>ผู้ช่วยอำนวยการสำนักงานและกิจการภูมิภาค</td></tr>
-            <tr><td>7</td><td>นางสาวสวรรยา  ปุนินานนท์</td><td>ผู้ช่วยฝ่ายประสานงานส่วนกลาง</td></tr>
-            <tr><td>8</td><td>นายสุนทร  สุขชา</td><td>เจ้าหน้าที่ฝ่ายกฎหมาย</td></tr>
-            <tr><td>9</td><td>Mr. Nathaniel Ross</td><td>Law & Policy Officer</td></tr>
-            <tr><td>10</td><td>นางสาวปัณณรัตน์  อัคราสิริภัสร์</td><td>เจ้าหน้าที่ฝ่ายการเงิน</td></tr>
-            <tr><td>11</td><td>นางสาวเจนจิรา  ไตรวรรณ์</td><td>เจ้าหน้าที่ฝ่ายสื่อสารสาธารณะ</td></tr>
-            <tr><td>12</td><td>นายโมทน์  อุเทนสุต</td><td>เจ้าหน้าที่ฝ่ายบริหารงานทั่วไป</td></tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-</section>
-</main>
-
-<!-- ===== Footer ===== -->
 <footer class="site">
   <div class="wrap">
     <div class="foot">

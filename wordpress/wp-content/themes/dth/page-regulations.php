@@ -98,44 +98,8 @@ get_header();
   </div>
 </header>
 
-<!-- ===== Breadcrumb ===== -->
-<nav class="breadcrumb" aria-label="เส้นทางนำทาง">
-  <div class="wrap"><a href="<?php echo esc_url( home_url('/') ); ?>">หน้าหลัก</a> <span aria-hidden="true">›</span> <span>เกี่ยวกับเรา</span> <span aria-hidden="true">›</span> <strong>ข้อบังคับ/ระเบียบ</strong></div>
-</nav>
+<?php the_content(); ?>
 
-<!-- ===== Page hero ===== -->
-<section class="page-hero">
-  <div class="ic-row"><span class="ic" aria-hidden="true">📜</span><h1>ข้อบังคับ/ระเบียบ</h1></div>
-  <p class="lead">
-    รวมข้อบังคับ ระเบียบ และเอกสารสำคัญของ<strong>สมาคมสภาคนพิการทุกประเภทแห่งประเทศไทย</strong>
-    สำหรับองค์การสมาชิก เครือข่าย และผู้สนใจ สามารถดาวน์โหลดได้ทั้งรูปแบบ PDF และ Word
-  </p>
-</section>
-
-<main id="main">
-
-<section class="block">
-  <div class="wrap">
-    <div class="kicker"><span class="ic" aria-hidden="true">📄</span><h2>เอกสารดาวน์โหลด</h2></div>
-
-    <div style="display:flex;flex-direction:column;gap:14px;max-width:760px">
-      <a class="card" href="https://dth.or.th/wp-content/uploads/2024/09/ข้อบังคับสภาคนพิการพ.ศ.25602565.pdf" target="_blank" rel="noopener" style="padding:18px;flex-direction:row;align-items:center;gap:14px">
-        <span class="doc-ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M14 2H7a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7Z"/><path d="M14 2v5h5"/><path d="M9 13h6M9 17h6"/></svg></span>
-        <span><strong style="display:block;color:var(--ink);font-size:.98rem;line-height:1.4">ข้อบังคับสมาคมสภาคนพิการทุกประเภทแห่งประเทศไทย พ.ศ. 2560 (แก้ไขเพิ่มเติม 2565)</strong><span class="meta" style="margin-top:6px"><svg class="im" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 11h18"/></svg> 16-09-2567 · PDF 187 KB</span></span>
-      </a>
-      <a class="card" href="https://dth.or.th/wp-content/uploads/2024/09/ข้อบังคับสภาคนพิการพ.ศ.25602565.docx" target="_blank" rel="noopener" style="padding:18px;flex-direction:row;align-items:center;gap:14px">
-        <span class="doc-ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M14 2H7a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7Z"/><path d="M14 2v5h5"/><path d="M9 13h6M9 17h6"/></svg></span>
-        <span><strong style="display:block;color:var(--ink);font-size:.98rem;line-height:1.4">ข้อบังคับสมาคมสภาคนพิการทุกประเภทแห่งประเทศไทย พ.ศ. 2560 (แก้ไขเพิ่มเติม 2565) — ฉบับ Word</strong><span class="meta" style="margin-top:6px"><svg class="im" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 11h18"/></svg> 16-09-2567 · DOC 76 KB</span></span>
-      </a>
-    </div>
-
-    <div style="margin-top:26px"><a href="https://dth.or.th/download" target="_blank" rel="noopener" class="pill-btn">ดูเอกสารทั้งหมดที่ dth.or.th</a></div>
-  </div>
-</section>
-
-</main>
-
-<!-- ===== Footer ===== -->
 <footer class="site">
   <div class="wrap">
     <div class="foot">
