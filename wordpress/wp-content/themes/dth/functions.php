@@ -15,6 +15,8 @@ require_once __DIR__ . '/inc/cms.php';
 require_once __DIR__ . '/inc/page-content.php';
 // ปุ่มลอยติดต่อ (แสดงทุกหน้า)
 require_once __DIR__ . '/inc/floating-contact.php';
+// CPT เจ้าหน้าที่
+require_once __DIR__ . '/inc/cpt-staff.php';
 
 add_action( 'after_setup_theme', function () {
 	add_theme_support( 'title-tag' );
