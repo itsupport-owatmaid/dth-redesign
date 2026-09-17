@@ -92,6 +92,12 @@ add_action( 'after_switch_theme', function () {
 		dth_seed_provinces();
 	}
 
+	// ใส่เนื้อหาตั้งต้นของทุกหน้า (รวมหน้าแรก) ทันทีที่เปิดใช้ธีม
+	// ไม่ต้องรอให้เข้าหน้าแอดมินก่อน หน้าเว็บจึงไม่ว่างเปล่า
+	if ( function_exists( 'dth_seed_page_contents' ) ) {
+		dth_seed_page_contents();
+	}
+
 	// เปิด permalink สวย + flush
 	if ( '' === get_option( 'permalink_structure' ) ) {
 		update_option( 'permalink_structure', '/%postname%/' );

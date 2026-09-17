@@ -1,0 +1,181 @@
+<!-- wp:html -->
+<!-- ===== Hero slider (real DTH banners) ===== -->
+<section class="hero" aria-label="ภาพสไลด์">
+  <div class="slides" id="slides" aria-live="polite">
+    <div class="slide welcome-slide on" style="background-image:url('{{DTH}}/Pic/hero-welcome.png')">
+      <div class="cap"><span class="tag">ยินดีต้อนรับ</span><h2>สมาคมสภาคนพิการทุกประเภทแห่งประเทศไทย</h2><p>ส่งเสริมสิทธิ พัฒนาคุณภาพชีวิต และสร้างสังคมที่เท่าเทียมสำหรับทุกคน</p></div>
+    </div>
+  </div>
+  <button class="hero-arrow prev" id="prev" aria-label="สไลด์ก่อนหน้า">‹</button>
+  <button class="hero-arrow next" id="next" aria-label="สไลด์ถัดไป">›</button>
+  <div class="hero-dots" id="dots" role="tablist" aria-label="เลือกสไลด์"></div>
+</section>
+
+<main id="main">
+
+<!-- ===== Follow DTH (Facebook Page Plugin) ===== -->
+<section class="block wash-mint" id="follow">
+  <div class="wrap">
+    <div class="kicker"><span class="ic" aria-hidden="true">📣</span><h2>ติดตาม DTH</h2><a href="https://www.facebook.com/disabilitiesth" target="_blank" rel="noopener" class="more see-all">ไปที่เพจ Facebook <span class="arr" aria-hidden="true">→</span></a></div>
+    <div class="fb-embed">
+      <iframe title="Facebook Page สมาคมสภาคนพิการทุกประเภทแห่งประเทศไทย"
+        src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fdisabilitiesth&tabs=timeline&width=500&height=750&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true"
+        width="500" height="750" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" loading="lazy"
+        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Rights tabs ===== -->
+<section class="block" id="rights">
+  <div class="wrap">
+    <div class="rights-shell" data-rights-tabs>
+      <div class="rights-head">
+        <h2>สิทธิคนพิการที่ควรรู้</h2>
+        <p>เลือกดูข้อมูลสำคัญตามหมวดที่ต้องการ เพื่อเข้าถึงสิทธิพื้นฐานและช่องทางช่วยเหลือได้รวดเร็วขึ้น</p>
+      </div>
+      <div class="rights-tabs" role="tablist" aria-label="หมวดสิทธิคนพิการ">
+        <button class="rights-tab active" role="tab" aria-selected="true" data-target="r-id">บัตรคนพิการ</button>
+        <button class="rights-tab" role="tab" aria-selected="false" data-target="r-allow">เบี้ยความพิการ</button>
+        <button class="rights-tab" role="tab" aria-selected="false" data-target="r-edu">การศึกษาและการทำงาน</button>
+        <button class="rights-tab" role="tab" aria-selected="false" data-target="r-help">ร้องเรียนและช่วยเหลือ</button>
+      </div>
+      <article class="rights-panel active" id="r-id" role="tabpanel">
+        <div class="rights-copy">
+          <span class="right-kicker">เอกสารสำคัญ</span>
+          <h3>บัตรคนพิการ</h3>
+          <p>จุดเริ่มต้นของการเข้าถึงสิทธิพื้นฐานหลายด้าน ทั้งสวัสดิการ การรักษาพยาบาล การศึกษา และสิ่งอำนวยความสะดวก</p>
+          <ul class="rights-list"><li>เอกสารที่ต้องใช้ในการยื่นคำขอ</li><li>ขั้นตอนการออกบัตรและต่ออายุ</li><li>หน่วยงานและจุดบริการที่เกี่ยวข้อง</li></ul>
+          <a href="https://dth.or.th/knowledge/45-%e0%b8%aa%e0%b8%96%e0%b8%b2%e0%b8%99%e0%b8%9e%e0%b8%a2%e0%b8%b2%e0%b8%9a%e0%b8%b2%e0%b8%a5%e0%b9%80%e0%b8%ad%e0%b8%81%e0%b8%8a%e0%b8%99/" target="_blank" rel="noopener" class="pill-btn rights-cta">ดูสถานพยาบาลที่ออกเอกสารรับรอง</a>
+        </div>
+        <div class="rights-media-card"><span class="badge">ข้อมูลอ้างอิง</span><h4>สรุปขั้นตอนทำบัตร</h4><div class="row"><span>ผู้มีสิทธิ</span><strong>คนพิการทุกประเภท</strong></div><div class="row"><span>สถานที่ยื่น</span><strong>พมจ. / รพ.รัฐ</strong></div><div class="row"><span>อายุบัตร</span><strong>8 ปี</strong></div></div>
+      </article>
+      <article class="rights-panel" id="r-allow" role="tabpanel">
+        <div class="rights-copy">
+          <span class="right-kicker">สวัสดิการ</span>
+          <h3>เบี้ยความพิการ</h3>
+          <p>สรุปข้อมูลที่ควรรู้ก่อนลงทะเบียนรับสิทธิ รวมถึงเงื่อนไข เอกสาร และการติดตามสถานะการรับเงิน</p>
+          <ul class="rights-list"><li>คุณสมบัติและเงื่อนไขผู้มีสิทธิ</li><li>การยื่นคำขอและช่องทางติดตามผล</li><li>ข้อควรตรวจสอบเมื่อเงินยังไม่เข้า</li></ul>
+          <a href="https://dth.or.th/infographic" target="_blank" rel="noopener" class="pill-btn rights-cta">ดูอินโฟกราฟิกสิทธิคนพิการ</a>
+        </div>
+        <div class="rights-media-card"><span class="badge">ข้อมูลอ้างอิง</span><h4>เบี้ยความพิการ</h4><div class="row"><span>ช่องทางยื่น</span><strong>อบต. / เทศบาล</strong></div><div class="row"><span>การจ่าย</span><strong>รายเดือน</strong></div><div class="row"><span>เอกสาร</span><strong>บัตรคนพิการ, ทะเบียนบ้าน</strong></div></div>
+      </article>
+      <article class="rights-panel" id="r-edu" role="tabpanel">
+        <div class="rights-copy">
+          <span class="right-kicker">โอกาสและอาชีพ</span>
+          <h3>การศึกษาและการทำงาน</h3>
+          <p>รวมสิทธิด้านทุนการศึกษา การฝึกอาชีพ และสิทธิในการจ้างงานที่ช่วยเพิ่มโอกาสและความมั่นคงในระยะยาว</p>
+          <ul class="rights-list"><li>ทุนและสิทธิทางการศึกษาที่เกี่ยวข้อง</li><li>โครงการฝึกอาชีพและพัฒนาทักษะ</li><li>สิทธิการจ้างงานตามมาตรา 33/35</li></ul>
+          <a href="https://www.jobfinfin.com/" target="_blank" rel="noopener" class="pill-btn rights-cta">ค้นหางานคนพิการ (Job Fin Fin)</a>
+        </div>
+        <div class="rights-media-card"><span class="badge">ข้อมูลอ้างอิง</span><h4>การจ้างงาน</h4><div class="row"><span>มาตรา 33</span><strong>จ้างงานโดยตรง</strong></div><div class="row"><span>มาตรา 35</span><strong>สัมปทาน/ฝึกงาน</strong></div><div class="row"><span>หน่วยงาน</span><strong>กรมการจัดหางาน</strong></div></div>
+      </article>
+      <article class="rights-panel" id="r-help" role="tabpanel">
+        <div class="rights-copy">
+          <span class="right-kicker">ขอความช่วยเหลือ</span>
+          <h3>ร้องเรียนและประสานช่วยเหลือ</h3>
+          <p>เมื่อเกิดปัญหาในการเข้าถึงสิทธิ การบริการ หรือสวัสดิการ ควรมีช่องทางที่ชัดเจนสำหรับแจ้งเรื่องและติดตามผล</p>
+          <ul class="rights-list"><li>ช่องทางร้องเรียนเมื่อไม่ได้รับสิทธิ</li><li>การประสานหน่วยงานที่เกี่ยวข้อง</li><li>แนวทางเตรียมข้อมูลก่อนแจ้งเรื่อง</li></ul>
+          <a href="#contact" class="pill-btn rights-cta">ดูช่องทางติดต่อ</a>
+        </div>
+        <div class="rights-media-card"><span class="badge">Quick Access</span><h4>ช่องทางติดต่อ</h4><div class="row"><span>สายด่วน</span><strong>1479</strong></div><div class="row"><span>โทรสมาคม</span><strong>02-354-4260</strong></div><div class="row"><span>อีเมล</span><strong>disabilitiesth@gmail.com</strong></div></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Q&A ===== -->
+<section class="block wash-leaf" id="qa">
+  <div class="wrap">
+    <div class="qa-grid">
+      <div class="qa-visual">
+        <a class="qa-tile t1" href="{{HOME}}/about/">
+          <span class="qa-logo"><img src="{{DTH}}/Pic/dth-logo.png" alt="" aria-hidden="true" onerror="this.style.display='none'"></span>
+          <h3>รู้จักการทำงาน<br>ของสมาคม</h3>
+        </a>
+        <a class="qa-tile t2" href="#network">
+          <span class="qa-logos" aria-hidden="true">
+            <img src="{{DTH}}/Pic/members/blind.png" alt="" onerror="this.style.display='none'">
+            <img src="{{DTH}}/Pic/members/deaf.png" alt="" onerror="this.style.display='none'">
+            <img src="{{DTH}}/Pic/members/physical.png" alt="" onerror="this.style.display='none'">
+            <img src="{{DTH}}/Pic/members/intellectual.jpg" alt="" onerror="this.style.display='none'">
+            <img src="{{DTH}}/Pic/members/autism.jpg" alt="" onerror="this.style.display='none'">
+            <img src="{{DTH}}/Pic/members/mental.jpg" alt="" onerror="this.style.display='none'">
+          </span>
+          <h3>องค์การสมาชิก<br>และเครือข่าย</h3>
+        </a>
+      </div>
+      <div>
+        <div class="kicker"><span class="ic" aria-hidden="true">❓</span><h2>คำถามที่พบบ่อย</h2></div>
+        <div class="qa-list">
+          <a class="qa-item" href="https://dth.or.th/knowledge/45-%e0%b8%aa%e0%b8%96%e0%b8%b2%e0%b8%99%e0%b8%9e%e0%b8%a2%e0%b8%b2%e0%b8%9a%e0%b8%b2%e0%b8%a5%e0%b9%80%e0%b8%ad%e0%b8%81%e0%b8%8a%e0%b8%99/" target="_blank" rel="noopener"><span>ขอเอกสารรับรองความพิการได้ที่สถานพยาบาลใดบ้าง?</span><span class="arr" aria-hidden="true">→</span></a>
+          <a class="qa-item" href="#rights"><span>ลงทะเบียนรับเบี้ยความพิการได้ที่ไหน?</span><span class="arr" aria-hidden="true">→</span></a>
+          <a class="qa-item" href="#rights"><span>สิทธิการจ้างงานตามมาตรา 33 และ 35 ต่างกันอย่างไร?</span><span class="arr" aria-hidden="true">→</span></a>
+          <a class="qa-item" href="#contact"><span>หากไม่ได้รับสิทธิที่ควรได้ จะร้องเรียนได้ทางใด?</span><span class="arr" aria-hidden="true">→</span></a>
+        </div>
+        <div style="margin-top:20px;display:flex;justify-content:flex-end"><a href="https://dth.or.th/knowledge" target="_blank" rel="noopener" class="see-all">ดูทั้งหมด <span class="arr" aria-hidden="true">→</span></a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Network logos (real member organizations) ===== -->
+<section class="block" id="network">
+  <div class="wrap">
+    <div class="kicker"><span class="ic" aria-hidden="true">🏛️</span><h2>องค์การสมาชิก 6 องค์การ</h2><a href="{{HOME}}/about/#members" class="more see-all">ข้อมูลติดต่อทุกสมาคม <span class="arr" aria-hidden="true">→</span></a></div>
+    <div class="partners">
+      <a class="partner" href="https://www.facebook.com/TabodThai?locale=th_TH" target="_blank" rel="noopener"><img src="{{DTH}}/Pic/members/blind.png" alt="โลโก้สมาคมคนตาบอดแห่งประเทศไทย" loading="lazy" onerror="this.style.display='none'"><span>สมาคมคนตาบอดแห่งประเทศไทย</span></a>
+      <a class="partner" href="https://www.facebook.com/pikarnpanya.bangkok?locale=th_TH" target="_blank" rel="noopener"><img src="{{DTH}}/Pic/members/intellectual.jpg" alt="โลโก้สมาคมผู้ปกครองคนพิการทางสติปัญญาแห่งประเทศไทย" loading="lazy" onerror="this.style.display='none'"><span>สมาคมผู้ปกครองคนพิการทางสติปัญญาแห่งประเทศไทย</span></a>
+      <a class="partner" href="https://www.facebook.com/APTAutismThailand?locale=th_TH" target="_blank" rel="noopener"><img src="{{DTH}}/Pic/members/autism.jpg" alt="โลโก้สมาคมผู้ปกครองบุคคลออทิซึม (ไทย)" loading="lazy" onerror="this.style.display='none'"><span>สมาคมผู้ปกครองบุคคลออทิซึม (ไทย)</span></a>
+      <a class="partner" href="https://www.facebook.com/nadthailand?locale=th_TH" target="_blank" rel="noopener"><img src="{{DTH}}/Pic/members/deaf.png" alt="โลโก้สมาคมคนหูหนวกแห่งประเทศไทย" loading="lazy" onerror="this.style.display='none'"><span>สมาคมคนหูหนวกแห่งประเทศไทย</span></a>
+      <a class="partner" href="https://www.facebook.com/disabledofthailand?locale=th_TH" target="_blank" rel="noopener"><img src="{{DTH}}/Pic/members/physical.png" alt="โลโก้สมาคมคนพิการแห่งประเทศไทย" loading="lazy" onerror="this.style.display='none'"><span>สมาคมคนพิการแห่งประเทศไทย</span></a>
+      <a class="partner" href="https://www.facebook.com/amidmh.th?locale=th_TH" target="_blank" rel="noopener"><img src="{{DTH}}/Pic/members/mental.jpg" alt="โลโก้สมาคมเพื่อผู้บกพร่องทางจิตแห่งประเทศไทย" loading="lazy" onerror="this.style.display='none'"><span>สมาคมเพื่อผู้บกพร่องทางจิตแห่งประเทศไทย</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Government / related orgs (real) ===== -->
+<section class="block wash-mint">
+  <div class="wrap">
+    <div class="kicker"><span class="ic" aria-hidden="true">🏛️</span><h2>หน่วยงานที่เกี่ยวข้อง</h2></div>
+    <div class="partners gov-partners">
+      <a class="partner gov-partner" href="https://www.m-society.go.th/home.php" target="_blank" rel="noopener"><img src="{{DTH}}/Pic/logos/logo-01.png" alt="กระทรวงการพัฒนาสังคมและความมั่นคงของมนุษย์" loading="lazy" onerror="this.style.display='none'"><span>กระทรวงการพัฒนาสังคมและความมั่นคงของมนุษย์</span></a>
+      <a class="partner gov-partner" href="https://dep.go.th/th/" target="_blank" rel="noopener"><img src="{{DTH}}/Pic/logos/logo-04.png" alt="กรมส่งเสริมและพัฒนาคุณภาพชีวิตคนพิการ" loading="lazy" onerror="this.style.display='none'"><span>กรมส่งเสริมและพัฒนาคุณภาพชีวิตคนพิการ</span></a>
+      <a class="partner gov-partner" href="https://www.nhso.go.th" target="_blank" rel="noopener"><img src="{{DTH}}/Pic/logos/logo-05.png" alt="สำนักงานหลักประกันสุขภาพแห่งชาติ" loading="lazy" onerror="this.style.display='none'"><span>สำนักงานหลักประกันสุขภาพแห่งชาติ (สปสช.)</span></a>
+      <a class="partner gov-partner" href="https://www.thaihealth.or.th" target="_blank" rel="noopener"><img src="{{DTH}}/Pic/logos/logo-06.png" alt="สำนักงานกองทุนสนับสนุนการสร้างเสริมสุขภาพ" loading="lazy" onerror="this.style.display='none'"><span>สำนักงานกองทุนสนับสนุนการสร้างเสริมสุขภาพ (สสส.)</span></a>
+      <a class="partner gov-partner" href="https://www.doe.go.th/prd/main" target="_blank" rel="noopener"><img src="{{DTH}}/Pic/logos/logo-12.png" alt="กรมการจัดหางาน" loading="lazy" onerror="this.style.display='none'"><span>กรมการจัดหางาน</span></a>
+      <a class="partner gov-partner" href="https://www.moe.go.th" target="_blank" rel="noopener"><img src="{{DTH}}/Pic/logos/logo-13.png" alt="กระทรวงศึกษาธิการ" loading="lazy" onerror="this.style.display='none'"><span>กระทรวงศึกษาธิการ</span></a>
+      <a class="partner gov-partner" href="https://www.ohchr.org/en/treaty-bodies/crpd" target="_blank" rel="noopener"><img src="{{DTH}}/Pic/logos/crpd.png" alt="คณะกรรมการว่าด้วยสิทธิคนพิการแห่งสหประชาชาติ" loading="lazy" onerror="this.style.display='none'"><span>คณะกรรมการว่าด้วยสิทธิคนพิการแห่งสหประชาชาติ</span></a>
+      <a class="partner gov-partner" href="https://www.internationaldisabilityalliance.org/" target="_blank" rel="noopener"><img src="{{DTH}}/Pic/logos/IDA-Logo.png" alt="International Disability Alliance" loading="lazy" onerror="this.style.display='none'"><span>International Disability Alliance</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Hotline ===== -->
+<section class="block">
+  <div class="wrap">
+    <div class="hotline">
+      <div class="l"><h3>สายด่วนคนพิการ</h3><p>กรมส่งเสริมและพัฒนาคุณภาพชีวิตคนพิการ</p></div>
+      <a href="tel:1479" class="call" aria-label="โทรสายด่วนคนพิการ 1479"><svg class="im im-lg" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.08 4.18 2 2 0 0 1 4.06 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg> 1479</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Contact ===== -->
+<section class="block wash-leaf" id="contact">
+  <div class="wrap">
+    <div class="kicker"><span class="ic" aria-hidden="true">📍</span><h2>ติดต่อสมาคม</h2></div>
+    <div class="cal-grid">
+      <div class="card" style="padding:clamp(24px,3vw,34px)">
+        <h3 style="color:var(--brand-dark);font-size:1.3rem;margin-bottom:14px">สมาคมสภาคนพิการทุกประเภทแห่งประเทศไทย</h3>
+        <p style="color:var(--muted);margin-bottom:14px">255 ห้อง 6-8 ชั้น 3 อาคารศูนย์พัฒนาและฝึกอบรมคนพิการแห่งเอเชียและแปซิฟิก (APCD) ถนนราชวิถี แขวงทุ่งพญาไท เขตราชเทวี กรุงเทพมหานคร 10400</p>
+        <p style="color:var(--muted);margin-bottom:8px"><svg class="im im-lg" viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg> disabilitiesth@gmail.com</p>
+        <a href="tel:023544260" class="pill-btn"><svg class="im im-lg" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.08 4.18 2 2 0 0 1 4.06 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg> 02-354-4260</a>
+      </div>
+      <div class="card" style="overflow:hidden;min-height:320px;padding:0"><iframe title="แผนที่ตั้งสมาคม" loading="lazy" style="width:100%;height:100%;min-height:320px;border:0;display:block" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3875.15139515162!2d100.52614701483063!3d13.769742190335837!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e29952a2cdf38b%3A0x184a992ec58439a3!2z4Liq4Lih4Liy4LiE4Lih4Liq4Lig4Liy4LiE4LiZ4Lie4Li04LiB4Liy4Lij4LiX4Li44LiB4Lib4Lij4Liw4LmA4Lig4LiX4LmB4Lir4LmI4LiH4Lib4Lij4Liw4LmA4LiX4Lio4LmE4LiX4Lii!5e0!3m2!1sen!2sth!4v1649090216442!5m2!1sen!2sth"></iframe></div>
+    </div>
+  </div>
+</section>
+
+</main>
+<!-- /wp:html -->
