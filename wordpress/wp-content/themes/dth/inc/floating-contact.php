@@ -34,6 +34,7 @@ add_action( 'wp_footer', function () {
     <form id="dthMsgForm" method="post" action="<?php echo esc_url( admin_url( 'admin-post.php' ) ); ?>">
       <input type="hidden" name="action" value="dth_contact_submit">
       <input type="hidden" name="dth_source" id="dthMSource" value="">
+      <input type="hidden" id="dthMAjax" value="<?php echo esc_url( admin_url( 'admin-ajax.php' ) ); ?>">
       <?php wp_nonce_field( 'dth_contact_submit', 'dth_contact_nonce' ); ?>
       <p class="hp" aria-hidden="true"><label for="dthWebsite">เว้นว่างไว้</label><input id="dthWebsite" type="text" name="dth_website" tabindex="-1" autocomplete="off"></p>
       <p id="dthMsgErr" role="alert"></p>
@@ -77,12 +78,21 @@ add_action( 'wp_footer', function () {
       var n=document.getElementById('dthMName'),m=document.getElementById('dthMMsg');
       if(!n||!m||!n.value.trim()||!m.value.trim()){e.preventDefault();showErr('กรุณากรอกชื่อและข้อความให้ครบ');return;}
       e.preventDefault();clearErr();
-      var fd=new FormData(form);fd.append('dth_ajax','1');
       // ใช้ getAttribute เพราะช่อง <input name="action"> ทับค่า form.action ตามสเปก DOM
       var url=form.getAttribute('action');
+      var ajaxEl=document.getElementById('dthMAjax'),nonceEl=form.querySelector('[name="dth_contact_nonce"]');
       if(sendB){sendB.disabled=true;sendB.textContent='กำลังส่ง…';}
-      fetch(url,{method:'POST',body:fd,credentials:'same-origin'})
-        .then(function(r){return r.json();})
+      // ขอ nonce สดก่อน เผื่อหน้านี้ถูกระบบแคชเก็บไว้นานจน nonce ที่ฝังมาหมดอายุ
+      var fresh=(ajaxEl&&nonceEl&&ajaxEl.value)
+        ? fetch(ajaxEl.value+'?action=dth_contact_nonce',{credentials:'same-origin'})
+            .then(function(r){return r.json();})
+            .then(function(j){if(j&&j.success&&j.data&&j.data.nonce)nonceEl.value=j.data.nonce;})
+            .catch(function(){})
+        : Promise.resolve();
+      fresh.then(function(){
+        var fd=new FormData(form);fd.append('dth_ajax','1');
+        return fetch(url,{method:'POST',body:fd,credentials:'same-origin'}).then(function(r){return r.json();});
+      })
         .then(function(j){
           if(j&&j.success){form.reset();if(src)src.value=location.href;showDone();}
           else{showErr((j&&j.data&&j.data.message)||'ส่งข้อความไม่สำเร็จ กรุณาลองใหม่');}

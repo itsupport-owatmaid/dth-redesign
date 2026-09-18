@@ -238,6 +238,18 @@ function dth_contact_notify_line( $name, $contact, $body, $source ) {
 	return 'ส่งไม่ออก (HTTP ' . $code . ')';
 }
 
+/**
+ * แจก nonce สด ๆ ผ่าน admin-ajax
+ * เว็บที่เปิดระบบแคชหน้า (SpeedyCache, LiteSpeed, WP Rocket ฯลฯ) จะแคช nonce
+ * ที่ฝังในหน้าไว้ด้วย พอเกินอายุแล้วผู้ใช้กดส่งจะถูกปฏิเสธทั้งที่ไม่ได้ทำอะไรผิด
+ * ฝั่งหน้าเว็บจึงขอ nonce ใหม่ก่อนส่งทุกครั้ง — endpoint นี้ไม่ถูกแคช
+ */
+function dth_contact_nonce_ajax() {
+	wp_send_json_success( array( 'nonce' => wp_create_nonce( 'dth_contact_submit' ) ) );
+}
+add_action( 'wp_ajax_nopriv_dth_contact_nonce', 'dth_contact_nonce_ajax' );
+add_action( 'wp_ajax_dth_contact_nonce', 'dth_contact_nonce_ajax' );
+
 /** ตัวจัดการฟอร์ม */
 function dth_contact_handle() {
 	$is_ajax = ! empty( $_POST['dth_ajax'] );
