@@ -23,6 +23,8 @@ require_once __DIR__ . '/inc/cpt-board.php';
 require_once __DIR__ . '/inc/cpt-news.php';
 // CPT คลังสื่อ
 require_once __DIR__ . '/inc/cpt-media.php';
+// CPT ภาพแบนเนอร์หน้าแรก
+require_once __DIR__ . '/inc/cpt-hero.php';
 // ฟอร์มติดต่อ (เก็บข้อความ + แจ้งเตือนอีเมล/LINE)
 require_once __DIR__ . '/inc/contact-form.php';
 

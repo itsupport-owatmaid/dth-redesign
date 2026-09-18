@@ -5,16 +5,7 @@ function dth_page_content_seed() {
 	return array(
 		'home' => '<!-- wp:html -->
 <!-- ===== Hero slider (real DTH banners) ===== -->
-<section class="hero" aria-label="ภาพสไลด์">
-  <div class="slides" id="slides" aria-live="polite">
-    <div class="slide welcome-slide on" style="background-image:url(\'{{DTH}}/Pic/hero-welcome.png\')">
-      <div class="cap"><span class="tag">ยินดีต้อนรับ</span><h2>สมาคมสภาคนพิการทุกประเภทแห่งประเทศไทย</h2><p>ส่งเสริมสิทธิ พัฒนาคุณภาพชีวิต และสร้างสังคมที่เท่าเทียมสำหรับทุกคน</p></div>
-    </div>
-  </div>
-  <button class="hero-arrow prev" id="prev" aria-label="สไลด์ก่อนหน้า">‹</button>
-  <button class="hero-arrow next" id="next" aria-label="สไลด์ถัดไป">›</button>
-  <div class="hero-dots" id="dots" role="tablist" aria-label="เลือกสไลด์"></div>
-</section>
+[dth_hero]
 
 <main id="main">
 
