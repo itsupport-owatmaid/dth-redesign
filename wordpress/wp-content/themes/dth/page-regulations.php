@@ -98,7 +98,10 @@ get_header();
   </div>
 </header>
 
-<?php the_content(); ?>
+<?php
+// เนื้อหาหน้านี้ (แก้ได้ในหลังบ้าน) — ต้องอยู่ใน loop ไม่งั้น WordPress บางเวอร์ชันคืนค่าว่าง
+if ( have_posts() ) { while ( have_posts() ) { the_post(); the_content(); } }
+?>
 
 <footer class="site">
   <div class="wrap">

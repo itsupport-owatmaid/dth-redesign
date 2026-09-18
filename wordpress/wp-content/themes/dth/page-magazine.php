@@ -98,7 +98,10 @@ get_header();
   </div>
 </header>
 
-<?php the_content(); ?>
+<?php
+// เนื้อหาหน้านี้ (แก้ได้ในหลังบ้าน) — ต้องอยู่ใน loop ไม่งั้น WordPress บางเวอร์ชันคืนค่าว่าง
+if ( have_posts() ) { while ( have_posts() ) { the_post(); the_content(); } }
+?>
 
 <footer class="site">
   <div class="wrap">
@@ -136,19 +139,6 @@ get_header();
   </div>
 </footer>
 
-<!-- ===== Floating contact ===== -->
-<div class="fab-wrap" id="fab">
-  <div class="fab-panel" id="fabPanel" role="menu" aria-label="ช่องทางติดต่อ">
-    <a class="fab-item" href="https://www.facebook.com/share/1Ez81X9Yjh/" target="_blank" rel="noopener" role="menuitem"><span class="ico ico-fb" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 21v-8h2.5l.4-3h-2.9V8.2c0-.9.3-1.5 1.5-1.5H16.5V4.1S15.4 4 14.3 4c-2.3 0-3.8 1.4-3.8 3.9V10H8v3h2.5v8h3Z"/></svg></span> Facebook</a>
-    <a class="fab-item" href="tel:023544260" role="menuitem"><span class="ico ico-tel" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.6c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.4 0 .8-.3 1l-2.3 2.2Z"/></svg></span> โทร 02-354-4260</a>
-    <a class="fab-item" href="mailto:disabilitiesth@gmail.com" role="menuitem"><span class="ico ico-mail" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="m4 7 8 6 8-6"/></svg></span> อีเมล</a>
-  </div>
-  <button class="fab-main" id="fabMain" aria-label="เปิดช่องทางติดต่อ" aria-expanded="false" aria-controls="fabPanel">
-    <img class="ic-open" src="<?php echo DTH_URI; ?>/Pic/dth-logo.png" alt="" aria-hidden="true">
-    <svg class="ic-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg>
-  </button>
-</div>
-
 <script>
   // Accessibility: font size
   document.querySelectorAll('[data-fs]').forEach(b=>b.addEventListener('click',()=>{
@@ -170,10 +160,6 @@ get_header();
   document.querySelectorAll('.has-sub > a').forEach(a=>a.addEventListener('click',e=>{
     if(matchMedia('(max-width:760px)').matches){e.preventDefault();const li=a.parentElement,o=li.classList.toggle('open');a.setAttribute('aria-expanded',o);}
   }));
-  // Floating contact
-  const fab=document.getElementById('fab'),fabMain=document.getElementById('fabMain');
-  fabMain.addEventListener('click',()=>{const o=fab.classList.toggle('open');fabMain.setAttribute('aria-expanded',o);});
-  document.addEventListener('click',e=>{if(fab.classList.contains('open')&&!fab.contains(e.target)){fab.classList.remove('open');fabMain.setAttribute('aria-expanded','false');}});
 </script>
 <!-- back to top -->
 <button class="to-top" id="toTop" type="button">
