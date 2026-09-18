@@ -100,7 +100,34 @@ get_header();
   </div>
 </header>
 
-<?php the_content(); ?>
+<?php
+/**
+ * เนื้อหาหน้าแรก (แก้ได้ในหลังบ้าน)
+ *
+ * ดึงจากหน้าที่ตั้งเป็นหน้าแรกโดยตรง ไม่พึ่ง loop หลัก เพราะถ้า
+ * "ตั้งค่า > การอ่าน" เป็น "เรื่องล่าสุด" loop จะเป็นรายการเรื่อง ไม่ใช่หน้าแรก
+ * แล้วหน้าแรกจะโล่ง ลำดับการหา: หน้าที่ตั้งไว้ -> หน้า slug "home" -> เนื้อหาตั้งต้น
+ * จึงไม่มีทางว่างเปล่า ไม่ว่าตั้งค่าไว้แบบไหน
+ */
+$dth_home_id = (int) get_option( 'page_on_front' );
+if ( ! $dth_home_id ) {
+	$dth_home_page = get_page_by_path( 'home' );
+	if ( $dth_home_page ) { $dth_home_id = (int) $dth_home_page->ID; }
+}
+$dth_home = '';
+if ( $dth_home_id ) {
+	$dth_post = get_post( $dth_home_id );
+	if ( $dth_post && 'page' === $dth_post->post_type ) { $dth_home = (string) $dth_post->post_content; }
+}
+if ( '' === trim( $dth_home ) && function_exists( 'dth_page_content_seed' ) ) {
+	$dth_seed = dth_page_content_seed();
+	$dth_home = isset( $dth_seed['home'] ) ? $dth_seed['home'] : '';
+}
+if ( '' !== trim( $dth_home ) ) {
+	// ผ่าน the_content เพื่อให้บล็อก shortcode และตัวแปร {{DTH}} {{HOME}} ทำงานเหมือนเดิม
+	echo apply_filters( 'the_content', $dth_home ); // phpcs:ignore WordPress.Security.EscapeOutput
+}
+?>
 
 <!-- ===== Footer ===== -->
 <footer class="site">

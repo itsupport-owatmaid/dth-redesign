@@ -789,11 +789,32 @@ add_filter( 'the_content', function ( $html ) {
 	return $html;
 }, 9 );
 function dth_seed_page_contents() {
-	foreach ( dth_page_content_seed() as $slug => $content ) {
+	$seed = dth_page_content_seed();
+	foreach ( $seed as $slug => $content ) {
 		$page = get_page_by_path( $slug );
 		if ( ! $page ) { continue; }
 		if ( trim( (string) $page->post_content ) !== '' ) { continue; }
 		wp_update_post( array( 'ID' => $page->ID, 'post_content' => $content ) );
+	}
+
+	// ถ้า "ตั้งค่า > การอ่าน" ยังเป็น "เรื่องล่าสุด" ให้ชี้กลับมาที่หน้า home
+	// ไม่งั้นผู้ดูแลจะแก้หน้าแรกในหลังบ้านแล้วไม่เห็นผล เพราะเว็บไม่ได้ใช้หน้านั้น
+	if ( ! (int) get_option( 'page_on_front' ) ) {
+		$home = get_page_by_path( 'home' );
+		if ( $home ) {
+			update_option( 'show_on_front', 'page' );
+			update_option( 'page_on_front', $home->ID );
+		}
+	}
+
+	// เผื่อหน้าแรกของเว็บไม่ใช่หน้า slug "home" (ตั้งไว้เป็นหน้าอื่นในตั้งค่า > การอ่าน)
+	// ถ้าหน้านั้นยังว่าง ให้ใส่เนื้อหาหน้าแรกลงไปด้วย ไม่งั้นหน้าแรกจะโล่ง
+	$front_id = (int) get_option( 'page_on_front' );
+	if ( $front_id && ! empty( $seed['home'] ) ) {
+		$front = get_post( $front_id );
+		if ( $front && 'page' === $front->post_type && trim( (string) $front->post_content ) === '' ) {
+			wp_update_post( array( 'ID' => $front_id, 'post_content' => $seed['home'] ) );
+		}
 	}
 }
 add_action( 'admin_init', 'dth_seed_page_contents' );
