@@ -188,24 +188,7 @@ get_header();
 <!-- ===== Q&A ===== -->
 <section class="block wash-leaf" id="qa">
   <div class="wrap">
-    <div class="qa-grid">
-      <div class="qa-visual">
-        <a class="qa-tile t1" href="<?php echo esc_url( home_url('/about/') ); ?>">
-          <span class="qa-logo"><img src="<?php echo DTH_URI; ?>/Pic/dth-logo.png" alt="" aria-hidden="true" onerror="this.style.display='none'"></span>
-          <h3>รู้จักการทำงาน<br>ของสมาคม</h3>
-        </a>
-        <a class="qa-tile t2" href="#network">
-          <span class="qa-logos" aria-hidden="true">
-            <img src="<?php echo DTH_URI; ?>/Pic/members/blind.png" alt="" onerror="this.style.display='none'">
-            <img src="<?php echo DTH_URI; ?>/Pic/members/deaf.png" alt="" onerror="this.style.display='none'">
-            <img src="<?php echo DTH_URI; ?>/Pic/members/physical.png" alt="" onerror="this.style.display='none'">
-            <img src="<?php echo DTH_URI; ?>/Pic/members/intellectual.jpg" alt="" onerror="this.style.display='none'">
-            <img src="<?php echo DTH_URI; ?>/Pic/members/autism.jpg" alt="" onerror="this.style.display='none'">
-            <img src="<?php echo DTH_URI; ?>/Pic/members/mental.jpg" alt="" onerror="this.style.display='none'">
-          </span>
-          <h3>องค์การสมาชิก<br>และเครือข่าย</h3>
-        </a>
-      </div>
+    <div class="qa-grid" style="grid-template-columns:1fr">
       <div>
         <div class="kicker"><span class="ic" aria-hidden="true">❓</span><h2>คำถามที่พบบ่อย</h2></div>
         <div class="qa-list">
