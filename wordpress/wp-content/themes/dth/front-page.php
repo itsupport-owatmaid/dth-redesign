@@ -119,10 +119,15 @@ get_header();
   <div class="wrap">
     <div class="kicker"><span class="ic" aria-hidden="true">📣</span><h2>ติดตาม DTH</h2><a href="https://www.facebook.com/disabilitiesth" target="_blank" rel="noopener" class="more see-all">ไปที่เพจ Facebook <span class="arr" aria-hidden="true">→</span></a></div>
     <div class="fb-embed">
-      <iframe title="Facebook Page สมาคมสภาคนพิการทุกประเภทแห่งประเทศไทย"
-        src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fdisabilitiesth&tabs=timeline&width=500&height=750&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true"
-        width="500" height="750" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" loading="lazy"
-        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+      <?php
+      // ใช้ปลั๊กอิน Smash Balloon (Custom Facebook Feed) ถ้าติดตั้งแล้ว
+      if ( shortcode_exists( 'custom-facebook-feed' ) ) {
+        echo do_shortcode( '[custom-facebook-feed]' );
+      } else {
+        // สำรอง: ปุ่มเปิดเพจ (กันหน้าว่าง/โค้ดพัง ถ้ายังไม่ได้ลงปลั๊กอิน)
+        echo '<a class="see-all" href="https://www.facebook.com/disabilitiesth" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:8px">เปิดเพจ Facebook ของสมาคม <span class="arr" aria-hidden="true">&rarr;</span></a>';
+      }
+      ?>
     </div>
   </div>
 </section>
