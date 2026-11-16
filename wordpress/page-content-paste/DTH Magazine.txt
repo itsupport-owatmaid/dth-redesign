@@ -1,0 +1,33 @@
+<!-- wp:html -->
+<!-- ===== Breadcrumb ===== -->
+<nav class="breadcrumb" aria-label="เส้นทางนำทาง">
+  <div class="wrap"><a href="{{HOME}}/">หน้าแรก</a> <span aria-hidden="true">›</span> <span>ข้อมูลสำคัญ</span> <span aria-hidden="true">›</span> <strong>DTH Magazine</strong></div>
+</nav>
+
+<!-- ===== Page hero ===== -->
+<section class="page-hero">
+  <h1>DTH Magazine</h1>
+  <p class="lead">วารสารของสมาคมสภาคนพิการทุกประเภทแห่งประเทศไทย — รวมฉบับย้อนหลังให้ดาวน์โหลด</p>
+</section>
+
+<main id="main">
+<section class="block">
+  <div class="wrap">
+    <div class="kicker"><h2>DTH Magazine — วารสารสมาคม</h2></div>
+    <p class="prov-note">วารสาร DTH Magazine ฉบับล่าสุด — คลิกเพื่อเปิด/ดาวน์โหลดไฟล์ PDF</p>
+    <div class="mag-grid">
+      <a class="card mag-card" href="{{DTH}}/Doc/magazine/dth-magazine-vol13.pdf" target="_blank" rel="noopener">
+        <span class="mag-ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M14 2H7a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7Z"/><path d="M14 2v5h5"/><path d="M9 13h6M9 17h6"/></svg></span>
+        <div class="body"><h3>ฉบับที่ 13 — Work Together Issue</h3><div class="meta">PDF · 4.2 MB · ดาวน์โหลด</div></div>
+      </a>
+      <a class="card mag-card" href="{{DTH}}/Doc/magazine/dth-magazine-vol14.pdf" target="_blank" rel="noopener">
+        <span class="mag-ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M14 2H7a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7Z"/><path d="M14 2v5h5"/><path d="M9 13h6M9 17h6"/></svg></span>
+        <div class="body"><h3>ฉบับที่ 14 — Colleague</h3><div class="meta">PDF · 13 MB · ดาวน์โหลด</div></div>
+      </a>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ===== Footer ===== -->
+<!-- /wp:html -->

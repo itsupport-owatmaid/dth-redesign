@@ -1,0 +1,53 @@
+<!-- wp:html -->
+<!-- ===== Breadcrumb ===== -->
+<nav class="breadcrumb" aria-label="เส้นทางนำทาง">
+  <div class="wrap"><a href="{{HOME}}/">หน้าหลัก</a> <span aria-hidden="true">›</span> <span>ข่าวสาร</span> <span aria-hidden="true">›</span> <strong id="crumbCat">ทั้งหมด</strong></div>
+</nav>
+
+<main id="main">
+<section class="block" style="padding-top:clamp(20px,2.5vw,30px)">
+  <div class="wrap">
+
+    <div class="kicker"><span class="ic" aria-hidden="true">📰</span><h1 style="font-size:clamp(1.5rem,2.9vw,2.25rem);font-weight:700;letter-spacing:-.02em;line-height:1.15">ข่าวสาร</h1></div>
+
+    <!-- Category chips (คลิกเพื่อแยกแสดงผลตามหมวด) -->
+    <div class="tabbar" id="catBar" aria-label="หมวดหมู่ข่าวสาร" style="margin-bottom:clamp(18px,2.5vw,26px)">
+      <button class="tab active" data-cat="all" type="button">ทั้งหมด</button>
+      <button class="tab" data-cat="pr" type="button">ข่าวประชาสัมพันธ์</button>
+      <button class="tab" data-cat="activity" type="button">กิจกรรม</button>
+      <button class="tab" data-cat="report" type="button">รายงานประจำปี</button>
+      <button class="tab" data-cat="knowledge" type="button">สาระน่ารู้</button>
+    </div>
+
+    <!-- Toolbar -->
+    <div class="hub-toolbar">
+      <div class="hub-search">
+        <input type="text" id="hubSearch" placeholder="ใส่คำที่ต้องการค้นหา…" aria-label="ค้นหาข่าวสาร">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m21 21-4.34-4.34"></path><circle cx="11" cy="11" r="8"></circle></svg>
+      </div>
+      <select class="hub-select" id="hubSelect" aria-label="เลือกหมวดย่อยสาระน่ารู้">
+        <option value="">หมวดย่อยสาระน่ารู้</option>
+        <option value="health">สุขภาพ</option>
+        <option value="general">ทั่วไป</option>
+        <option value="blind">สมาคมคนตาบอดแห่งประเทศไทย</option>
+      </select>
+    </div>
+
+    <!-- News grid -->
+    [dth_news]
+    <div id="hubEmpty" class="card" style="display:none;padding:40px;text-align:center;color:var(--muted)">
+      <div style="font-size:2.6rem" aria-hidden="true">🗂️</div>
+      <p style="margin-top:10px">ยังไม่มีรายการในหมวดนี้</p>
+      <p style="margin-top:6px;font-size:.9rem">ติดตามข้อมูลอัปเดตได้ที่ <a href="https://www.facebook.com/share/1Ez81X9Yjh/" target="_blank" rel="noopener" style="color:var(--brand-dark);font-weight:600">Facebook ของสมาคม</a> หรือ <a href="https://dth.or.th/download" target="_blank" rel="noopener" style="color:var(--brand-dark);font-weight:600">เอกสารดาวน์โหลด dth.or.th</a></p>
+    </div>
+
+    <div class="pager">
+      <div class="total">จำนวนทั้งหมด <b id="hubCount">7</b> รายการ</div>
+    </div>
+
+  </div>
+</section>
+</main>
+
+<!-- ===== Footer ===== -->
+<!-- /wp:html -->

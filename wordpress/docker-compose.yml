@@ -1,0 +1,66 @@
+services:
+  db:
+    image: mariadb:11
+    container_name: dth_db
+    restart: unless-stopped
+    environment:
+      MYSQL_DATABASE: wordpress
+      MYSQL_USER: wordpress
+      MYSQL_PASSWORD: wordpress
+      MYSQL_ROOT_PASSWORD: rootpass
+    volumes:
+      - db_data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "healthcheck.sh", "--connect", "--innodb_initialized"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+
+  wordpress:
+    image: wordpress:6-php8.2-apache
+    container_name: dth_wp
+    restart: unless-stopped
+    depends_on:
+      db:
+        condition: service_healthy
+    ports:
+      - "8080:80"
+    environment:
+      WORDPRESS_DB_HOST: db:3306
+      WORDPRESS_DB_USER: wordpress
+      WORDPRESS_DB_PASSWORD: wordpress
+      WORDPRESS_DB_NAME: wordpress
+    volumes:
+      - wp_data:/var/www/html
+      # ธีม DTH (แก้ไฟล์ในเครื่องแล้วเห็นผลทันที)
+      - ./wp-content/themes/dth:/var/www/html/wp-content/themes/dth
+      # รูปภาพ/เอกสาร bind-mount จาก repo (ไม่ต้องสำเนาซ้ำ)
+      - ../Pic:/var/www/html/wp-content/themes/dth/Pic:ro
+      - ../Doc:/var/www/html/wp-content/themes/dth/Doc:ro
+
+  # ติดตั้ง WordPress + สร้างหน้า + เปิดใช้ธีม อัตโนมัติ (รันครั้งเดียวแล้วจบ)
+  wpcli:
+    image: wordpress:cli-php8.2
+    container_name: dth_wpcli
+    depends_on:
+      db:
+        condition: service_healthy
+      wordpress:
+        condition: service_started
+    user: "33:33"
+    environment:
+      WORDPRESS_DB_HOST: db:3306
+      WORDPRESS_DB_USER: wordpress
+      WORDPRESS_DB_PASSWORD: wordpress
+      WORDPRESS_DB_NAME: wordpress
+    volumes:
+      - wp_data:/var/www/html
+      - ./wp-content/themes/dth:/var/www/html/wp-content/themes/dth
+      - ../Pic:/var/www/html/wp-content/themes/dth/Pic:ro
+      - ../Doc:/var/www/html/wp-content/themes/dth/Doc:ro
+      - ./init:/init:ro
+    entrypoint: ["bash", "/init/setup.sh"]
+
+volumes:
+  db_data:
+  wp_data:

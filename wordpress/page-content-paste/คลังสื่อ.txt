@@ -1,0 +1,35 @@
+<!-- wp:html -->
+<!-- ===== Breadcrumb ===== -->
+<nav class="breadcrumb" aria-label="เส้นทางนำทาง">
+  <div class="wrap"><a href="{{HOME}}/">หน้าแรก</a> <span aria-hidden="true">›</span> <span>ข้อมูลสำคัญ</span> <span aria-hidden="true">›</span> <strong>คลังสื่อ / อินโฟกราฟิก</strong></div>
+</nav>
+
+<main id="main">
+<section class="block" style="padding-top:clamp(20px,2.5vw,30px)">
+  <div class="wrap">
+    <div class="kicker"><h1 style="font-size:clamp(1.5rem,2.9vw,2.25rem);font-weight:600;line-height:1.2">คลังสื่อ / อินโฟกราฟิก</h1></div>
+    <div class="tabbar" id="catBar" aria-label="หมวดหมู่คลังสื่อ" style="margin-bottom:clamp(18px,2.5vw,26px)">
+      <button class="tab active" data-cat="all" type="button">ทั้งหมด</button>
+      <button class="tab" data-cat="rights" type="button">สิทธิและสวัสดิการ</button>
+      <button class="tab" data-cat="law" type="button">กฎหมาย</button>
+      <button class="tab" data-cat="home" type="button">ที่อยู่อาศัย</button>
+      <button class="tab" data-cat="magazine" type="button">วารสาร DTH</button>
+    </div>
+    <div class="hub-toolbar">
+      <div class="hub-search">
+        <input type="text" id="hubSearch" placeholder="ใส่คำที่ต้องการค้นหา…" aria-label="ค้นหาคลังสื่อ">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m21 21-4.34-4.34"></path><circle cx="11" cy="11" r="8"></circle></svg>
+      </div>
+      <a href="https://dth.or.th/infographic" target="_blank" rel="noopener" class="see-all" style="white-space:nowrap">ดูทั้งหมดที่ dth.or.th <span class="arr" aria-hidden="true">&rarr;</span></a>
+    </div>
+    [dth_media]
+    <div id="hubEmpty" class="card" style="display:none;padding:40px;text-align:center;color:var(--muted)">
+      <p style="margin-top:10px">ยังไม่มีรายการในหมวดนี้</p>
+    </div>
+    <div class="pager"><div class="total">จำนวนทั้งหมด <b id="hubCount">8</b> รายการ</div></div>
+  </div>
+</section>
+</main>
+
+<!-- ===== Footer ===== -->
+<!-- /wp:html -->
